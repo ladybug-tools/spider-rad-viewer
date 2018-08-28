@@ -29,13 +29,18 @@
 
 	<iframe id=ifr src="rad-viewer-in-iframe-child.html" ></iframe>
 
-	<p><button onclick=ifr.contentWindow.location.hash="https://rawgit.com/ladybug-tools/spider/master/radiance-sample-files/london-office/london-office.rad"; >london office</button></p>
+	<p>
+		<button onclick=ifr.contentWindow.location.hash="https://rawgit.com/ladybug-tools/spider/master/radiance-sample-files/london-office/london-office.rad"; >london office</button>
+		 <button onclick=ifr.contentWindow.location.hash="https://rawgit.com/ladybug-tools/spider/master/radiance-sample-files/gjward1/blue_chair.rad"; >blue chair</button>
+		 <button onclick=ifr.contentWindow.location.hash="https://rawgit.com/ladybug-tools/spider/master/radiance-sample-files/various-sources/mostapha-forest-sphere.rad"; >forest sphere</button>
+		 <button onclick=ifr.contentWindow.location.hash="https://rawgit.com/ladybug-tools/spider/master/radiance-sample-files/gjward1/whale2.rad"; >whale2</button>
+	</p>
 
 	<div id = "divContents2" ></div>
 
 <script>
 
-const urlSourceCode = "https://github.com/ladybug-tools/spider-rad-viewer/cookbook/rad-viewer-in-iframe-parent";
+const urlSourceCode = "https://github.com/ladybug-tools/spider-rad-viewer/tree/master/cookbook/rad-viewer-in-iframe/";
 
 init();
 
