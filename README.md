@@ -14,18 +14,25 @@ _<small>Spider RAD Viewer current release</small>_
 -->
 
 <iframe src=https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-iframe-carousel/rad-viewer-iframe-carousel-r1.html width=100% height=500px >Iframes are not viewable in GitHub source code view</iframe>
--
-_RAD viewer Iframe-Carousel: still at an early stage_
+_RAD Viewer Iframe Carousel: still at an early stage of development_
 
 ### Full Screen: [Spider RAD Viewer]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/ )
 
 
 
-## Concept
+## Concept / Issues to be addressed
 
 View RAD files produced by Radiance scripts in interactive 3D in your browser
 
-Support for [Radiance Online]( https://www.radiance-online.org/ )
+And provide new-user support for [Radiance Online]( https://www.radiance-online.org/ )
+
+Radiance Software may be used to produce stunning images with engaging effects. Interestingly the [The RADIANCE 5.1 Synthetic Imaging System.pdf]( http://radsite.lbl.gov/radiance/refer/refman.pdf ) contains a single diagram and no images in its twenty pages. The [Radiance ManPages.pdf]( https://www.radiance-online.org/learning/documentation/manual-pages/pdfs/manpages.pdf ) contains zero images within its **227** pages.
+
+Let's see if we can help do something about helping illustrate the beauties of Radiance software
+
+***
+
+### Mission
 
 Translate Radiance RAD file types into Three.js views - all building on [Mostapha's efforts]( https://github.com/mostaphaRoudsari/radJSON)
 
@@ -39,8 +46,7 @@ And we hope that it helps Mostapha here:
 
 * [17th International Radiance Workshop]( http://climate-based-daylighting.com/doku.php?id=radiance2018:programme#workshop_programme )
 
-
-### Mission
+### Vision
 
 * Help make it faster, easier, simpler to do cataloguing and file management on large numbers of Radiance RAD files
 
@@ -76,13 +82,21 @@ And we hope that it helps Mostapha here:
 
 ## Links of Interest
 
+Spider
+
+* [Radiance Sample Data Files]( http://www.ladybug.tools/spider/#radiance-sample-files/README.md )
+
+Radiance
+
+* [The RADIANCE 5.1 Synthetic Imaging System.pdf]( http://radsite.lbl.gov/radiance/refer/refman.pdf )
+* [Radiance ManPages.pdf]( https://www.radiance-online.org/learning/documentation/manual-pages/pdfs/manpages.pdf )
 
 ## Change Log
 
 ### 2018-08-28 ~ Theo
 
 * First commit
-* Addi index.html/ read me / license
+* Add index.html/ read me / license
 * Add RAD viewer folder with R1 / index / read me
 
 
