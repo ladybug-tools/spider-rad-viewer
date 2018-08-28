@@ -25,6 +25,7 @@
 		opacity: 1;
 
 	}
+
 	iframe.fade-out { opacity: 0; }
 	iframe.fade-in { opacity: 1; }
 
@@ -34,18 +35,23 @@
 
 	<div id = "header" >
 		<div id = "title" ></div>
-		<div id = "contents" >
-		</div>
+		<div id = "contents" ></div>
 	</div>
+
 	<div id= divIframe ><iframe id=ifr  width=100% height=480px ></iframe></div>
 
 <script>
 
 	const sites = [
 
-		{ fileName: 'https://www.ladybug.tools/spider/radiance-sample-files/gjward1/blue_chair.rad', title: 'Blue Chair' },
-		{ fileName: 'https://www.ladybug.tools/spider/radiance-sample-files/sample-file.rad', title: 'Sample File 1' },
-		{ fileName: 'https://www.ladybug.tools/spider/radiance-sample-files/various-sources/mostapha-forest-sphere.rad', title: 'forest sphere' }
+		{ fileName: 'gjward1/blue_chair.rad', title: 'Blue Chair' },
+		{ fileName: 'sample-file.rad', title: 'Sample File 1' },
+		{ fileName: 'gjward1/black_chair.rad', title: 'Black Chair' },
+		{ fileName: 'gjward1/bookbox.rad', title: 'Book Box' },
+		{ fileName: 'gjward1/black_chair.rad', title: 'Black Chair' },
+		{ fileName: 'gjward1/door_closer.rad', title: 'Door Closer' },
+		{ fileName: 'gjward1/toilet.rad', title: 'Toiet' },
+		{ fileName: 'various-sources/mostapha-forest-sphere.rad', title: 'forest sphere' }
 
 
 	];
@@ -82,7 +88,7 @@
 
 		divIframe.innerHTML =
 		`
-			<iframe id=ifr src = "${url}#${sites[ index ].fileName}" width=100% height=500px ></iframe>
+			<iframe id=ifr src = "${url}#https://www.ladybug.tools/spider/radiance-sample-files/${sites[ index ].fileName}" width=100% height=480px ></iframe>
 			<p>${sites[ index ].fileName.split('/').pop()}<p>
 
 		`;
