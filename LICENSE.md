@@ -1,6 +1,6 @@
-MIT License
+# Ladybug Tools / Spider RAD Viewer / MIT License
 
-Copyright (c) 2018 Ladybug Tools
+Copyright &copy; 2018 Ladybug Tools
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
