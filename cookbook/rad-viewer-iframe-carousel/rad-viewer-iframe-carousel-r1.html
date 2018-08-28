@@ -38,15 +38,15 @@
 		</div>
 	</div>
 
-	<iframe id=ifr src = "../rad-viewer-in-iframe/rad-viewer-in-iframe-child.html" width=100% height=480px ></iframe>
+	<iframe id=ifr src = "https://rawgit.com/ladybug-tools/spider-rad-viewer/master/cookbook/rad-viewer-in-iframe/rad-viewer-in-iframe-child.html" width=100% height=480px ></iframe>
 
 <script>
 
 	const sites = [
 
-		{ fileName: '../rad-viewer-in-iframe/rad-viewer-in-iframe-child.html#https://rawgit.com/ladybug-tools/spider/master/radiance-sample-files/gjward1/blue_chair.rad', title: 'Blue Chair' },
-		{ fileName: '../rad-viewer-in-iframe/rad-viewer-in-iframe-child.html#https://rawgit.com/ladybug-tools/spider/master/radiance-sample-files/sample-file.rad', title: 'Sample File 1' },
-		{ fileName: '../rad-viewer-in-iframe/rad-viewer-in-iframe-child.html#https://rawgit.com/ladybug-tools/spider/master/radiance-sample-files/various-sources/mostapha-forest-sphere.rad', title: 'forest sphere' }
+		{ fileName: 'https://rawgit.com/ladybug-tools/spider/master/radiance-sample-files/gjward1/blue_chair.rad', title: 'Blue Chair' },
+		{ fileName: 'https://rawgit.com/ladybug-tools/spider/master/radiance-sample-files/sample-file.rad', title: 'Sample File 1' },
+		{ fileName: 'https://rawgit.com/ladybug-tools/spider/master/radiance-sample-files/various-sources/mostapha-forest-sphere.rad', title: 'forest sphere' }
 
 
 	];
@@ -92,7 +92,7 @@
 
 		setTimeout( function(){ ifr.className = 'fade-out'; }, 8000 );
 
-		ifr.src = sites[ index ].fileName;
+		ifr.contentWindow.location.hash = sites[ index ].fileName;
 
 		//history.replaceState( '', document.title, window.location.pathname );
 
