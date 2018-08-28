@@ -37,35 +37,24 @@
 		<div id = "contents" >
 		</div>
 	</div>
-
-	<iframe id=ifr src = "https://rawgit.com/ladybug-tools/spider-rad-viewer/master/cookbook/rad-viewer-in-iframe/rad-viewer-in-iframe-child.html" width=100% height=480px ></iframe>
+	<div id= divIframe ><iframe id=ifr  width=100% height=480px ></iframe></div>
 
 <script>
 
 	const sites = [
 
-		{ fileName: 'https://rawgit.com/ladybug-tools/spider/master/radiance-sample-files/gjward1/blue_chair.rad', title: 'Blue Chair' },
-		{ fileName: 'https://rawgit.com/ladybug-tools/spider/master/radiance-sample-files/sample-file.rad', title: 'Sample File 1' },
-		{ fileName: 'https://rawgit.com/ladybug-tools/spider/master/radiance-sample-files/various-sources/mostapha-forest-sphere.rad', title: 'forest sphere' }
+		{ fileName: 'https://www.ladybug.tools/spider/radiance-sample-files/gjward1/blue_chair.rad', title: 'Blue Chair' },
+		{ fileName: 'https://www.ladybug.tools/spider/radiance-sample-files/sample-file.rad', title: 'Sample File 1' },
+		{ fileName: 'https://www.ladybug.tools/spider/radiance-sample-files/various-sources/mostapha-forest-sphere.rad', title: 'forest sphere' }
 
 
 	];
 
-	/*
-//		{ fileName: 'https://www.ladybug.tools/spider/gbxml-viewer/r14/gv-cor-core/gv-cor.html', title: "Aragog'gbXML Viewer" },
-//		{ fileName: 'https://www.ladybug.tools/spider/cookbook/rad-to-threejs/r5/rad-to-three.html', title: 'Radiance RAD File Viewer' }
-
-//		{ fileName: '../rad-viewer-in-iframe/rad-viewer-in-iframe-child.html#https://rawgit.com/ladybug-tools/spider/master/radiance-sample-files/london-office/london-office.rad', title: 'London Office' },
-
-"https://rawgit.com/ladybug-tools/spider/master/radiance-sample-files/london-office/london-office.rad"; >london office</button>
-"https://rawgit.com/ladybug-tools/spider/master/radiance-sample-files/gjward1/blue_chair.rad"; >blue chair</button>
-"https://rawgit.com/ladybug-tools/spider/master/radiance-sample-files/various-sources/mostapha-forest-sphere.rad"; >forest sphere</button>
-"https://rawgit.com/ladybug-tools/spider/master/radiance-sample-files/gjward1/whale2.rad"; >whale2</button>
-*/
 
 	let timer;
 	let index = Math.floor( Math.random() * sites.length );
 
+	url = "https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-in-iframe/rad-viewer-in-iframe-child.html";
 	init();
 
 	function init() {
@@ -83,18 +72,24 @@
 
 		index = index >= sites.length ? 0 : index;
 
-		console.log( 'sites[ index ].fileName', sites[ index ].fileName );
+		//console.log( 'sites[ index ].fileName', sites[ index ].fileName );
 
 		if ( ! sites[ index ].fileName ) { return; }
-
 
 		ifr.onload = function() { ifr.className = 'fade-in'; }
 
 		setTimeout( function(){ ifr.className = 'fade-out'; }, 8000 );
 
-		ifr.contentWindow.location.hash = sites[ index ].fileName;
+		divIframe.innerHTML =
+		`
+			<iframe id=ifr src = "${url}#${sites[ index ].fileName}" width=100% height=500px ></iframe>
+			<p>${sites[ index ].fileName.split('/').pop()}<p>
 
-		//history.replaceState( '', document.title, window.location.pathname );
+		`;
+
+		//ifr.contentWindow.location.hash = sites[ index ].fileName;
+
+		history.replaceState( '', document.title, window.location.pathname );
 
 		index++;
 
