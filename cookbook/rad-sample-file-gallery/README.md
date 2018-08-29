@@ -22,7 +22,7 @@ Provide links to many files for testing
 
 ## Full Screen: [RAD Sample File Gallery]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-sample-file-gallery/r1/rad-sample-file-gallery.html )
 
-* Add fetch-ghithub-api-tree.js to lib and make more generic
+* Add fetch-github-api-tree.js to lib and make more generic
 * Adds links to two galleries
 	* https://www.ladybug.tools/spider/#radiance-sample-files/README.md
 	* https://github.com/rndmStff/radModels
