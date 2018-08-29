@@ -13,11 +13,11 @@
 _<small>Spider RAD Viewer current release</small>_
 -->
 
-<iframe src=https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-iframe-carousel/r1/rad-viewer-iframe-carousel.html width=100% height=500px >Iframes are not viewable in GitHub source code view</iframe>
+<iframe src=https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-iframe-carousel/r1/rad-viewer-iframe-carousel.html width=100% height=520px >Iframes are not viewable in GitHub source code view</iframe>
 _RAD Viewer Iframe Carousel: still at an early stage of development_
 
-### Full Screen: [Spider RAD Viewer]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/ )
 
+### Full Screen: [Spider RAD Viewer]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/ )
 
 
 ## Concept / Issues to be addressed
@@ -70,10 +70,15 @@ And we hope that it helps Mostapha here:
 
 ## To do / wish list
 
-* 2018-08-28 ~ Theo ~ Add heads-up display for all surfaces
 * 2018-08-19 ~ Theo ~ Load multiple files via location.hash
 * 2018-08-12 ~ Theo ~ Add drag and drop multiple files
 * 2018-08-11 ~ Theo ~ Handle larger files in a timely, non-crashing fashion
+
+#### Cookbook examples
+
+* 2018-08-28 ~ Theo ~ Add heads-up display for all surfaces
+* 2018-08-28 ~ Theo ~ Add side-bar menu driven gallery
+* 2018-08-28 ~ Theo ~ Add scrolling thumbnail gallery
 
 
 ## Issues
