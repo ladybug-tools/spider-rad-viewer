@@ -13,7 +13,7 @@
 _<small>Spider RAD Viewer current release</small>_
 -->
 
-<iframe src=https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-iframe-carousel/rad-viewer-iframe-carousel-r1.html width=100% height=500px >Iframes are not viewable in GitHub source code view</iframe>
+<iframe src=https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-iframe-carousel/r1/rad-viewer-iframe-carousel.html width=100% height=500px >Iframes are not viewable in GitHub source code view</iframe>
 _RAD Viewer Iframe Carousel: still at an early stage of development_
 
 ### Full Screen: [Spider RAD Viewer]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/ )
