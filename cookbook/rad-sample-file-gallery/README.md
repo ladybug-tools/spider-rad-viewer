@@ -1,0 +1,61 @@
+
+<span style=display:none; >[You are now in a GitHub source code view - click this link to view Read Me file as a web page]( https://www.ladybug.tools/spider-rad-viewer/#cookbook/rad-sample-file-gallery/README.md "View file as a web page." ) </span>
+
+<div><input type=button class = "btn btn-secondary btn-sm" onclick=window.location.href="https://www.ladybug.tools/spider-rad-viewer/blob/master/cookbook/rad-sample-file-gallery/README.md"
+value="You are now in a GitHub web page view - Click this button to view this read me file as source code" ></div>
+
+<br>
+
+# [RAD Sample File Gallery Read Me]( #cookbook/rad-sample-file-gallery/README.md )
+
+
+<iframe src=https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-sample-file-gallery/r1/rad-sample-file-gallery.html width=100% height=500px >Iframes are not viewable in GitHub source code views</iframe>
+_<small>RAD Sample File Gallery</small>_
+
+
+
+## Concept
+
+Demonstrate that the Spider RAD Viewer open files via a URL set as the text after the '#' in the base URL
+
+Provide links to many files for testing
+
+## Full Screen: [RAD Sample File Gallery]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-sample-file-gallery/r1/rad-sample-file-gallery.html )
+
+* Add fetch-ghithub-api-tree.js to lib and make more generic
+* Adds links to two galleries
+	* https://www.ladybug.tools/spider/#radiance-sample-files/README.md
+	* https://github.com/rndmStff/radModels
+
+
+***
+
+## To Do / Wish List
+
+
+## Issues
+
+
+## Things you can do using this script
+
+* Click the three bars( 'hamburger menu icon' ) to slide the menu in and out
+* Click the Octocat icon to view or edit the source code on GitHub
+* Click on title to reload
+* Press Control-U/Command-Option-U to view the source code
+* Press Control-Shift-J/Command-Option-J to see if the JavaScript console reports any errors
+
+
+## Links of Interest
+
+
+## Change Log
+
+### 2018-08-29 ~ Theo
+
+* First commit
+
+
+***
+
+# <center title="hello!" ><a href=javascript:window.scrollTo(0,0); style=text-decoration:none; > ❦ </a></center>
+
