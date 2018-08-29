@@ -103,6 +103,14 @@ Radiance
 * First commit
 * Add index.html/ read me / license
 * Add RAD viewer folder with R1 / index / read me
+* Add Cookbook folder with examples
+
+And trying to follow Mostapha's suggestions
+
+1. Keep the code clean.
+2. Test the code.
+3. Learn from the code and hack it for other uses.
+4. And finally use the repository as a dependency. Especially when it comes to JavaScript we can use GitHub submodules functionality between the repositories.
 
 
 ***
