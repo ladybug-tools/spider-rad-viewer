@@ -17,6 +17,8 @@ _<small>RAD Viewer Iframe Carousel</small>_
 
 ## Concept
 
+Provide an iframe that displays a series of RAD files with a fade in and out effect
+
 
 ## To Do / Wish List
 
@@ -24,21 +26,12 @@ _<small>RAD Viewer Iframe Carousel</small>_
 ## Issues
 
 
-## Things you can do using this script
-
-* Click the three bars( 'hamburger menu icon' ) to slide the menu in and out
-* Click the Octocat icon to view or edit the source code on GitHub
-* Click on title to reload
-* Press Control-U/Command-Option-U to view the source code
-* Press Control-Shift-J/Command-Option-J to see if the JavaScript console reports any errors
-
-
 ## Links of Interest
 
 
 ## Change Log
 
-###
+### 2018-08-28 ~ Theo
 
 * First commit
 
