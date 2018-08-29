@@ -1,7 +1,7 @@
 
 <span style=display:none; >[You are now in a GitHub source code view - click this link to view Read Me file as a web page]( https://www.ladybug.tools/spider-rad-viewer/#cookbook/rad-viewer-in-iframe/README.md "View file as a web page." ) </span>
 
-<div><input type=button class = "btn btn-secondary btn-sm" onclick=window.location.href="https://github.com/pushme-pullyou/www.ladybug.tools/spider-rad-viewer/blob/master/cookbook/rad-viewer-in-iframe/README.md"
+<div><input type=button class = "btn btn-secondary btn-sm" onclick=window.location.href="https://www.ladybug.tools/spider-rad-viewer/blob/master/cookbook/rad-viewer-in-iframe/README.md"
 value="You are now in a GitHub web page view - Click this button to view this read me file as source code" ></div>
 
 <br>
@@ -12,11 +12,19 @@ value="You are now in a GitHub web page view - Click this button to view this re
 <iframe src=https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-in-iframe/r1/rad-viewer-in-iframe-parent.html width=100% height=500px >Iframes are not viewable in GitHub source code views</iframe>
 _<small>RAD Viewer in Iframe</small>_
 
-## Full Screen: [RAD Viewer in Iframe Parent ~ HTML]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-in-iframe/r1/rad-viewer-in-iframe-parent.html )
+### Full Screen: [RAD Viewer in Iframe Parent ~ HTML]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-in-iframe/r1/rad-viewer-in-iframe-parent.html )
 
+* rad-viewer-in-iframe-child.html embedded in an HTML file
 
+### Full Screen: [RAD Viewer in Iframe Parent ~ Markdown]( https://www.ladybug.tools/spider-rad-viewer/#cookbook/rad-viewer-in-iframe/r1/rad-viewer-in-iframe-parent.md )
+
+* rad-viewer-in-iframe-child.html embedded in a Markdown file
 
 ## Concept
+
+It should be easy to display RAD files in 3D inside normal web page content.
+
+The scripts here show how this can be done
 
 
 ## To Do / Wish List
