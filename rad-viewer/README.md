@@ -12,13 +12,24 @@ The following sections - newest on top - are a show and tell of the changes
 
 ***
 
-## 2018-08-28 ~ Full Screen: [Spider RAD Viewer R1]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r1/rad-viewer.html )
+## 2018-08-28/29 ~ Full Screen: [Spider RAD Viewer R1.1]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r1-1/rad-viewer.html )
 
 <iframe src=https://www.ladybug.tools/spider-rad-viewer/rad-viewer/index.html width=100% height=500px >Iframes are not viewable in GitHub source code view<</iframe>
 
 * First commit
 * Builds on files from Spider and now forked in [archive]( file:///D:/Dropbox/Public/git-repos/spider-rad-viewer/index.html#archive/rad-to-threejs/README.md )
 * Simplified version / removes samples menu items
+
+### 2018-08-29 ~ R1.1
+* Add the fix from RAD Viewer R13 for Michal's models
+* Add separate 'lib' folder in root folder
+
+#### Theo says:
+
+My past experiences with maintaining lib folders is not good. I tend to make changes that crash many downstream users.
+
+Fingers crossed,I get a workflow going that avoids these issues
+
 
 
 ***
