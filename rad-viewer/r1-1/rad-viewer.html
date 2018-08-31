@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" >
 <meta name="viewport" content = "width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0" >
-<meta name=description content="Viewe Radiance RAD files in real-time 3D in your browser using the Three.js JavaScript library" >
+<meta name=description content="View Radiance RAD files in real-time 3D in your browser using the Three.js JavaScript library" >
 <meta name=keywords content="Three.js,WebGL,JavaScript,GitHub,FOSS,3D,STEM" >
 <meta name = "date" content = "2018-08-29" >
 <title>Spider Rad Viewer R1.1</title>
@@ -40,7 +40,7 @@
 		<div id = "divTitle" ></div>
 
 		<p>
-			Load JSON:
+			Open RAD and MAT files:
 			<input type=file id=inpOpenFile onchange=rad.inpOpenFiles(this.files); multiple accept=".rad,.mat" >
 		</p>
 
@@ -48,6 +48,8 @@
 
 			<summary>File data</summary>
 
+			<p>Shows data for files under 500 KB </p>
+			
 			<div id = "divLog" ></div>
 
 			<!-- div and text area show errors differently -->

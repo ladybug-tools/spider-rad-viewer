@@ -70,14 +70,13 @@ And we hope that it helps Mostapha here:
 
 ## To do / wish list
 
+* 2018-08-30 ~ Theo ~ Merge the various file open methods into a single file
 * 2018-08-19 ~ Theo ~ Load multiple files via location.hash
 * 2018-08-12 ~ Theo ~ Add drag and drop multiple files
 * 2018-08-11 ~ Theo ~ Handle larger files in a timely, non-crashing fashion
 
 #### Cookbook examples
 
-* 2018-08-28 ~ Theo ~ Add heads-up display for all surfaces
-* 2018-08-28 ~ Theo ~ Add side-bar menu driven gallery
 * 2018-08-28 ~ Theo ~ Add scrolling thumbnail gallery
 
 
@@ -97,6 +96,14 @@ Radiance
 * [Radiance ManPages.pdf]( https://www.radiance-online.org/learning/documentation/manual-pages/pdfs/manpages.pdf )
 
 ## Change Log
+
+### 2018-08-30 ~ Theo
+
+Wish list items well underway
+
+* 2018-08-28 ~ Theo ~ Add heads-up display for all surfaces
+* 2018-08-28 ~ Theo ~ Add side-bar menu driven gallery
+
 
 ### 2018-08-28 ~ Theo
 
