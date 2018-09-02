@@ -10,11 +10,21 @@ value='You are now in a GitHub web page view - Click this button to view this re
 
 The following sections - newest on top - are a show and tell of the changes
 
+
+## 2018-08-28/29 ~ Full Screen: [Spider RAD Viewer R3]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r3/rad-viewer.html )
+
+<iframe src=https://www.ladybug.tools/spider-rad-viewer/rad-viewer/index.html width=100% height=500px >Iframes are not viewable in GitHub source code view<</iframe>
+
+* For details see https://github.com/ladybug-tools/spider-rad-viewer/projects/1#card-12627207
+
+
 ***
 
 ## 2018-08-28/29 ~ Full Screen: [Spider RAD Viewer R1.1]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r1-1/rad-viewer.html )
 
+<!--
 <iframe src=https://www.ladybug.tools/spider-rad-viewer/rad-viewer/index.html width=100% height=500px >Iframes are not viewable in GitHub source code view<</iframe>
+-->
 
 * First commit
 * Builds on files from Spider and now forked in [archive]( file:///D:/Dropbox/Public/git-repos/spider-rad-viewer/index.html#archive/rad-to-threejs/README.md )

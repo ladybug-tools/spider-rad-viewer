@@ -70,11 +70,8 @@ And we hope that it helps Mostapha here:
 
 ## To do / wish list
 
-* 2018-08-30 ~ Theo ~ Merge the various file open methods into a single file
-* 2018-08-19 ~ Theo ~ Load multiple files via location.hash
-* 2018-08-12 ~ Theo ~ Add drag and drop multiple files
-* 2018-08-11 ~ Theo ~ Handle larger files in a timely, non-crashing fashion
 
+See: [Spider RAD Viewer Dev]( https://github.com/ladybug-tools/spider-rad-viewer/projects/1 )
 #### Cookbook examples
 
 * 2018-08-28 ~ Theo ~ Add scrolling thumbnail gallery
