@@ -11,10 +11,12 @@ value='You are now in a GitHub web page view - Click this button to view this re
 The following sections - newest on top - are a show and tell of the changes
 
 
-## 2018-08-28/29 ~ Full Screen: [Spider RAD Viewer R3]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r3/rad-viewer.html )
+## 2018-09-01 ~ Full Screen: [Spider RAD Viewer R3]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r3/rad-viewer.html )
 
 <iframe src=https://www.ladybug.tools/spider-rad-viewer/rad-viewer/index.html width=100% height=500px >Iframes are not viewable in GitHub source code view<</iframe>
 
+* Better file opening
+* More name-spacing
 * For details see https://github.com/ladybug-tools/spider-rad-viewer/projects/1#card-12627207
 
 
