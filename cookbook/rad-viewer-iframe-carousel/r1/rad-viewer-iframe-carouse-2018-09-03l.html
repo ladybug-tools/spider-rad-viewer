@@ -3,10 +3,10 @@
 <head>
 <meta charset = "utf-8" >
 <meta name = "viewport" content= "width=device-width, initial-scale=1">
-<meta name = "description" content = "Simple HTML Web page carousel to view RAD files within an Iframe" >
+<meta name = "description" content = "web page carousel" >
 <meta name = "keywords" content = "JavaScript,GitHub,FOSS,3D,STEM" >
-<meta name = "date" content = "2018-09-03" >
-<title>RAD Viewer Iframe Carousel R1.1 </title>
+<meta name = "date" content = "2018-08-28" >
+<title></title>
 <style>
 
 	body { font: 12pt monospace; margin: 0 auto; max-width: 800px; }
@@ -38,7 +38,7 @@
 		<div id = "contents" ></div>
 	</div>
 
-	<div id= divIframe ><iframe id=ifr width=100% height=480px ></iframe></div>
+	<div id= divIframe ><iframe id=ifr  width=100% height=480px ></iframe></div>
 
 <script>
 
@@ -59,8 +59,7 @@
 	let timer;
 	let index = Math.floor( Math.random() * sites.length );
 
-	const urlCarousel = "https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-in-iframe/r1/rad-viewer-in-iframe-child.html";
-
+	url = "https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-in-iframe/r1/rad-viewer-in-iframe-child.html";
 	init();
 
 	function init() {
@@ -88,10 +87,12 @@
 
 		divIframe.innerHTML =
 		`
-			<iframe id=ifr src = "${ urlCarousel }#https://www.ladybug.tools/spider/radiance-sample-files/${sites[ index ].fileName}" width=100% height=480px ></iframe>
+			<iframe id=ifr src = "${url}#https://www.ladybug.tools/spider/radiance-sample-files/${sites[ index ].fileName}" width=100% height=480px ></iframe>
 			<p>${sites[ index ].fileName.split('/').pop()}<p>
 
 		`;
+
+		//ifr.contentWindow.location.hash = sites[ index ].fileName;
 
 		history.replaceState( '', document.title, window.location.pathname );
 

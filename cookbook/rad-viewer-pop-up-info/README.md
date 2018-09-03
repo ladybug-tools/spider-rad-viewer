@@ -15,15 +15,15 @@ _<small>Spider RAD Viewer Pop-Up Info</small>_
 
 ## Concept
 
-Mouse over any surface to view its geometry and materials data in a pop-up area
+Move pointer over any surface to view its geometry and materials data in a pop-up area
 
 ***
 
 ## Full Screen: [Spider RAD Viewer Pop-Up Info R3]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-pop-up-info/r3/rad-viewer-pop-up-info.html )
 
-* Fix broken links
+* Fix broken links/ code cleanup
 * Better name spacing
-* Three.js r96
+* Update to Three.js r96
 
 
 ## 2018-08-30: [Spider RAD Viewer Pop-Up Info R1]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-pop-up-info/r1/rad-viewer-pop-up-info.html )
