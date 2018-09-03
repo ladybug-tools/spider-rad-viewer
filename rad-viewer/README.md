@@ -8,39 +8,17 @@ value='You are now in a GitHub web page view - Click this button to view this re
 
 ## Concept
 
-The following sections - newest on top - are a show and tell of the changes
+* A basic Radiance RAD file viewer
+* Open, display and manipulate RAD files in real-time 3D in your browser
+* Built with plain-vanilla JavaScript using the Three.js library
+* All free and open source on GitHub with an MIT license
 
+## Links of Interest
 
-## 2018-09-01 ~ Full Screen: [Spider RAD Viewer R3]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r3/rad-viewer.html )
+* For further information see: [Ladybug Tools / Spider RAD Viewer Read Me]( https://www.ladybug.tools/spider-rad-viewer/ )
+* For support, bugs and wish list issues see: [Spider RAD Viewer GitHub Issues]( https://github.com/ladybug-tools/spider-rad-viewer/issues )
+* For project development details see: [Spider RAD Viewer GitHub Projects]( https://github.com/ladybug-tools/spider-rad-viewer/projects/1 )
 
-<iframe src=https://www.ladybug.tools/spider-rad-viewer/rad-viewer/index.html width=100% height=500px >Iframes are not viewable in GitHub source code view<</iframe>
-
-* Better file opening
-* More name-spacing
-* For details see https://github.com/ladybug-tools/spider-rad-viewer/projects/1#card-12627207
-
-
-***
-
-## 2018-08-28/29 ~ Full Screen: [Spider RAD Viewer R1.1]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r1-1/rad-viewer.html )
-
-<!--
-<iframe src=https://www.ladybug.tools/spider-rad-viewer/rad-viewer/index.html width=100% height=500px >Iframes are not viewable in GitHub source code view<</iframe>
--->
-
-* First commit
-* Builds on files from Spider and now forked in [archive]( file:///D:/Dropbox/Public/git-repos/spider-rad-viewer/index.html#archive/rad-to-threejs/README.md )
-* Simplified version / removes samples menu items
-
-### 2018-08-29 ~ R1.1
-* Add the fix from RAD Viewer R13 for Michal's models
-* Add separate 'lib' folder in root folder
-
-#### Theo says:
-
-My past experiences with maintaining lib folders is not good. I tend to make changes that crash many downstream users.
-
-Fingers crossed,I get a workflow going that avoids these issues
 
 
 

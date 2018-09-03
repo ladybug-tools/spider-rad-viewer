@@ -8,17 +8,30 @@
 
 # [Ladybug Tools / Spider RAD Viewer Read Me]( #README.md )
 
-<!--
-<iframe src=https://www.ladybug.tools/spider-rad-viewer/rad-viewer/ width=100% height=500px >Iframes are not viewable in GitHub source code views</iframe>
-_<small>Spider RAD Viewer current release</small>_
--->
 
 <iframe src=https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-iframe-carousel/r1/rad-viewer-iframe-carousel.html width=100% height=520px >Iframes are not viewable in GitHub source code view</iframe>
-_RAD Viewer Iframe Carousel: still at an early stage of development_
+_<small>RAD Viewer Iframe Carousel: still at an early stage of development</small>_
 
+Welcome visitors from the [17th International Radiance Workshop]( http://climate-based-daylighting.com/doku.php?id=radiance2018:programme#workshop_programme )
+
+***
 
 ### Full Screen: [Spider RAD Viewer]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/ )
 
+* A basic Radiance RAD file viewer
+* Open, display and manipulate RAD files in real-time 3D in your browser
+* Built with plain-vanilla JavaScript using the Three.js library
+* All free and open source on GitHub with an MIT license
+
+### Read Me: [Spider RAD Viewer Cookbook]( https://www.ladybug.tools/spider-rad-viewer/cookbook/ )
+
+* A collection of scripts that enhance the basic file viewer to carry out specific tasks
+	* Point cursor at a surface and view its geometry and materials in a pop-up:[Spider Rad Viewer with Pop-Up Info]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-pop-up-info )
+	* Display a slide-show carousel of RAD files: [/RAD Viewer Iframe Carousel]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-iframe-carousel/ )
+	* View all the RAD files in a GitHub repository: [RAD Sample File Gallery]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-sample-file-gallery/ )
+	* More scripts are available in the Cookbook
+
+***
 
 ## Concept / Issues to be addressed
 
@@ -36,15 +49,9 @@ Let's see if we can help do something about helping illustrate the beauties of R
 
 Translate Radiance RAD file types into Three.js views - all building on [Mostapha's efforts]( https://github.com/mostaphaRoudsari/radJSON)
 
-This repo replaces and deprecates the following scripts
-* [RAD to JSON]( https://www.ladybug.tools/spider/#cookbook/rad-to-json/README.md )
-* [Radiance RAD to Three.js]( https://rawgit.com/ladybug-tools/spider/master/#cookbook/rad-to-threejs/README.md )
-* [radJSON Fork]( https://rawgit.com/ladybug-tools/spider/master/#cookbook/rad-json-fork/README.md )
-* [Rad Viewer]( https://www.ladybug.tools/spider/#rad-viewer/README.md )
-
-And we hope that it helps Mostapha here:
-
-* [17th International Radiance Workshop]( http://climate-based-daylighting.com/doku.php?id=radiance2018:programme#workshop_programme )
+* Select and display files very quickly
+* Reduce labor needs and increase engineering insights
+* Easy code you learn from and easily adapt to your specific needs
 
 ### Vision
 
@@ -53,32 +60,31 @@ And we hope that it helps Mostapha here:
 
 ## Features
 
-* Select, load and display Radiance RAD Files
+* Select, open, view and manipulate Radiance RAD Files
 * Open file or files via
 	* Operating system dialog box - single or multiple files
 	* URL - remote or local - supplied by a [location.hash]( https://developer.mozilla.org/en-US/docs/Web/API/Window/location ) update - single files only for now
 * Select files from lists of links to available online [sample RAD files]( file:///D:/Dropbox/Public/git-repos/spider/index.html#radiance-sample-files/README.md )
 * Display RAD files in interactive 3D with rotate, zoom and pan
 * View RAD file data
-	* Native format
+	* Native text format
 	* Translated to JSON
-* Basic look-up table supplies a basic polygon color palette
+* Basic look-up table supplies a basic polygon color palette if no material specified
 * Handles openings in surfaces moderately well
 * Update scene settings: rotation, wireframe mode, edges visibility, surfaces opacity
-
+* Written in plan-vanilla JavaScript
+	* Single dependency: Three.js
+	* No need for a server: run locally or offline
 
 
 ## To do / wish list
 
-
-See: [Spider RAD Viewer Dev]( https://github.com/ladybug-tools/spider-rad-viewer/projects/1 )
-#### Cookbook examples
-
-* 2018-08-28 ~ Theo ~ Add scrolling thumbnail gallery
+See this GitHub Project: [Spider RAD Viewer Dev]( https://github.com/ladybug-tools/spider-rad-viewer/projects/1 )
 
 
 ## Issues
 
+See GitHub issues: [Spider RAD Viewer Issues]( https://github.com/ladybug-tools/spider-rad-viewer/issues )
 
 
 ## Links of Interest
@@ -86,30 +92,26 @@ See: [Spider RAD Viewer Dev]( https://github.com/ladybug-tools/spider-rad-viewer
 Spider
 
 * [Radiance Sample Data Files]( http://www.ladybug.tools/spider/#radiance-sample-files/README.md )
+	* As and when we start receiving more sample files these folders wil be forked into theor own repository
+
 
 Radiance
 
+* [17th International Radiance Workshop]( http://climate-based-daylighting.com/doku.php?id=radiance2018:programme#workshop_programme )
 * [The RADIANCE 5.1 Synthetic Imaging System.pdf]( http://radsite.lbl.gov/radiance/refer/refman.pdf )
 * [Radiance ManPages.pdf]( https://www.radiance-online.org/learning/documentation/manual-pages/pdfs/manpages.pdf )
 
-## Change Log
 
-### 2018-08-30 ~ Theo
+## Notes
 
-Wish list items well underway
+This repo replaces and deprecates the following scripts
+* [RAD to JSON]( https://www.ladybug.tools/spider/#cookbook/rad-to-json/README.md )
+* [Radiance RAD to Three.js]( https://rawgit.com/ladybug-tools/spider/master/#cookbook/rad-to-threejs/README.md )
+* [radJSON Fork]( https://rawgit.com/ladybug-tools/spider/master/#cookbook/rad-json-fork/README.md )
+* [Rad Viewer]( https://www.ladybug.tools/spider/#rad-viewer/README.md )
 
-* 2018-08-28 ~ Theo ~ Add heads-up display for all surfaces
-* 2018-08-28 ~ Theo ~ Add side-bar menu driven gallery
 
-
-### 2018-08-28 ~ Theo
-
-* First commit
-* Add index.html/ read me / license
-* Add RAD viewer folder with R1 / index / read me
-* Add Cookbook folder with examples
-
-And trying to follow Mostapha's suggestions
+Try to follow Mostapha's suggestions
 
 1. Keep the code clean.
 2. Test the code.
