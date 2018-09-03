@@ -23,7 +23,7 @@ Welcome visitors from the [17th International Radiance Workshop]( http://climate
 * Built with plain-vanilla JavaScript using the Three.js library
 * All free and open source on GitHub with an MIT license
 
-### Read Me: [Spider RAD Viewer Cookbook]( https://www.ladybug.tools/spider-rad-viewer/cookbook/ )
+### Read Me: [Spider RAD Viewer Cookbook]( https://www.ladybug.tools/spider-rad-viewer/#cookbook/README.md )
 
 * A collection of scripts that enhance the basic file viewer to carry out specific tasks
 	* Point cursor at a surface and view its geometry and materials in a pop-up:[Spider Rad Viewer with Pop-Up Info]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-pop-up-info )
