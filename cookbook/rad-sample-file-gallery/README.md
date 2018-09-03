@@ -9,7 +9,7 @@ value="You are now in a GitHub web page view - Click this button to view this re
 # [RAD Sample File Gallery Read Me]( #cookbook/rad-sample-file-gallery/README.md )
 
 
-<iframe src=https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-sample-file-gallery/r1/rad-sample-file-gallery.html width=100% height=500px >Iframes are not viewable in GitHub source code views</iframe>
+<iframe src=https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-sample-file-gallery/index.html width=100% height=500px >Iframes are not viewable in GitHub source code views</iframe>
 _<small>RAD Sample File Gallery</small>_
 
 
@@ -20,39 +20,40 @@ Demonstrate that the Spider RAD Viewer open files via a URL set as the text afte
 
 Provide links to many files for testing
 
-## Full Screen: [RAD Sample File Gallery]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-sample-file-gallery/r1/rad-sample-file-gallery.html )
+***
+
+## 2018-09-01: [RAD Sample File Gallery R3]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-sample-file-gallery/r3/rad-sample-file-gallery.html )
+
+* Update to use r3 lib files
+* Update to Three.js R96
+
+
+## 2018-08-29: [RAD Sample File Gallery R1]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-sample-file-gallery/r1/rad-sample-file-gallery.html )
 
 * Add fetch-github-api-tree.js to lib and make more generic
 * Adds links to two galleries
 	* https://www.ladybug.tools/spider/#radiance-sample-files/README.md
 	* https://github.com/rndmStff/radModels
-
+* First commit
 
 ***
 
-## To Do / Wish List
+## To do / wish list
+
+See this GitHub Project: [Spider RAD Viewer Dev]( https://github.com/ladybug-tools/spider-rad-viewer/projects/1 )
 
 
 ## Issues
 
+See GitHub issues: [Spider RAD Viewer Issues]( https://github.com/ladybug-tools/spider-rad-viewer/issues )
+
 
 ## Things you can do using this script
 
-* Click the three bars( 'hamburger menu icon' ) to slide the menu in and out
 * Click the Octocat icon to view or edit the source code on GitHub
 * Click on title to reload
 * Press Control-U/Command-Option-U to view the source code
 * Press Control-Shift-J/Command-Option-J to see if the JavaScript console reports any errors
-
-
-## Links of Interest
-
-
-## Change Log
-
-### 2018-08-29 ~ Theo
-
-* First commit
 
 
 ***

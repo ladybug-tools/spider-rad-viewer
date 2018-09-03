@@ -5,7 +5,7 @@
 <meta name="viewport" content = "width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0" >
 <meta name=description content="View Radiance RAD files in real-time 3D in your browser using the Three.js JavaScript library" >
 <meta name=keywords content="Three.js,WebGL,JavaScript,GitHub,FOSS,3D,STEM" >
-<meta name = "date" content = "2018-09-01" >
+<meta name = "date" content = "2018-09-03" >
 <title>Spider Rad Viewer with Pop-Up Info R3</title>
 <style>
 	/* Copyright 2018 Ladybug Tools authors. MIT License */
@@ -25,7 +25,7 @@
 
 	#divJson, #txtJson, #divRadiance { border: 1px solid #aaa; height: 300px; overflow: auto; resize: both; width: 100%; }
 
-	#popUp { background-color: #eee; border-radius: 8px; display: block; max-width: 220px; padding: 0 5px 10px 5px; opacity: 0.95;
+	#divPopUp { background-color: #eee; border-radius: 8px; display: block; max-width: 220px; padding: 0 5px 10px 5px; opacity: 0.95;
 		right: 1rem; position: absolute; top: 1rem; z-index: 10; };
 
 </style>
@@ -37,7 +37,7 @@
 <script src = "../../../lib/r3/fil-open-file.js" ></script>
 <script src = "../../../lib/r3/rad-to-three.js" ></script>
 <script src = "../../../lib/r3/rad-converter.js" ></script>
-<script src = "../../../lib/r3/pop-info-pop-up.js" ></script>
+<script src = "../../../lib/r3/pop-up.js" ></script>
 
 	<div id = "divMenu" >
 
@@ -94,21 +94,21 @@
 
 	</div>
 
-	<div id = "popUp" >
+	<div id = "divPopUp" >
 
-		<div id=divData ></div>
+		<div id=divPopUpData ></div>
+
 	</div>
 
 <script>
 
 
-
-// Remember to update the release number
-const urlSourceCode = "https://github.com/ladybug-tools/spider-rad-viewer/tree/master/cookbook/rad-viewer-pop-up-info/r1/rad-viewer-pop-up-info.html";
+const urlSourceCode = "https://github.com/ladybug-tools/spider-rad-viewer/tree/master/cookbook/rad-viewer-pop-up-info/";
 
 const urlDefaultFile = 'https://rawgit.com/ladybug-tools/spider/master/radiance-sample-files/sample-file.rad';
 
 init();
+
 
 
 function init() {
@@ -117,7 +117,7 @@ function init() {
 
 	THR.initThreejs();
 
-	FIL.initPopUp();
+	POP.initPopUp();
 
 	window.addEventListener ( 'hashchange', FIL.onHashChange, false );
 
@@ -143,8 +143,6 @@ function setTitle( target ) {
 	`;
 
 }
-
-
 
 </script>
 </body>
