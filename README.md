@@ -18,10 +18,10 @@ Welcome visitors from the [17th International Radiance Workshop]( http://climate
 
 ### Full Screen: [Spider RAD Viewer]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/ )
 
-* A basic Radiance RAD file viewer
+* A basic [Radiance]( https://www.radiance-online.org/ ) RAD file viewer
 * Open, display and manipulate RAD files in real-time 3D in your browser
-* Built with plain-vanilla JavaScript using the Three.js library
-* All free and open source on GitHub with an MIT license
+* Built with plain-vanilla JavaScript using the [Three.js]( https://threejs.org ) library
+* All free and open source on [GitHub]( https://github.com ) with an MIT license
 
 ### Read Me: [Spider RAD Viewer Cookbook]( https://www.ladybug.tools/spider-rad-viewer/#cookbook/README.md )
 
@@ -35,13 +35,13 @@ Welcome visitors from the [17th International Radiance Workshop]( http://climate
 
 ## Concept / Issues to be addressed
 
-View RAD files produced by Radiance scripts in interactive 3D in your browser
-
-And provide new-user support for [Radiance Online]( https://www.radiance-online.org/ )
-
 Radiance Software may be used to produce stunning images with engaging effects. Interestingly the [The RADIANCE 5.1 Synthetic Imaging System.pdf]( http://radsite.lbl.gov/radiance/refer/refman.pdf ) contains a single diagram and no images in its twenty pages. The [Radiance ManPages.pdf]( https://www.radiance-online.org/learning/documentation/manual-pages/pdfs/manpages.pdf ) contains zero images within its **227** pages.
 
-Let's see if we can help do something about helping illustrate the beauties of Radiance software
+What can we do can to help illustrate the beauties of Radiance software?
+
+Here is a small start: Scripts to view RAD files produced by Radiance scripts in interactive 3D in your browser
+
+And provide new-user support for [Radiance Online]( https://www.radiance-online.org/ )
 
 ***
 
@@ -60,7 +60,7 @@ Translate Radiance RAD file types into Three.js views - all building on [Mostaph
 
 ## Features
 
-* Select, open, view and manipulate Radiance RAD Files
+* Select, open, view and manipulate [Radiance]( https://www.radiance-online.org/ ) RAD Files
 * Open file or files via
 	* Operating system dialog box - single or multiple files
 	* URL - remote or local - supplied by a [location.hash]( https://developer.mozilla.org/en-US/docs/Web/API/Window/location ) update - single files only for now
@@ -75,6 +75,18 @@ Translate Radiance RAD file types into Three.js views - all building on [Mostaph
 * Written in plan-vanilla JavaScript
 	* Single dependency: Three.js
 	* No need for a server: run locally or offline
+
+Cookbook sample files add scripts with these extra features
+* Select files to view from lists of links to available online sample RAD files
+* Mouseover a surface to display details of its geometry and material in a pop-up
+* View RAD files in an iframe embedded in an HTML file or a Markdown file
+* View RAD files in a slide-show carousel
+
+All scripts are:
+* All free and open source on [GitHub]( https://github.com ) with an MIT license
+* [Plain-vanilla JavaScript]( http://vanilla-js.com/ ) with [Three.js]( https://threejs.org ) as the only dependency
+* Written in a very beginner-friendly style
+*  Run offline and locally / No server or localhost required
 
 
 ## To do / wish list
