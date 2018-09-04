@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8" >
 <meta name="viewport" content = "width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0" >
-<meta name=description content="View Radiance RAD files in real-time 3D in your browser using the Three.js JavaScript library" >
+<meta name=description content="Viewe Radiance RAD files in real-time 3D in your browser using the Three.js JavaScript library" >
 <meta name=keywords content="Three.js,WebGL,JavaScript,GitHub,FOSS,3D,STEM" >
-<meta name = "date" content = "2018-09-03" >
-<title>Spider Rad Viewer with Pop-Up Info R3</title>
+<meta name = "date" content = "2018-08-28" >
+<title>Spider Rad Viewer R1</title>
 <style>
 	/* Copyright 2018 Ladybug Tools authors. MIT License */
 
@@ -22,11 +22,10 @@
 	input[ type = range ]::-webkit-slider-thumb { -webkit-appearance: none; background-color: #888; height: 20px; width: 10px; }
 
 	#divMenu { background-color: #eee; max-height: 95%; margin: 1rem; width: 18rem; overflow: auto; padding: 1rem; position: absolute; resize: both; }
+/*
+	#divLog, #divJson, #txtJson, #divRadiance { border: 1px solid #aaa; height: 300px; overflow: auto; resize: both; width: 100%; }
+*/
 
-	#divJson, #txtJson, #divRadiance { border: 1px solid #aaa; height: 300px; overflow: auto; resize: both; width: 100%; }
-
-	#divPopUp { background-color: #eee; border-radius: 8px; display: block; max-width: 220px; padding: 0 5px 10px 5px; opacity: 0.95;
-		right: 1rem; position: absolute; top: 1rem; z-index: 10; };
 
 </style>
 </head>
@@ -34,113 +33,54 @@
 <script src = "https://cdn.rawgit.com/mrdoob/three.js/r96/build/three.min.js" ></script>
 <script src = "https://cdn.rawgit.com/mrdoob/three.js/r96/examples/js/controls/TrackballControls.js" ></script>
 <script src = "../../../lib/r3/thr-threejs.js" ></script>
-<script src = "../../../lib/r3/fil-open-files.js" ></script>
 <script src = "../../../lib/r3/rad-to-three.js" ></script>
 <script src = "../../../lib/r3/rad-converter.js" ></script>
-<script src = "../../../lib/r3/pop-up.js" ></script>
+<script src = "../../../lib/r3/fil-open-files.js" ></script>
 
 	<div id = "divMenu" >
-
-		<div id = "divTitle" ></div>
-
-		<p>
-			Load JSON:
-			<input type=file id=inpOpenFile onchange=FIL.inpOpenFiles(this.files); multiple accept=".rad,.mat" >
-		</p>
-
-		<details>
-
-			<summary>File data</summary>
-
-			<div id = "divLog" ></div>
-
-			<!-- div and text area show errors differently -->
-			<!--
-				<p>JSON div </p>
-				<div id=divJson ></div>
-			-->
-
-			<p>JSON textarea</p>
-			<textarea id="txtJson" ></textarea>
-
-			<p>Radiance data</p>
-			<div id="divRadiance" ></div>
-
-		</details>
-
 
 		<details>
 
 			<summary>Settings</summary>
 
 			<p>
-				<button onclick="THR.sceneRotation = THR.sceneRotation === 1 ? 0 : 1;" >rotation</button>
+				<button onclick="THR.sceneRotation=THRsceneRotation === 1 ? 0 : 1;" >rotation</button>
 			</p>
 
 			<p>
-				<button onclick=THR.toggleWireframe(); >wireframe</button>
+				<button onclick=toggleWireframe(); >wireframe</button>
 
 				<button onclick=rad.edges.visible=!rad.edges.visible; >toggle edges</button>
 			</p>
 
 			<div title="building opacity: 0 to 100%" >Opacity
 				<output id=outOpacity class=floatRight >85%</output><br>
-				<input type="range" id="rngOpacity" min=0 max=100 step=1 value=85 oninput=THR.updateOpacity(); >
+				<input type="range" id="rngOpacity" min=0 max=100 step=1 value=85 oninput=updateOpacity(); >
 			</div>
 
-			<p><button onclick=THR.zoomObjectBoundingSphere(rad.edges);>zoom all</button></p>
+			<p><button onclick=zoomObjectBoundingSphere(rad.edges);>zoom all</button></p>
+
+			<div id="divLog" ></div>
 
 		</details>
-
-	</div>
-
-	<div id = "divPopUp" >
-
-		<div id=divPopUpData ></div>
 
 	</div>
 
 <script>
 
 
-const urlSourceCode = "https://github.com/ladybug-tools/spider-rad-viewer/tree/master/cookbook/rad-viewer-pop-up-info/";
-
 const urlDefaultFile = 'https://rawgit.com/ladybug-tools/spider/master/radiance-sample-files/sample-file.rad';
 
 init();
 
 
-
 function init() {
 
-	setTitle( divTitle );
-
 	THR.initThreejs();
-
-	POP.initPopUp();
 
 	window.addEventListener ( 'hashchange', FIL.onHashChange, false );
 
 	if ( !location.hash ) { location.hash = urlDefaultFile; } else { FIL.onHashChange(); }
-
-}
-
-
-function setTitle( target ) {
-
-	target.innerHTML =
-	`
-		<h2>
-			<a href=${ urlSourceCode } target="_top" title = "Source code on GitHub" >
-				<img src="https://status.github.com/images/invertocat.png" height=18 >
-			</a>
-			<a href = "" title = "Click to reload this page" >${ document.title }</a>
-		</h2>
-
-		<p>
-			${ document.head.querySelector( '[name=description]' ).content }
-		</p>
-	`;
 
 }
 

@@ -1,45 +1,46 @@
 
 <span style=display:none; >[You are now in a GitHub source code view - click this link to view Read Me file as a web page]( https://www.ladybug.tools/spider-rad-viewer/#lib/README.md "View file as a web page." ) </span>
 
-<div><input type=button class = "btn btn-secondary btn-sm" onclick=window.location.href="https://www.ladybug.tools/spider-rad-viewer/blob/master/lib/README.md"
+<div><input type=button class = "btn btn-secondary btn-sm" onclick=window.location.href="https://github.com/ladybug-tools/spider-rad-viewer/tree/master/lib"
 value="You are now in a GitHub web page view - Click this button to view this read me file as source code" ></div>
 
 <br>
 
 # [Lib Read Me]( #lib/README.md )
 
-<!--
-<iframe src=https://www.ladybug.tools/spider-rad-viewer/lib/lib.html width=100% height=500px >Iframes are not viewable in GitHub source code views</iframe>
-_<small>ZZZZZ</small>_
-
-## Full Screen: [ZZZZZ]( https://www.ladybug.tools/spider-rad-viewer/lib/lib.html )
--->
 
 
-## Concept
+### Concept
 
 This folder holds the JavaScript files used by the various HTML files in this repository
 
-## To Do / Wish List
+
+### To do / wish list
+
+See this GitHub Project: [Spider RAD Viewer Dev]( https://github.com/ladybug-tools/spider-rad-viewer/projects/1 )
 
 
-## Issues
+### Issues
+
+See GitHub issues: [Spider RAD Viewer Issues]( https://github.com/ladybug-tools/spider-rad-viewer/issues )
 
 
-## Things you can do using this script
-
-* Click the Octocat icon to view or edit the source code on GitHub
-* Click on title to reload
-* Press Control-U/Command-Option-U to view the source code
-* Press Control-Shift-J/Command-Option-J to see if the JavaScript console reports any errors
 
 
-## Links of Interest
+### Links of Interest
+
+[What is the "/lib" filder in Linux ?]( https://www.linuxnix.com/linux-directory-structure-lib-explained/ )
+
+> The lib folder is a library files directory which contains all helpful library files used by the system. In simple terms these are helpful files which are used by an application or a command or a process for their proper execution.
 
 
-## Change Log
+### Change Log
 
-### 2018-08-30 ~ Theo
+#### 2018-09-03 ~ Theo
+
+* Read me updates
+
+#### 2018-08-30 ~ Theo
 
 * First commit of this read me
 
