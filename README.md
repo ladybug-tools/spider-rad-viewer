@@ -26,8 +26,8 @@ Welcome visitors from the [17th International Radiance Workshop]( http://climate
 ### Read Me: [Spider RAD Viewer Cookbook]( https://www.ladybug.tools/spider-rad-viewer/#cookbook/README.md )
 
 * A collection of scripts that enhance the basic file viewer to carry out specific tasks
-	* Point cursor at a surface and view its geometry and materials in a pop-up:[Spider Rad Viewer with Pop-Up Info]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-pop-up-info )
-	* Display a slide-show carousel of RAD files: [/RAD Viewer Iframe Carousel]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-iframe-carousel/ )
+	* Point cursor at a surface and view its geometry and materials in a pop-up: [Spider Rad Viewer with Pop-Up Info]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-pop-up-info )
+	* Display a slide-show carousel of RAD files: [RAD Viewer Iframe Carousel]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-iframe-carousel/ )
 	* View all the RAD files in a GitHub repository: [RAD Sample File Gallery]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-sample-file-gallery/ )
 	* More scripts are available in the Cookbook
 
