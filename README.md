@@ -50,8 +50,9 @@ And provide new-user support for [Radiance Online]( https://www.radiance-online.
 Translate Radiance RAD file types into Three.js views - all building on [Mostapha's efforts]( https://github.com/mostaphaRoudsari/radJSON)
 
 * Select and display files very quickly
+* Access anywhere: computer/tablet/phone
 * Reduce labor needs and increase engineering insights
-* Easy code you learn from and easily adapt to your specific needs
+* Easy code you learn from and can easily adapt to your specific needs
 
 ### Vision
 
