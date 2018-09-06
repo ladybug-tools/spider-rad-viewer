@@ -81,15 +81,17 @@ init();
 
 function init() {
 
-	divTitle.innerHTML = getTitle();
-
-	THR.initThreejs();
 
 	divFileOpen.innerHTML = FIL.getFileOpen( divFileData );
 
 	divSettings.innerHTML = SET.getSettings();
 
 	if ( !location.hash ) { location.hash = urlDefaultFile; } else { FIL.onHashChange(); }
+	divTitle.innerHTML = getTitle();
+
+	THR.getThreejs();
+
+	THR.animate();
 
 }
 

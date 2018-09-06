@@ -18,7 +18,15 @@ The following sections - newest on top - are a show and tell of the changes
 
 ***
 
-## 2018-09-01 ~ Full Screen: [Spider RAD Viewer R3]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r3/rad-viewer.html )
+## 2018-09-05 ~ Development version: [Spider RAD Viewer R4]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r4/rad-viewer.html )
+
+
+* File Open HTML pulled into JavaScript file / greater abstraction
+* New JavaScript /ib file: set-settings.js pulls in all html from parent file / greater abstraction
+* Tweaking UI a bit so more file data is visible on load.
+
+
+## 2018-09-01 ~ Full screen stable: [Spider RAD Viewer R3]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r3/rad-viewer.html )
 
 <iframe src=https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r3/rad-viewer.html  width=100% height=500px >Iframes are not viewable in GitHub source code view<</iframe>
 
