@@ -36,6 +36,10 @@ See GitHub issues: [Spider RAD Viewer Issues]( https://github.com/ladybug-tools/
 
 ### Change Log
 
+#### 2018-09-06 ~ Theo
+
+* set default camera position to nicer start position
+
 #### 2018-09-03 ~ Theo
 
 * Read me updates

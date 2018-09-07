@@ -5,8 +5,8 @@
 <meta name = "viewport" content= "width=device-width, initial-scale=1">
 <meta name = "description" content = "Simple HTML Web page carousel to view RAD files within an Iframe" >
 <meta name = "keywords" content = "JavaScript,GitHub,FOSS,3D,STEM" >
-<meta name = "date" content = "2018-09-03" >
-<title>RAD Viewer Iframe Carousel R1.1 </title>
+<meta name = "date" content = "2018-09-06" >
+<title>RAD Viewer Iframe Carousel R1.2 </title>
 <style>
 
 	body { font: 12pt monospace; margin: 0 auto; max-width: 800px; }
@@ -51,7 +51,8 @@
 		{ fileName: 'gjward1/black_chair.rad', title: 'Black Chair' },
 		{ fileName: 'gjward1/door_closer.rad', title: 'Door Closer' },
 		{ fileName: 'gjward1/toilet.rad', title: 'Toiet' },
-		{ fileName: 'various-sources/mostapha-forest-sphere.rad', title: 'forest sphere' }
+		{ fileName: 'various-sources/mostapha-forest-sphere.rad', title: 'forest sphere' },
+		{ fileName: 'various-sources/stool.rad', title: 'stool' }
 
 	];
 
@@ -59,7 +60,9 @@
 	let timer;
 	let index = Math.floor( Math.random() * sites.length );
 
-	const urlCarousel = "https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-in-iframe/r5/rad-viewer-in-iframe-child.html";
+	const urlCarousel = "../../rad-viewer-in-iframe/r5/rad-viewer-in-iframe-child.html";
+
+	//const urlCarousel = "https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-in-iframe/r5/rad-viewer-in-iframe-child.html";
 
 	init();
 
