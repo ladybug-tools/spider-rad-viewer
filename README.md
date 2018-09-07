@@ -61,21 +61,41 @@ Translate Radiance RAD file types into Three.js views - all building on [Mostaph
 
 ## Features
 
-* Select, open, view and manipulate [Radiance]( https://www.radiance-online.org/ ) RAD Files
-* Open file or files via
+One liner
+* Select, open, view and manipulate [Radiance]( https://www.radiance-online.org/ ) RAD Files with interactive 3D on any device
+
+Selecting files
+* Open file or files locally or remotely via
 	* Operating system dialog box - single or multiple files
 	* URL - remote or local - supplied by a [location.hash]( https://developer.mozilla.org/en-US/docs/Web/API/Window/location ) update - single files only for now
-* Select files from lists of links to available online [sample RAD files]( file:///D:/Dropbox/Public/git-repos/spider/index.html#radiance-sample-files/README.md )
+	* Drag and drop (work-in progress)
+* Select files from lists of links to available online [sample RAD files](
+file:///D:/Dropbox/Public/git-repos/spider/index.html#radiance-sample-files/README.md )
+
+Viewing files as models
 * Display RAD files in interactive 3D with rotate, zoom and pan
-* View RAD file data
+* Update scene settings: rotation, wireframe mode, edges visibility, surfaces opacity
+* UX intended to work on computer, tablet or mobile device (work-in-progress)
+
+Viewing files as data
+* View RAD file data in the menu
 	* Native text format
 	* Translated to JSON
+* Highlight individual elements visually and view their numeric parameters in a pop-up
+	* Shows use of Three.js Raycaster and Object3D.traverse
+
+Parsing file data
+* Uses converter from [github.com/mostaphaRoudsari/radJSON]( https://github.com/mostaphaRoudsari/radJSON )
+	* Outlines a possible schema
 * Basic look-up table supplies a basic polygon color palette if no material specified
 * Handles openings in surfaces moderately well
-* Update scene settings: rotation, wireframe mode, edges visibility, surfaces opacity
-* Written in plan-vanilla JavaScript
-	* Single dependency: Three.js
-	* No need for a server: run locally or offline
+* Files under a megabyte in size handled in a speedy fashion / Larger files are a work-in-progress
+
+Written in plan-vanilla JavaScript
+* All free and open source on [GitHub]( https://github.com ) with an MIT license
+* [Plain-vanilla JavaScript]( http://vanilla-js.com/ ) with [Three.js]( https://threejs.org ) as the only dependency
+* Written in a very beginner-friendly style
+*  Run offline and locally / No server or localhost required
 
 Cookbook sample files add scripts with these extra features
 * Select files to view from lists of links to available online sample RAD files
@@ -83,11 +103,19 @@ Cookbook sample files add scripts with these extra features
 * View RAD files in an iframe embedded in an HTML file or a Markdown file
 * View RAD files in a slide-show carousel
 
-All scripts are:
-* All free and open source on [GitHub]( https://github.com ) with an MIT license
-* [Plain-vanilla JavaScript]( http://vanilla-js.com/ ) with [Three.js]( https://threejs.org ) as the only dependency
-* Written in a very beginner-friendly style
-*  Run offline and locally / No server or localhost required
+
+Use cases
+* View large numbers of RAD files quickly and easily on any device
+* Locate  for individual geometry elements visually and identify numeric parameters instantly
+
+Possible future uses
+
+* Part of a system for extracting data and creating RAD files from other file types such as: gbXML, IDF, OSM and glTF
+* Display large numbers of RAD files selected at user run-time in a single 3D space
+	* To enable speedy visual compare and contrast
+* Speed up some 'housekeeping' operations for numbers of RAD files by enabling GPU access with lower skill-level requirements
+
+
 
 
 ## To do / wish list
