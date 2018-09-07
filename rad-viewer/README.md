@@ -18,6 +18,22 @@ The following sections - newest on top - are a show and tell of the changes
 
 ***
 
+## 2018-09-05 ~ Development version: [Spider RAD Viewer R5]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r5/rad-viewer.html )
+
+This release is based on a change of direction. The previous releases are based on the premise of creating the minimum viewer to open and display a single RAD file. All extra features are made available via cookbook sample files.
+
+The problem with this setup is that it makes testing more complicated. For example there is no easy way to check the pop-up display against a large number of sample files.
+
+The current release combines the minimum viewer with the pop-up display and one of the sample file menus.
+
+Other enhancements include:
+
+* The 'File open' panel nows accepts drag and drop URLs ( but not files yet )
+* 'thr-threejs.js' has had the utilities it includes split out into 'thru-threejs-utilities.js'
+	* The single function in 'set-settings.js' was also added and the script file discarded
+	* Part of a process to standardize code across a number of Spider scripts
+
+
 ## 2018-09-05 ~ Development version: [Spider RAD Viewer R4]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r4/rad-viewer.html )
 
 
