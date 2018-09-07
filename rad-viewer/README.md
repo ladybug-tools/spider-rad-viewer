@@ -18,6 +18,8 @@ The following sections - newest on top - are a show and tell of the changes
 
 ***
 
+<iframe src=https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r5/rad-viewer.html  width=100% height=500px >Iframes are not viewable in GitHub source code view<</iframe>
+
 ## 2018-09-05 ~ Development version: [Spider RAD Viewer R5]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r5/rad-viewer.html )
 
 This release is based on a change of direction. The previous releases are based on the premise of creating the minimum viewer to open and display a single RAD file. All extra features are made available via cookbook sample files.
@@ -33,8 +35,10 @@ Other enhancements include:
 	* The single function in 'set-settings.js' was also added and the script file discarded
 	* Part of a process to standardize code across a number of Spider scripts
 
+***
 
 ## 2018-09-05 ~ Development version: [Spider RAD Viewer R4]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r4/rad-viewer.html )
+
 
 
 * File Open HTML pulled into JavaScript file / greater abstraction
@@ -42,9 +46,13 @@ Other enhancements include:
 * Tweaking UI a bit so more file data is visible on load.
 
 
+***
+
 ## 2018-09-01 ~ Full screen stable: [Spider RAD Viewer R3]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r3/rad-viewer.html )
 
+<!--
 <iframe src=https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r3/rad-viewer.html  width=100% height=500px >Iframes are not viewable in GitHub source code view<</iframe>
+-->
 
 * Better file opening
 * More name-spacing

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en" >
+<head>
+<meta charset="utf-8" >
+<meta name="viewport" content = "width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0" >
+<meta name=description content="Viewe Radiance RAD files in real-time 3D in your browser using the Three.js JavaScript library" >
+<meta name=keywords content="Three.js,WebGL,JavaScript,GitHub,FOSS,3D,STEM" >
+<meta name = "date" content = "2018-08-28" >
+<title>Spider Rad Viewer R1</title>
+<style>
+	/* Copyright 2018 Ladybug Tools authors. MIT License */
+
+	body, html { font: 11pt monospace; height: 100%; margin: 0; overflow: hidden; }
+	a { color: crimson; text-decoration: none; }
+	a:hover, a:focus { background-color: yellow; color: #aaa; text-decoration: underline }
+
+	button { background-color: #ddd; border: none; color: #322; cursor: pointer; padding: 3px 5px; }
+	button:hover { background: #ccc; color: #fff }
+
+	input[ type = range ] { -webkit-appearance: none; -moz-appearance: none; background-color: #ddd; width: 90%; }
+	input[ type = range ]::-moz-range-thumb { background-color: #888; border-radius: 0; width: 10px; }
+	input[ type = range ]::-webkit-slider-thumb { -webkit-appearance: none; background-color: #888; height: 20px; width: 10px; }
+
+	#divMenu { background-color: #eee; max-height: 95%; margin: 1rem; width: 18rem; overflow: auto; padding: 1rem; position: absolute; resize: both; }
+/*
+	#divLog, #divJson, #txtJson, #divRadiance { border: 1px solid #aaa; height: 300px; overflow: auto; resize: both; width: 100%; }
+*/
+
+
+</style>
+</head>
+<body>
+<script src = "https://cdn.rawgit.com/mrdoob/three.js/r96/build/three.min.js" ></script>
+<script src = "https://cdn.rawgit.com/mrdoob/three.js/r96/examples/js/controls/TrackballControls.js" ></script>
+<script src = "../../../lib/r5/thr-threejs.js" ></script>
+<script src = "../../../lib/r5/thru-threejs-utilities.js" ></script>
+<script src = "../../../lib/r5/rad-to-three.js" ></script>
+<script src = "../../../lib/r5/rad-converter.js" ></script>
+<script src = "../../../lib/r5/fil-open-files.js" ></script>
+
+	<div id = "divMenu" >
+
+		<details>
+
+			<summary>Settings</summary>
+
+			<div id = "divSettings"></div>
+
+			<div id = "divLog"></div>
+
+		</details>
+
+	</div>
+
+<script>
+
+
+const urlDefaultFile = 'https://rawgit.com/ladybug-tools/spider/master/radiance-sample-files/sample-file.rad';
+
+init();
+
+
+FIL.divFileData = divLog;
+
+function init() {
+
+	THR.getThreejs();
+
+	divSettings.innerHTML = THRU.getSettings();
+
+	window.addEventListener ( 'hashchange', FIL.onHashChange, false );
+
+	if ( !location.hash ) { location.hash = urlDefaultFile; } else { FIL.onHashChange(); }
+
+	THR.animate();
+
+}
+
+</script>
+</body>
+</html>
