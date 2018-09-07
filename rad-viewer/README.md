@@ -39,7 +39,7 @@ Other enhancements include:
 
 ## 2018-09-05 ~ Development version: [Spider RAD Viewer R4]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r4/rad-viewer.html )
 
-
+[download source code]( https://github.com/ladybug-tools/spider-rad-viewer/releases/tag/v4.0 )
 
 * File Open HTML pulled into JavaScript file / greater abstraction
 * New JavaScript /ib file: set-settings.js pulls in all html from parent file / greater abstraction
@@ -53,6 +53,9 @@ Other enhancements include:
 <!--
 <iframe src=https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r3/rad-viewer.html  width=100% height=500px >Iframes are not viewable in GitHub source code view<</iframe>
 -->
+
+[download source code]( https://github.com/ladybug-tools/spider-rad-viewer/releases/tag/v3.2
+ )
 
 * Better file opening
 * More name-spacing
