@@ -18,7 +18,16 @@ The following sections - newest on top - are a show and tell of the changes
 
 ***
 
-<iframe src=https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r5/rad-viewer.html  width=100% height=500px >Iframes are not viewable in GitHub source code view<</iframe>
+<iframe src=https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r6/rad-viewer.html  width=100% height=500px >Iframes are not viewable in GitHub source code view<</iframe>
+
+## 2018-09-05 ~ Development version: [Spider RAD Viewer R5]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r5/rad-viewer.html )
+
+* Handles multiple drag and drop files
+* Handles URLs that contain links to multiple files
+
+Coming next: opening RAD files that contain links to other files
+
+***
 
 ## 2018-09-05 ~ Development version: [Spider RAD Viewer R5]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r5/rad-viewer.html )
 
