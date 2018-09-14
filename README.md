@@ -49,7 +49,7 @@ And provide new-user support for [Radiance Online]( https://www.radiance-online.
 
 Translate Radiance RAD file types into Three.js views - all building on [Mostapha's efforts]( https://github.com/mostaphaRoudsari/radJSON)
 
-* Select and display files very quickly
+* Select and display RAD files very quickly
 * Access anywhere: computer/tablet/phone
 * Reduce labor needs and increase engineering insights
 * Easy code you learn from and can easily adapt to your specific needs
@@ -86,7 +86,7 @@ Viewing files as data
 
 Parsing file data
 * Uses converter from [github.com/mostaphaRoudsari/radJSON]( https://github.com/mostaphaRoudsari/radJSON )
-	* Outlines a possible schema
+	* Outlines a possible JSON schema
 * Basic look-up table supplies a basic polygon color palette if no material specified
 * Handles openings in surfaces moderately well
 * Files under a megabyte in size handled in a speedy fashion / Larger files are a work-in-progress
@@ -95,7 +95,8 @@ Written in plan-vanilla JavaScript
 * All free and open source on [GitHub]( https://github.com ) with an MIT license
 * [Plain-vanilla JavaScript]( http://vanilla-js.com/ ) with [Three.js]( https://threejs.org ) as the only dependency
 * Written in a very beginner-friendly style
-*  Run offline and locally / No server or localhost required
+* Run offline and locally / No server or localhost required
+* Follows the code style guidelines of the [Three.js Examples]( https://threejs.org/examples/ )
 
 Cookbook sample files add scripts with these extra features
 * Select files to view from lists of links to available online sample RAD files
@@ -132,8 +133,8 @@ See GitHub issues: [Spider RAD Viewer Issues]( https://github.com/ladybug-tools/
 
 Spider
 
-* [Radiance Sample Data Files]( http://www.ladybug.tools/spider/#radiance-sample-files/README.md )
-	* As and when we start receiving more sample files these folders wil be forked into theor own repository
+* [Spider RAD Resources Read Me]( http://www.ladybug.tools/spider/#radiance-sample-files/README.md )
+	* As and when we start receiving more sample files these folders wil be forked into their own repository
 
 
 Radiance
