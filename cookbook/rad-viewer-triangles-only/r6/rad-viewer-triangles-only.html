@@ -4,7 +4,7 @@
 <meta charset="utf-8" >
 <meta name="viewport" content = "width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0" >
 <meta name=description content="View Radiance RAD files in real-time 3D in your browser using the Three.js JavaScript library" >
-<meta name=keywords content="Three.js,WebGL,JavaScript,GitHub,FOSS,3D,STEM" >
+<meta name=keywords content="Radiance,Three.js,WebGL,JavaScript,GitHub,FOSS,3D,STEM" >
 <meta name = "date" content = "2018-09-13" >
 <title>Spider Rad Viewer Triangles Only R6</title>
 <style>
@@ -32,7 +32,7 @@
 </head>
 <body>
 <script src = "https://cdn.rawgit.com/mrdoob/three.js/r96/build/three.min.js" ></script>
-<script src = "https://cdn.rawgit.com/mrdoob/three.js/r96/examples/js/controls/TrackballControls.js" ></script>
+<script src = "https://cdn.rawgit.com/mrdoob/three.js/r96/examples/js/controls/OrbitControls.js" ></script>
 <script src = "../../../lib/r6/fil-open-files.js" ></script>
 <script src = "../../../lib/r6/thr-threejs.js" ></script>
 <script src = "../../../lib/r6/thru-threejs-utilities.js" ></script>
@@ -96,7 +96,7 @@
 
 <script>
 
-const urlSourceCode = "https://github.com/ladybug-tools/spider-rad-viewer/tree/master/cookbook/rad-viewer/basic/";
+const urlSourceCode = "https://github.com/ladybug-tools/spider-rad-viewer/tree/master/cookbook/rad-viewer-triangles-only/";
 
 const urlDefaultFile = 'https://rawgit.com/ladybug-tools/spider/master/radiance-sample-files/sample-file.rad';
 //const urlDefaultFile = '../170315_shadingON_DA_autumn.rad'

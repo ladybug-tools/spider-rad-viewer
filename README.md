@@ -18,10 +18,12 @@ Welcome visitors from the [17th International Radiance Workshop]( http://climate
 
 ### Full Screen: [Spider RAD Viewer]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/ ) &mdash; [Read Me]( https://www.ladybug.tools/spider-rad-viewer/index.html#rad-viewer/README.md ) &mdash; [Download scripts]( https://github.com/ladybug-tools/spider-rad-viewer/releases )
 
-* A basic [Radiance]( https://www.radiance-online.org/ ) RAD file viewer
+* A [Radiance]( https://www.radiance-online.org/ ) RAD file viewer with a minimal feature set
+	* Open fileas via an API. fil dialog or drag and drop
+	* View surfaces data in a pop-up
 * Open, display and manipulate RAD files in real-time 3D in your browser
 * Built with plain-vanilla JavaScript using the [Three.js]( https://threejs.org ) library
-* All free and open source on [GitHub]( https://github.com ) with an MIT license
+* All free and open source softare hosted on [GitHub]( https://github.com ) with an MIT license
 
 ### Read Me: [Spider RAD Viewer Cookbook]( https://www.ladybug.tools/spider-rad-viewer/#cookbook/README.md )
 
@@ -29,6 +31,9 @@ Welcome visitors from the [17th International Radiance Workshop]( http://climate
 	* Point cursor at a surface and view its geometry and materials in a pop-up: [Spider Rad Viewer with Pop-Up Info]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-pop-up-info )
 	* Display a slide-show carousel of RAD files: [RAD Viewer Iframe Carousel]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-iframe-carousel/ )
 	* View all the RAD files in a GitHub repository: [RAD Sample File Gallery]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-sample-file-gallery/ )
+	* A very basic script with a minimal feature set: [RAD Viewer Basic]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-basic/ )
+		* Use this script to start building your own modules
+	* An exprimental cript for loading mult-megabyte files: [RAD Viewer Triangles Only]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-triangles-only/ )
 	* More scripts are available in the Cookbook
 
 ***
