@@ -31,10 +31,10 @@ rad.colors = {
 	generic_floor: 'brown',
 	generic_roof: 'maroon',
 
-	Exterior_Window: 0x000000, //'black',
-	Exterior_Wall: 0xFFB400, //'gray',
-	Exterior_Floor: 0x40B4FF, // 'brown',
-	Exterior_Roof: 0x800000, // 'maroon',
+	Exterior_Window: 'black',
+	Exterior_Wall: 'gray',
+	Exterior_Floor: 'brown',
+	Exterior_Roof: 'maroon',
 
 	Dark_Wood: 'brown',
 	Ceiling: 'azure',
@@ -47,39 +47,13 @@ rad.colors = {
 
 };
 
-rad.colorKeys = Object.keys( rad.colors );
-
-
-let mesh;
-const color = new THREE.Color();
-
 let material = new THREE.MeshBasicMaterial( { color: 'gray', opacity: rad.opacity, side: 2, transparent: true, vertexColors: THREE.VertexColors } );
-
-
 
 // called by FIL.callbackRequestFile and FIL.inpOpenFiles
 
-
 rad.addDataFile = function( text ) {
 
-	//THR.scene.remove( mesh );
-
-	rad.json = rad.radToJson( text );
-
-	mods = rad.json.surfaces.filter( item => rad.colorKeys.indexOf( item.modifier ) === -1 );
-
-	for ( surface of rad.json.surfaces ) {
-
-		if ( rad.colorKeys.indexOf( surface.modifier ) === -1 ) {
-
-			rad.colors[ surface.modifier ] = Math.random() * 0xffffff;
-			rad.colorKeys.push( surface.modifier );
-			console.log( 'mods', surface.modifier );
-
-		}
-
-	}
-
+	json = rad.radToJson( text );
 
 	rad.setThreeJsWindowUpdate();
 
@@ -115,9 +89,11 @@ rad.radToJson = function( radText ) {
 
 
 
-rad.setThreeJsWindowUpdate = function( target = divMsg ) {
+rad.setThreeJsWindowUpdate = function( target = undefined ) {
 
-	//console.log( 'rad.meshes', rad.meshes );
+	THR.scene.remove( rad.meshes, rad.edges );
+	rad.meshes = new THREE.Group();
+	rad.edges = new THREE.Group();
 
 	if ( ! rad.json.surfaces.length ) {
 
@@ -127,14 +103,9 @@ rad.setThreeJsWindowUpdate = function( target = divMsg ) {
 
 	}
 
-	rad.vertices = [];
-	rad.surfaceColors = [];
-	//rad.geom = new THREE.Geometry();
-	rad.count3 = 0;
+	rad.geom = new THREE.Geometry();
+	rad.count3 = 0
 	rad.count4 = 0;
-	rad.countGeo = 0;
-
-	const color = new THREE.Color();
 
 	for ( let geometry of rad.json.surfaces ) {
 
@@ -147,40 +118,29 @@ rad.setThreeJsWindowUpdate = function( target = divMsg ) {
 
 			default:
 
-				rad.countGeo++;
-				//console.log( 'oops', geometry );
+				console.log( 'oops', geometry );
 
 		}
 
 	}
 
 
-	/*
 	rad.geom.computeFaceNormals();
 	rad.geom.computeVertexNormals();
+
 	rad.geom.colorsNeedUpdate = true;
+
 	rad.geomMaterial = new THREE.MeshBasicMaterial( { color: 'darkgray', opacity: rad.opacity, side: 2, transparent: true } );
-	*/
 
+	mesh = new THREE.Mesh( rad.geom, rad.geomMaterial );
+	rad.meshes.add( mesh );
 
-	const geometry = new THREE.BufferGeometry();
-	geometry.addAttribute( 'position', new THREE.Float32BufferAttribute( rad.vertices, 3 ) );
-	geometry.addAttribute( 'color', new THREE.Float32BufferAttribute( rad.surfaceColors, 3 ) );
-	geometry.computeVertexNormals();
-
-	THR.scene.remove( rad.meshes );
-
-	material = new THREE.MeshPhongMaterial( { color: 0xaaaaaa, side: 2, vertexColors: THREE.VertexColors } );
-	rad.meshes = new THREE.Mesh( geometry, material );
-	rad.meshes.name = rad.name;
-
-	THR.scene.add( rad.meshes );
+	THR.scene.add( rad.meshes, rad.edges );
 
 	THRU.zoomObjectBoundingSphere( rad.meshes );
 
-	console.log( 'rad.count4', rad.count4 );
-	console.log( 'rad.count3', rad.count3 );
-	console.log( 'rad.countGeo', rad.countGeo);
+	//console.log( 'rad.count4', rad.count4 );
+	//console.log( 'rad.count3', rad.count3 );
 
 };
 
@@ -191,70 +151,62 @@ rad.setThreeJsWindowUpdate = function( target = divMsg ) {
 rad.drawPolygon = function( polygon ) {
 	//console.log( 'polygon', polygon );
 
-	if ( polygon.vertices.length < 2 ) {
+	let points = polygon.vertices.map( item => new THREE.Vector3().fromArray( item ) );
+	//console.log( 'points', points );
 
-		console.log( 'draw point', {polygon} );
 
-	} else if ( polygon.vertices.length < 3 ) {
+	//console.log( 'color', color );
+
+
+
+	//const material = new THREE.MeshNormalMaterial( {  opacity: rad.opacity, side: 2, transparent: true } );
+
+
+	if ( points.length < 2 ) {
+
+		console.log( {polygon} );
+
+		return;
+
+	} else if ( points.length < 3 ) {
 
 		console.log( 'draw line', {polygon} );
 
-	} else if ( polygon.vertices.length < 4 ) {
+		return;
 
-		rad.count3++;
+	} else if ( points.length < 4 ) {
 
-		for ( vertex of polygon.vertices ) {
+		rad.count3 ++;
 
-			for ( coordinate of vertex ) {
+		geometry = new THREE.Geometry();
+		geometry.vertices = points;
+		let color = new THREE.Color( rad.getColor( polygon ) );
+		var normal = new THREE.Vector3( 0, 0, 1 );
+		geometry.faces = [ new THREE.Face3( 2, 1, 0, normal, color ) ];
+		//geometry.colors = [ color, color, color ];
 
-				rad.vertices.push( coordinate );
 
-			}
+		//geometry.faces[ 0 ].vertexColors[ 0 ] = new THREE.Color( 0xffffff * Math.random());
+		//geometry.faces[ 1 ].vertexColors[ 1 ] = new THREE.Color( 0xffffff * Math.random());
+		//geometry.faces[ 2 ].vertexColors[ 2 ] = new THREE.Color( 0xffffff * Math.random());
 
-		}
-
-		color.setStyle( rad.getColor( polygon ) );
-
-		rad.surfaceColors.push( color.r, color.g, color.b );
-		rad.surfaceColors.push( color.r, color.g, color.b );
-		rad.surfaceColors.push( color.r, color.g, color.b );
+		rad.geom.merge( geometry );
 
 	} else {
 
 		rad.count4 ++;
+		//console.log( {polygon} );
 
-		for ( let vertex of polygon.vertices.slice( 0, 3 ) ) {
+		const geometry = new THREE.Geometry();
+		geometry.vertices = points;
+		geometry.faces = [ new THREE.Face3( 2, 1, 0 ), new THREE.Face3( 0, 2, 3 ) ];
 
-			for ( let coordinate of vertex ) {
+		rad.geom.merge( geometry );
 
-				rad.vertices.push( coordinate );
-
-			}
-
-		}
-
-		const vertices = [ polygon.vertices[ 3 ], polygon.vertices[ 2 ], polygon.vertices[ 0 ] ];
-
-		for ( let vertex of vertices ) {
-
-			for ( let coordinate of vertex ) {
-
-				rad.vertices.push( coordinate );
-
-			}
-
-		}
-
-		//color.setStyle( rad.getColor( polygon ) );
-
-		let color = new THREE.Color( rad.getColor( polygon ) );
-		//console.log( 'rad.getColor( polygon ) ', color  );
-
-		for ( var i = 0; i < 6; i++ ) {
-
-			rad.surfaceColors.push( color.r, color.g, color.b );
-
-		}
+		//mesh = rad.drawShape( points, material );
+		//mesh.userData = polygon;
+		//rad.meshes.add( mesh );
+		//rad.setEdges( mesh );
 
 	}
 
@@ -293,12 +245,12 @@ rad.getColor = function( geometry ){
 		const colorText = geometry.modifier;
 		//console.log( 'colorText', colorText );
 
-		color = rad.colors[ colorText ] || 0x444444; // 'darkgray';
+		color = rad.colors[ colorText ] || 'darkgray';
 		//console.log( 'x', color );
 
 	}
 
-	color = color ? color : 0x888888; // 'darkgray';
+	color = color ? color : 'darkgray';
 
 	return color;
 

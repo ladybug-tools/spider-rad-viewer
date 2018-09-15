@@ -14,7 +14,12 @@ _<small>Spider Rad Viewer Triangles Only</small>_
 
 ## Full Screen: [Spider Rad Viewer Triangles Only R6]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-triangles-only/r6/rad-viewer-triangles-only.html )
 
-* Adds time takn to load display
+* Adds time taken to load display
+
+### Update 2018-09-15
+
+* Begins to add colors
+* A number of fixes and a number of issues
 
 ## Concept
 
