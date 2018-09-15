@@ -9,7 +9,7 @@ value="You are now in a GitHub web page view - Click this button to view this re
 # [Spider Rad Viewer Triangles Only Read Me]( #cookbook/rad-viewer-triangles-only/README.md )
 
 
-<iframe src=https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-triangles-only/66/rad-viewer-triangles-only.html width=100% height=500px >Iframes are not viewable in GitHub source code views</iframe>
+<iframe src=https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-triangles-only/r6/rad-viewer-triangles-only.html width=100% height=500px >Iframes are not viewable in GitHub source code views</iframe>
 _<small>Spider Rad Viewer Triangles Only</small>_
 
 ## Full Screen: [Spider Rad Viewer Triangles Only R6]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-triangles-only/r6/rad-viewer-triangles-only.html )
