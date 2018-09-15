@@ -27,20 +27,21 @@
 </head>
 <body>
 <script src = "https://cdn.rawgit.com/mrdoob/three.js/r96/build/three.min.js" ></script>
-<script src = "https://cdn.rawgit.com/mrdoob/three.js/r96/examples/js/controls/TrackballControls.js" ></script>
-<script src="./thr-threejs.js"></script>
+<script src = "https://cdn.rawgit.com/mrdoob/three.js/r96/examples/js/controls/OrbitControls.js" ></script>
+<script src="../../../lib/r6/thr-threejs.js"></script>
+<script src="../../../lib/r6/thru-threejs-utilities.js"></script>
 
 	<div id = "divMenu" >
 
 		<div id = "divTitle" ></div>
 
-		<p>
-			<button onclick="THR.sceneRotation = THR.sceneRotation === 1 ? 0 : 1;" >rotation</button>
-		</p>
+		<details open >
 
-		<p>
-			<input type="range" id="inpSpeed" onclick="THR.sceneRotation=0.03 * this.value;" />
-		</p>
+			<summary>Settings</summary>
+
+			<div id = "divSettings" ></div>
+
+		</details>
 
 		<div id = "divLog" ></div>
 
@@ -49,7 +50,7 @@
 <script>
 
 
-const urlSourceCode = "https://github.com/zzzzz/zzzzz.github.io/tree/master/xxxxx/";
+const urlSourceCode = "https://github.com/ladybug-tools/spider-rad-viewer/tree/master/cookbook/";
 
 
 init();
@@ -60,13 +61,18 @@ function init() {
 
 	divTitle.innerHTML = getTitle();
 
+
+	divSettings.innerHTML = THRU.getSettings( divSettings );
+	//divSettings.innerHTML = THRU.getSettings();
+
 	THR.getThreejs();
+
+	THRU.setHelpers();
+
+	THRU.setGeometry();
 
 	THR.animate();
 
-	// just to show we are alive
-	THR.axesHelper = new THREE.AxesHelper( 100 );
-	THR.scene.add( THR.axesHelper );
 
 }
 

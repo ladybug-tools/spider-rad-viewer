@@ -14,6 +14,12 @@ value="You are now in a GitHub web page view - Click this button to view this re
 
 This folder holds the JavaScript files used by the various HTML files in this repository
 
+R6 is the current stable release
+
+Files that the call scripts in this lib should include the current release number in their title.
+In other words, the release numbers in the titles of scripts in this repo refer to the lib release and not to the release of the lib itself.
+
+
 
 ### To do / wish list
 
@@ -35,6 +41,13 @@ See GitHub issues: [Spider RAD Viewer Issues]( https://github.com/ladybug-tools/
 
 
 ### Change Log
+
+
+#### 2018-09-15 ~ Theo
+
+* Move two three scripts to their own cookbook entries
+* start cam-view-camera.js
+
 
 #### 2018-09-06 ~ Theo
 
