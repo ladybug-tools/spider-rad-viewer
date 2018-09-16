@@ -343,6 +343,7 @@ function onHashChange() {
 		divContents.innerHTML = `<iframe src=${ url } height=100% width=100% ></iframe>`;
 
 	} else if ( /\.(jpe?g|png|ico|svg|gif)$/i.test( ulc )  ) {
+
 	//} else if ( ulc.endsWith( '.gif' ) || ulc.endsWith( '.png' ) || ulc.endsWith( '.jpg' ) || ulc.endsWith( '.ico' ) || ulc.endsWith( '.svg' ) ) {
 
 		divContents.innerHTML = `<img src=${ url } >`;

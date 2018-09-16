@@ -159,8 +159,12 @@ function updateIframe( activeContainer ) {
 		activeContainer.innerHTML =
 		`
 			<iframe src="${ folders[ id ].urlFolder }" scrolling="no" ></iframe>
-			<h3>full screen: <a href = "${ folders[ id ].urlFolder }" >${folders[ id ].name}</a> /
-				<a href = "https://www.ladybug.tools/spider-rad-viewer/#${ folders[ id ].path }" >Read Me</a></h3>
+
+			<h3>
+				<a href = "https://www.ladybug.tools/spider-rad-viewer/#${ folders[ id ].path }" >Read Me</a>
+
+				/ full screen: <a href = "${ folders[ id ].urlFolder }" >${folders[ id ].name}</a>
+			</h3>
 
 
 		`;

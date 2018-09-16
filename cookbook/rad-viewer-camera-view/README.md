@@ -20,6 +20,7 @@ _<small>Spider RAD Viewer R6 - Camera View</small>_
 
 * Display current camera and controls parameters
 * Display suggested Radiance ```rpict``` equivalent options
+* Adjust scene then press 'Update camera view' button
 
 
 ## To Do / Wish List

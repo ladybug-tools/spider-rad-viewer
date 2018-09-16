@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8" >
 <meta name="viewport" content = "width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0" >
-<meta name=description content="View Radiance RAD files in real-time 3D in your browser using the Three.js JavaScript library" >
+<meta name=description content="Select and load sample Radiance RAD files hosted on GitHub. View files in real-time interactive 3D in your browser using the Three.js JavaScript library" >
 <meta name=keywords content="Three.js,WebGL,JavaScript,GitHub,FOSS,3D,STEM" >
-<meta name = "date" content = "2018-09-13" >
-<title>Spider Rad Viewer Basic R6</title>
+<meta name = "date" content = "2018-09-15" >
+<title>RAD Viewer R6 - Sample File Gallery </title>
 <style>
 	/* Copyright 2018 Ladybug Tools authors. MIT License */
 
@@ -40,10 +40,35 @@
 <script src = "../../../lib/r6/thru-threejs-utilities.js" ></script>
 <script src = "../../../lib/r6/rad-to-three.js" ></script>
 <script src = "../../../lib/r6/rad-converter.js" ></script>
+<script src = "../../../lib/r6/fgat-fetch-github-api-tree.js" ></script>
 
 	<div id = "divMenu" >
 
 		<div id = "divTitle" ></div>
+
+		<details open >
+
+			<summary>Spider RAD Sample files</summary>
+
+			<div id=divSampleFiles ></div>
+
+		</details>
+
+		<details>
+
+			<summary>rndmStff RAD models</summary>
+
+			<p style=background-color:yellow;color:red; >
+				Check the tooltips for each file to view its file size.
+				Large files will freeze your browser.
+			</p>
+			<p style=color:green; >
+				Click the menu title link to clear the url after the '#'.
+			</p>
+			<div id=divSampleFilesRndmStff ></div>
+
+		</details>
+
 
 		<details open >
 
@@ -53,7 +78,8 @@
 
 		</details>
 
-		<details open >
+
+		<details>
 
 			<summary>File data</summary>
 
@@ -74,7 +100,10 @@
 
 <script>
 
-const urlSourceCode = "https://github.com/ladybug-tools/spider-rad-viewer/tree/master/cookbook/rad-viewer-basic/";
+
+
+// Remember to update the release number
+const urlSourceCode = "https://github.com/ladybug-tools/spider-rad-viewer/tree/master/cookbook/rad-sample-file-gallery";
 
 const urlDefaultFile = 'https://rawgit.com/ladybug-tools/spider/master/radiance-sample-files/sample-file.rad';
 
@@ -85,8 +114,8 @@ function init() {
 
 	divTitle.innerHTML = getTitle();
 
-	//divFileOpen.innerHTML = FIL.getFileOpen( divFileData );
-	divFileOpen.innerHTML = FIL.getFileOpen();
+	divFileOpen.innerHTML = FIL.getFileOpen( divFileData );
+	//divFileOpen.innerHTML = FIL.getFileOpen();
 
 	divSettings.innerHTML = THRU.getSettings( divSettings );
 	//divSettings.innerHTML = THRU.getSettings();
@@ -100,30 +129,34 @@ function init() {
 
 	THR.animate();
 
+	FGAT.fetchGitHubApiTree(); // get default files
+
+	FGAT.fetchGitHubApiTree( "rndmStff", "radModels", divSampleFilesRndmStff );
+
+
 }
+
 
 
 function getTitle() {
 
-	const htm  =
-	`
-		<h2>
-			<a href=${ urlSourceCode } target="_top" title="Source code on GitHub" >
-				<img src="https://status.github.com/images/invertocat.png" height=18 >
-			</a>
-			<a href="" title="Click to reload this page" >${ document.title }</a>
-		</h2>
+const htm  =
+`
+	<h2>
+		<a href=${ urlSourceCode } target="_top" title="Source code on GitHub" >
+			<img src="https://status.github.com/images/invertocat.png" height=18 >
+		</a>
+		<a href="" title="Click to reload this page" >${ document.title }</a>
+	</h2>
 
-		<p>
-			${ document.head.querySelector( '[ name=description ]' ).content }
-		</p>
-	`;
+	<p>
+		${ document.head.querySelector( '[ name=description ]' ).content }
+	</p>
+`;
 
-	return htm;
+return htm;
 
 }
-
-
 
 </script>
 </body>
