@@ -47,6 +47,12 @@ _<small>Spider RAD Viewer R6 - Camera View</small>_
 
 ## Change Log
 
+### 2018-09-16 ~ Theo
+
+r6.2
+* change text between ```rpict``` values from spaces to tabs
+
+
 ### 2018-09-15 ~ Theo
 
 * First commit

@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8" >
 <meta name="viewport" content = "width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0" >
-<meta name=description content="View Radiance RAD files in real-time 3D in your browser using the Three.js JavaScript library" >
+<meta name=description content="A work-in-progress speedy fast method - with many issues still - to view Radiance RAD files in real-time 3D in your browser using the Three.js JavaScript library" >
 <meta name=keywords content="Radiance,Three.js,WebGL,JavaScript,GitHub,FOSS,3D,STEM" >
-<meta name = "date" content = "2018-09-14" >
-<title>Spider Rad Viewer Triangles Only R6.1</title>
+<meta name = "date" content = "2018-09-16" >
+<title>Spider Rad Viewer Triangles Only R6.2</title>
 <style>
 	/* Copyright 2018 Ladybug Tools authors. MIT License */
 
@@ -100,9 +100,8 @@
 
 const urlSourceCode = "https://github.com/ladybug-tools/spider-rad-viewer/tree/master/cookbook/rad-viewer-triangles-only/";
 
-//const urlDefaultFile = 'https://rawgit.com/ladybug-tools/spider-rad-resources/master/rad-sample-files/various-sources/sample-file.rad';
-const urlDefaultFile = 'https://rawgit.com/ladybug-tools/spider-rad-resources/master/rad-sample-files/various-sources/london-office.rad';
-
+const urlDefaultFile = 'https://rawgit.com/ladybug-tools/spider-rad-resources/master/rad-sample-files/various-sources/sample-file.rad';
+//const urlDefaultFile = 'https://rawgit.com/ladybug-tools/spider-rad-resources/master/rad-sample-files/various-sources/london-office.rad';
 //const urlDefaultFile = 'https://rawgit.com/ladybug-tools/spider-rad-resources/master/rad-sample-files/office/chair/chair.rad'
 
 init();
@@ -127,11 +126,12 @@ function init() {
 
 	THR.animate();
 
-	FGAT.fetchGitHubApiTree(); // get links to default sample files
+	//FGAT.fetchGitHubApiTree(); // get links to default sample files
 
-	FGAT.fetchGitHubApiTree( "rndmStff", "radModels", divSampleFilesRndmStff );
+	//FGAT.fetchGitHubApiTree( "rndmStff", "radModels", divSampleFilesRndmStff );
 
 	THRU.addSomeLights();
+
 }
 
 

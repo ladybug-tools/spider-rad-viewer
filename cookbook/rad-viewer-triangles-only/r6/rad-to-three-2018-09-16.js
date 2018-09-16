@@ -132,7 +132,6 @@ rad.setThreeJsWindowUpdate = function( target = divMsg ) {
 	//rad.geom = new THREE.Geometry();
 	rad.count3 = 0;
 	rad.count4 = 0;
-	rad.count5plus = 0;
 	rad.countGeo = 0;
 
 	const color = new THREE.Color();
@@ -167,10 +166,7 @@ rad.setThreeJsWindowUpdate = function( target = divMsg ) {
 	const geometry = new THREE.BufferGeometry();
 	geometry.addAttribute( 'position', new THREE.Float32BufferAttribute( rad.vertices, 3 ) );
 	geometry.addAttribute( 'color', new THREE.Float32BufferAttribute( rad.surfaceColors, 3 ) );
-
-	geometry.computeFaceNormals();
 	geometry.computeVertexNormals();
-	//geometry.normalizeNormals();
 
 	THR.scene.remove( rad.meshes );
 
@@ -182,9 +178,8 @@ rad.setThreeJsWindowUpdate = function( target = divMsg ) {
 
 	THRU.zoomObjectBoundingSphere( rad.meshes );
 
-	console.log( 'rad.count3', rad.count3 );
 	console.log( 'rad.count4', rad.count4 );
-	console.log( 'rad.count5plus', rad.count5plus );
+	console.log( 'rad.count3', rad.count3 );
 	console.log( 'rad.countGeo', rad.countGeo);
 
 };
@@ -208,8 +203,6 @@ rad.drawPolygon = function( polygon ) {
 
 		rad.count3++;
 
-		//polygon.vertices.reverse();
-
 		for ( vertex of polygon.vertices ) {
 
 			for ( coordinate of vertex ) {
@@ -221,13 +214,12 @@ rad.drawPolygon = function( polygon ) {
 		}
 
 		color.setStyle( rad.getColor( polygon ) );
-		//console.log( 'color', color );
 
 		rad.surfaceColors.push( color.r, color.g, color.b );
 		rad.surfaceColors.push( color.r, color.g, color.b );
 		rad.surfaceColors.push( color.r, color.g, color.b );
 
-	} else if ( polygon.vertices.length < 5 ) {
+	} else {
 
 		rad.count4 ++;
 
@@ -241,7 +233,6 @@ rad.drawPolygon = function( polygon ) {
 
 		}
 
-
 		const vertices = [ polygon.vertices[ 3 ], polygon.vertices[ 2 ], polygon.vertices[ 0 ] ];
 
 		for ( let vertex of vertices ) {
@@ -254,61 +245,12 @@ rad.drawPolygon = function( polygon ) {
 
 		}
 
+		//color.setStyle( rad.getColor( polygon ) );
 
 		let color = new THREE.Color( rad.getColor( polygon ) );
 		//console.log( 'rad.getColor( polygon ) ', color  );
 
 		for ( var i = 0; i < 6; i++ ) {
-
-			rad.surfaceColors.push( color.r, color.g, color.b );
-
-		}
-
-	} else if ( polygon.vertices.length < 6 ) {
-
-		rad.count5plus++;
-
-		for ( let vertex of polygon.vertices.slice( 0, 3 ) ) {
-
-			for ( let coordinate of vertex ) {
-
-				rad.vertices.push( coordinate );
-
-			}
-
-		}
-
-
-		let vertices = [ polygon.vertices[ 3 ], polygon.vertices[ 2 ], polygon.vertices[ 0 ] ];
-
-		for ( let vertex of vertices ) {
-
-			for ( let coordinate of vertex ) {
-
-				rad.vertices.push( coordinate );
-
-			}
-
-		}
-
-
-		vertices = [ polygon.vertices[ 0 ], polygon.vertices[ 3 ], polygon.vertices[ 4 ] ];
-
-		for ( let vertex of vertices ) {
-
-			for ( let coordinate of vertex ) {
-
-				rad.vertices.push( coordinate );
-
-			}
-
-		}
-
-		let color = new THREE.Color( rad.getColor( polygon ) );
-		//console.log( 'rad.getColor( polygon ) ', color  );
-
-
-		for ( var i = 0; i < 9; i++ ) {
 
 			rad.surfaceColors.push( color.r, color.g, color.b );
 
