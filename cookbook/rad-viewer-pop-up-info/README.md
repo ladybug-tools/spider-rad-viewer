@@ -19,6 +19,11 @@ Move pointer over any surface to view its geometry and materials data in a pop-u
 
 ***
 
+## Full Screen: [Spider RAD Viewer Pop-Up Info R6]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-pop-up-info/r6/rad-viewer-pop-up-info.html )
+
+
+
+
 ## Full Screen: [Spider RAD Viewer Pop-Up Info R3]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-pop-up-info/r3/rad-viewer-pop-up-info.html )
 
 * Fix broken links/ code cleanup

@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8" >
 <meta name="viewport" content = "width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0" >
-<meta name=description content="View Radiance RAD files in real-time 3D in your browser using the Three.js JavaScript library" >
+<meta name=description content="Gather and view multiple Radiance RAD files in real-time 3D in your browser using the Three.js JavaScript library" >
 <meta name=keywords content="Three.js,WebGL,JavaScript,GitHub,FOSS,3D,STEM" >
-<meta name = "date" content = "2018-09-13" >
-<title>Spider Rad Viewer Basic R6</title>
+<meta name = "date" content = "2018-09-16" >
+<title>Spider Rad Viewer R6 Open Xform </title>
 <style>
 	/* Copyright 2018 Ladybug Tools authors. MIT License */
 
@@ -35,10 +35,10 @@
 <body>
 <script src = "https://cdn.rawgit.com/mrdoob/three.js/r96/build/three.min.js" ></script>
 <script src = "https://cdn.rawgit.com/mrdoob/three.js/r96/examples/js/controls/OrbitControls.js" ></script>
-<script src = "../../../lib/r6/fil-open-files.js" ></script>
+<script src = "./fil-open-files.js" ></script>
 <script src = "../../../lib/r6/thr-threejs.js" ></script>
 <script src = "../../../lib/r6/thru-threejs-utilities.js" ></script>
-<script src = "../../../lib/r6/rad-to-three.js" ></script>
+<script src = "./rad-to-three.js" ></script>
 <script src = "../../../lib/r6/rad-converter.js" ></script>
 
 	<div id = "divMenu" >
@@ -76,7 +76,9 @@
 
 const urlSourceCode = "https://github.com/ladybug-tools/spider-rad-viewer/tree/master/cookbook/rad-viewer-basic/";
 
-const urlDefaultFile = 'https://rawgit.com/ladybug-tools/spider/master/radiance-sample-files/sample-file.rad';
+//const urlDefaultFile = 'https://rawgit.com/rndmStff/radModels/master/manhattan/model.rad';
+//const urlDefaultFile = 'https://rawgit.com/ladybug-tools/spider/master/radiance-sample-files/sample-file.rad';
+const urlDefaultFile = 'https://rawgit.com/ladybug-tools/spider-rad-resources/master/rad-sample-files/radiance-pub-objects/townhouse/townhouse.rad';
 
 init();
 
@@ -95,6 +97,8 @@ function init() {
 
 	// comment out for no axes and no rotation
 	THRU.setHelpers();
+
+	THRU.addSomeLights();
 
 	if ( !location.hash ) { location.hash = urlDefaultFile; } else { FIL.onHashChange(); }
 
