@@ -31,6 +31,12 @@ The following sections - newest on top - are a show and tell of the changes
 * Handles non-inclusion of a settings div
 * Rotation moved from thr-threejs.js to thru-threejs-utilities.js
 
+### 2018-09-17 ~ R6.2
+
+thru-three-utilities.js
+* Add 'Toggle surface normals' button and code
+* Add 'Toggle axes' button and code
+
 
 Coming next: opening RAD files that contain links to other files
 

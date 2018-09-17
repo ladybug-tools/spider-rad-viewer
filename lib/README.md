@@ -43,6 +43,12 @@ See GitHub issues: [Spider RAD Viewer Issues]( https://github.com/ladybug-tools/
 ### Change Log
 
 
+#### 2018-09-17 ~ Theo
+
+thru-three-utilities.js
+* Add 'Toggle surface normals' button and code
+* Add 'Toggle axes' button and code
+
 #### 2018-09-15 ~ Theo
 
 * Move two three scripts to their own cookbook entries
