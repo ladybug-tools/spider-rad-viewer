@@ -24,7 +24,8 @@ The following sections - newest on top - are a show and tell of the changes
 ## 2018-09-18 ~ Development version: [Spider RAD Viewer R7]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r7/rad-viewer.html )
 
 * Uses BufferGeometry which makes things much faster ( and more complicated )
-
+* Still at an early stage / pop-up area broken / ditto normals and more
+* Best to reload the page in between lading big files
 
 
 ## 2018-09-11 ~ Stable version: [Spider RAD Viewer R6]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r6/rad-viewer.html )
