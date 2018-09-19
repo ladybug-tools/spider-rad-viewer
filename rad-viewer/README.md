@@ -20,7 +20,14 @@ The following sections - newest on top - are a show and tell of the changes
 
 <iframe src=https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r6/rad-viewer.html  width=100% height=500px >Iframes are not viewable in GitHub source code view<</iframe>
 
-## 2018-09-11 ~ Development version: [Spider RAD Viewer R6]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r6/rad-viewer.html )
+
+## 2018-09-18 ~ Development version: [Spider RAD Viewer R7]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r7/rad-viewer.html )
+
+* Uses BufferGeometry which makes things much faster ( and more complicated )
+
+
+
+## 2018-09-11 ~ Stable version: [Spider RAD Viewer R6]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r6/rad-viewer.html )
 
 * Handles multiple drag and drop files
 * Handles URLs that contain links to multiple files

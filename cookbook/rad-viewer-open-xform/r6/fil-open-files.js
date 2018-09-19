@@ -29,8 +29,6 @@ FIL.onHashChange = function() {
 
 	FIL.timeStart = performance.now();
 
-	//THR.scene.remove( rad.meshes );
-
 	rad.json = { 'surfaces': [], 'materials': [], 'other': [] };
 
 	rad.url = location.hash.slice( 1 );
@@ -97,6 +95,7 @@ FIL.callbackRequestFile = function( xhr ) {
 	FIL.setLog( FIL.divFileData );
 
 };
+
 
 
 FIL.callbackRequestFileXform = function( xhr ) {
