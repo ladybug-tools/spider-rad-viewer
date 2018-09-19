@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en" >
+<head>
+<meta charset="utf-8" >
+<meta name="viewport" content = "width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" >
+<meta name=description content="View Radiance RAD files in interactive 3D in your browser using the Three.js JavaScript library" >
+<meta name=keywords content="Radiance,Three.js,WebGL,JavaScript,GitHub,FOSS,3D,STEM" >
+<meta name = "date" content = "2018-09-17" >
+<title>Spider Rad Viewer R7</title>
+<link rel="stylesheet" href="../../lib/r7/style.css">
+</head>
+<body>
+<script src = "https://cdn.rawgit.com/mrdoob/three.js/r96/build/three.min.js" ></script>
+<script src = "https://cdn.rawgit.com/mrdoob/three.js/r96/examples/js/controls/OrbitControls.js" ></script>
+<script src = "../../lib/r7/cor-core.js" ></script>
+<script src = "../../lib/r7/fil-open-files.js" ></script>
+<script src = "../../lib/r7/thr-threejs.js" ></script>
+<script src = "../../lib/r7/thru-threejs-utilities.js" ></script>
+<script src = "../../lib/r7/rad-to-three.js" ></script>
+<script src = "../../lib/r7/rad-converter.js" ></script>
+<script src = "../../lib/r7/pop-up.js" ></script>
+<script src = "../../lib/r7/fgat-fetch-github-api-tree.js" ></script>
+
+	<main id="container" ></main>
+
+	<nav id = "navMenu" >
+
+		<header id="navHeader" ></header>
+
+		<details open >
+
+			<summary>File Open</summary>
+
+			<div id="divFileOpen" class="dragDropArea" ></div>
+
+		</details>
+
+		<details>
+
+			<summary>Spider RAD Sample files</summary>
+
+			<div id=divSampleFiles ></div>
+
+		</details>
+
+		<details>
+
+			<summary>Spider RAD Sample URLs</summary>
+
+			<p><a href="#../../../spider-rad-resources/rad-sample-files/mostapha-sample-files/honeybee_005.opq.rad&../../../spider-rad-resources/rad-sample-files/mostapha-sample-files/honeybee_005.opq.mat&../../../spider-rad-resources/rad-sample-files/mostapha-sample-files/honeybee_005.glz.rad&../../../spider-rad-resources/rad-sample-files/mostapha-sample-files/honeybee_005.glz.mat" >sample from Mostapha</a></p>
+
+			<p><a href="#../../../spider-rad-resources/rad-sample-files/office/facade/facade.rad&../../../spider-rad-resources/rad-sample-files/office/facade/material_facade.rad" >facade</a></p>
+		</details>
+
+
+		<details >
+
+			<summary>File data</summary>
+
+			<div id="divFileData" ></div>
+
+		</details>
+
+
+		<details open >
+
+			<summary>Settings</summary>
+
+			<div id="divSettings" ></div>
+
+		</details>
+
+		<footer id="navFooter"></footer>
+
+	</nav>
+
+
+	<div id="divPopUp" >
+
+		<div id="divPopUpData" ></div>
+
+		<div id="divMessage" ></div>
+
+	</div>
+
+<script>
+
+const urlSourceCode = "https://github.com/ladybug-tools/spider-rad-viewer/tree/master/rad-viewer/";
+
+const urlDefaultFile = 'https://rawgit.com/ladybug-tools/spider/master/radiance-sample-files/sample-file.rad';
+
+init();
+
+
+function init() {
+
+	navHeader.innerHTML = COR.getNavHeader();
+
+	divFileOpen.innerHTML = FIL.getFileOpen( divFileData );
+	//divFileOpen.innerHTML = FIL.getFileOpen();
+
+	divSettings.innerHTML = THRU.getSettings( divSettings );
+	//divSettings.innerHTML = THRU.getSettings();
+
+	navFooter.innerHTML = COR.getNavFooter();
+
+	THR.getThreejs();
+
+	THRU.setHelpers();
+
+	POP.initPopUp();
+
+	if ( !location.hash ) { location.hash = urlDefaultFile; } else { FIL.onHashChange(); }
+
+	THR.animate();
+
+	THRU.addSomeLights();
+
+	FGAT.fetchGitHubApiTree(); // get links to sample files
+
+}
+
+</script>
+</body>
+</html>

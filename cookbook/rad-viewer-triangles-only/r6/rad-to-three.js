@@ -278,7 +278,6 @@ rad.drawPolygon = function( polygon ) {
 
 		}
 
-
 		let vertices = [ polygon.vertices[ 3 ], polygon.vertices[ 2 ], polygon.vertices[ 0 ] ];
 
 		for ( let vertex of vertices ) {
