@@ -8,12 +8,12 @@ value="You are now in a GitHub web page view - Click this button to view this re
 
 # [Rad Viewer R7 Camera Frustum Read Me]( #cookbook/rad-viewer-camera-frustum/README.md )
 
-<!--
+
 <iframe src=https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-camera-frustum/r7/rad-viewer-camera-frustum.html width=100% height=500px >Iframes are not viewable in GitHub source code views</iframe>
 _<small>Rad Viewer R7 Camera Frustum</small>_
 
 ## Full Screen: [Rad Viewer R7 Camera Frustum]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-camera-frustum/r7/rad-viewer-camera-frustum.html )
--->
+
 
 
 ## Concept
@@ -53,7 +53,7 @@ Coming soon
 
 ## Change Log
 
-###
+### 2018-09-24 ~ Theo
 
 * First commit
 
