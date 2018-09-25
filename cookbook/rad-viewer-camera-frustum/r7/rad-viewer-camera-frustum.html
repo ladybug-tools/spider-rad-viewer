@@ -3,22 +3,28 @@
 <head>
 <meta charset="utf-8" >
 <meta name="viewport" content = "width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" >
-<meta name=description content="View Radiance RAD files and camera frustrum in interactive 3D in your browser using the Three.js JavaScript library" >
+<meta name=description content="View Radiance RAD files and camera frustum in interactive 3D in your browser using the Three.js JavaScript library" >
 <meta name=keywords content="Radiance,Spider,Ladybug.tools,Three.js,WebGL,JavaScript,GitHub,FOSS,3D,STEM" >
 <meta name = "date" content = "2018-09-22" >
 <title>Spider Rad Viewer R7 Camera Frustum </title>
 <link rel="stylesheet" href="../../../lib/r7/style.css">
+<style>
+
+	.active { background-color: pink; }
+
+</style>
 </head>
 <body>
 <script src = "https://cdn.rawgit.com/mrdoob/three.js/r96/build/three.min.js" ></script>
 <script src = "https://cdn.rawgit.com/mrdoob/three.js/r96/examples/js/controls/OrbitControls.js" ></script>
+<script src = "https://cdn.rawgit.com/mrdoob/three.js/r96/examples/js/controls/TrackballControls.js" ></script>
 <script src = "../../../lib/r7/cor-core.js" ></script>
 <script src = "../../../lib/r7/fil-open-files.js" ></script>
 <script src = "../../../lib/r7/thr-threejs.js" ></script>
 <script src = "../../../lib/r7/thru-threejs-utilities.js" ></script>
 <script src = "../../../lib/r7/rad-to-three.js" ></script>
 <script src = "../../../lib/r7/rad-converter.js" ></script>
-<script src = "../../../lib/r7/cam-camera-frustum.js" ></script>
+<script src = "../../../lib/r7/cam-view-camera.js" ></script>
 
 	<main id="container" ></main>
 
@@ -60,15 +66,17 @@ function init() {
 
 	divFileOpen.innerHTML = FIL.getFileOpen();
 
-	divCameraFrustum.innerHTML = CAM.getCameraFrustom();
+	divCameraFrustum.innerHTML = CAM.getCameraFrustumHtml();
 
 	THR.getThreejs();
 
-	//if ( !location.hash ) { location.hash = urlDefaultFile; } else { FIL.onHashChange(); }
+	if ( !location.hash ) { location.hash = urlDefaultFile; } else { FIL.onHashChange(); }
 
-	location.hash = urlDefaultFile;
+	//location.hash = urlDefaultFile;
 
 	THR.animate();
+
+	setTimeout( setTwoFrustumCameras, 500 );
 
 }
 
