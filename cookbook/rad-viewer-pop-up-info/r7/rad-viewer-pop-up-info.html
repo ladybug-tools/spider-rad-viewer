@@ -61,13 +61,14 @@ function init() {
 
 	THR.getThreejs();
 
-	POP.initPopUp();
+	//divPopUpData.innerHTML = POP.getPopUpHtml();
 
-	//if ( !location.hash ) { location.hash = urlDefaultFile; } else { FIL.onHashChange(); }
-
-	location.hash = urlDefaultFile;
+	if ( !location.hash ) { location.hash = urlDefaultFile; } else { FIL.onHashChange(); }
+	//location.hash = urlDefaultFile;
 
 	THR.animate();
+
+	setTimeout(() => { divPopUpData.innerHTML = POP.getPopUpHtml(); }, 600);
 
 }
 
