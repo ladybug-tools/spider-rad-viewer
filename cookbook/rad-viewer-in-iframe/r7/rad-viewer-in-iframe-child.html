@@ -2,11 +2,11 @@
 <html lang="en" >
 <head>
 <meta charset="utf-8" >
-<meta name="viewport" content = "width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" >
-<meta name=description content="Very basic script to view Radiance RAD files in interactive 3D in your browser using the Three.js JavaScript library" >
-<meta name=keywords content="Radiance,Spider,Ladybug.tools,Three.js,WebGL,JavaScript,GitHub,FOSS,3D,STEM" >
-<meta name = "date" content = "2018-09-22" >
-<title>Spider Rad Viewer R7 Basic</title>
+<meta name="viewport" content = "width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0" >
+<meta name=description content="View Radiance RAD files in real-time 3D in your browser using the Three.js JavaScript library" >
+<meta name=keywords content="Three.js,WebGL,JavaScript,GitHub,FOSS,3D,STEM" >
+<meta name = "date" content = "2018-09-26" >
+<title>Spider Rad Viewer R7 Iframe child</title>
 <link rel="stylesheet" href="../../../lib/r7/style.css">
 </head>
 <body>
@@ -23,13 +23,13 @@
 
 	<nav id = "navMenu" >
 
-		<header id="navHeader" ></header>
+		<details>
 
-		<details open >
+			<summary>Settings</summary>
 
-			<summary>File Open</summary>
+			<div id = "divSettings"></div>
 
-			<div id="divFileOpen" class="dragDropArea" ></div>
+			<div id = "divLog"></div>
 
 		</details>
 
@@ -47,11 +47,16 @@ init();
 
 function init() {
 
-	navHeader.innerHTML = COR.getNavHeader();
+	//navHeader.innerHTML = COR.getNavHeader();
 
-	divFileOpen.innerHTML = FIL.getFileOpen();
+	//divFileOpen.innerHTML = FIL.getFileOpen();
+
+	divSettings.innerHTML = THRU.getSettings( divSettings );
+	//divSettings.innerHTML = THRU.getSettings();
 
 	THR.getThreejs();
+
+	window.addEventListener ( 'hashchange', FIL.onHashChange, false );
 
 	//if ( !location.hash ) { location.hash = urlDefaultFile; } else { FIL.onHashChange(); }
 

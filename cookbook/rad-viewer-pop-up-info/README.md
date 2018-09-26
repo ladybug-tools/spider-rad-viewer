@@ -53,6 +53,12 @@ See this GitHub Project: [Spider RAD Viewer Dev]( https://github.com/ladybug-too
 See GitHub issues: [Spider RAD Viewer Issues]( https://github.com/ladybug-tools/spider-rad-viewer/issues )
 
 
+## Links of interest
+
+* https://stackoverflow.com/questions/36017079/three-js-get-the-position-of-a-single-face-of-a-tessellated-object
+
+
+
 ## Things you can do using this script
 
 * Click the Octocat icon to view or edit the source code on GitHub

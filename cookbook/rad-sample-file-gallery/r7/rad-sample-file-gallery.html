@@ -2,11 +2,11 @@
 <html lang="en" >
 <head>
 <meta charset="utf-8" >
-<meta name="viewport" content = "width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" >
-<meta name=description content="Very basic script to view Radiance RAD files in interactive 3D in your browser using the Three.js JavaScript library" >
-<meta name=keywords content="Radiance,Spider,Ladybug.tools,Three.js,WebGL,JavaScript,GitHub,FOSS,3D,STEM" >
-<meta name = "date" content = "2018-09-22" >
-<title>Spider Rad Viewer R7 Basic</title>
+<meta name="viewport" content = "width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0" >
+<meta name=description content="Select and load sample Radiance RAD files hosted on GitHub. View files in real-time interactive 3D in your browser using the Three.js JavaScript library" >
+<meta name=keywords content="Three.js,WebGL,JavaScript,GitHub,FOSS,3D,STEM" >
+<meta name = "date" content = "2018-09-26" >
+<title>RAD Viewer R67- Sample File Gallery </title>
 <link rel="stylesheet" href="../../../lib/r7/style.css">
 </head>
 <body>
@@ -18,12 +18,36 @@
 <script src = "../../../lib/r7/thru-threejs-utilities.js" ></script>
 <script src = "../../../lib/r7/rad-to-three.js" ></script>
 <script src = "../../../lib/r7/rad-converter.js" ></script>
+<script src = "../../../lib/r7/fgat-fetch-github-api-tree.js" ></script>
 
 	<main id="container" ></main>
 
 	<nav id = "navMenu" >
 
 		<header id="navHeader" ></header>
+
+		<details open >
+
+			<summary>Spider RAD Sample files</summary>
+
+			<div id=divSampleFiles ></div>
+
+		</details>
+
+		<details>
+
+			<summary>rndmStff RAD models</summary>
+
+			<p style=background-color:yellow;color:red; >
+				Check the tooltips for each file to view its file size.
+				Large files will freeze your browser.
+			</p>
+			<p style=color:green; >
+				Click the menu title link to clear the url after the '#'.
+			</p>
+			<div id=divSampleFilesRndmStff ></div>
+
+		</details>
 
 		<details open >
 
@@ -58,6 +82,10 @@ function init() {
 	location.hash = urlDefaultFile;
 
 	THR.animate();
+
+	FGAT.fetchGitHubApiTree(); // get default files
+
+	FGAT.fetchGitHubApiTree( "rndmStff", "radModels", divSampleFilesRndmStff );
 
 }
 
