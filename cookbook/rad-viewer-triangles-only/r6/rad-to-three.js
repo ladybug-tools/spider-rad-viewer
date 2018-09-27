@@ -182,10 +182,10 @@ rad.setThreeJsWindowUpdate = function( target = divMsg ) {
 
 	THRU.zoomObjectBoundingSphere( rad.meshes );
 
-	console.log( 'rad.count3', rad.count3 );
-	console.log( 'rad.count4', rad.count4 );
-	console.log( 'rad.count5plus', rad.count5plus );
-	console.log( 'rad.countGeo', rad.countGeo);
+	//console.log( 'rad.count3', rad.count3 );
+	//console.log( 'rad.count4', rad.count4 );
+	//console.log( 'rad.count5plus', rad.count5plus );
+	//console.log( 'rad.countGeo', rad.countGeo);
 
 };
 

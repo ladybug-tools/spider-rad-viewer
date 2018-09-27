@@ -58,9 +58,9 @@ function init() {
 
 	window.addEventListener ( 'hashchange', FIL.onHashChange, false );
 
-	//if ( !location.hash ) { location.hash = urlDefaultFile; } else { FIL.onHashChange(); }
+	if ( !location.hash ) { location.hash = urlDefaultFile; } else { FIL.onHashChange(); }
 
-	location.hash = urlDefaultFile;
+	//location.hash = urlDefaultFile;
 
 	THR.animate();
 
