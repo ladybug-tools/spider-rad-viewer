@@ -40,8 +40,10 @@ Scripts of interest include:
 * View all the RAD files in a GitHub repository: [RAD Sample File Gallery]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-sample-file-gallery/ )
 * A very basic script with a minimal feature set: [RAD Viewer Basic]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-basic/ )
 	* Use this script to start building your own modules
-* An excremental script for loading mult-megabyte files: [RAD Viewer Triangles Only]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-triangles-only/ )
-* More scripts are available in the Cookbook
+* More scripts are available in the Cookbook. See the read me file
+
+BTW: The cookbook read me script obtains list of sub-folders from a given folder on GitHub using the GitHub API. Creates an iframe for each sub-folder. Sets index.html of each sub-folder as the source for each iframe.
+
 
 ### Forum / https://discourse.ladybug.tools/c/spider
 
