@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en" >
+<head>
+<meta charset="utf-8" >
+<meta name="viewport" content = "width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0" >
+<meta name=description content="Gather and view multiple Radiance RAD files in real-time 3D in your browser using the Three.js JavaScript library" >
+<meta name=keywords content="Three.js,WebGL,JavaScript,GitHub,FOSS,3D,STEM" >
+<meta name = "date" content = "2018-09-26" >
+<title>Spider Rad Viewer R7 Section Cut </title>
+<link rel="stylesheet" href="../../../lib/r7/style.css">
+</head>
+<body>
+<script src = "https://rawgit.com/mrdoob/three.js/r96/build/three.min.js" ></script>
+<script src = "https://rawgit.com/mrdoob/three.js/r96/examples/js/controls/OrbitControls.js" ></script>
+<script src = "../../../lib/r7/cor-core.js" ></script>
+<script src = "../../../lib/r7/fil-open-files.js" ></script>
+<script src = "../../../lib/r7/thr-threejs.js" ></script>
+<script src = "../../../lib/r7/thru-threejs-utilities.js" ></script>
+<script src = "../../../lib/r7/rad-to-three.js" ></script>
+<script src = "../../../lib/r7/rad-converter.js" ></script>
+<script src = "../../../lib/r7/cut-section-cut.js"></script>
+
+	<main id="container" ></main>
+
+	<nav id = "navMenu" >
+
+		<header id="navHeader" ></header>
+
+		<details open >
+
+			<summary>File Open</summary>
+
+			<div id="divFileOpen" class="dragDropArea" ></div>
+
+		</details>
+
+		<p>
+			<button onclick=FIL.requestFileXform("https://raw.githubusercontent.com/ladybug-tools/spider-rad-resources/master/rad-sample-files/radiance-pub-objects/townhouse/townhouse.rad",FIL.callbackRequestFileXform) >townhouse</button>
+		</p>
+
+		rndmStff<br>
+		<button onclick=FIL.requestFileXform("https://rawgit.com/rndmStff/radModels/master/TajWithLuminaires/model.rad",FIL.callbackRequestFileXform) >TajWithLuminaires/model.rad</button>
+		<button onclick=FIL.requestFileXform("https://rawgit.com/rndmStff/radModels/master/classRoom/model.rad",FIL.callbackRequestFileXform) >classRoom/model.rad</button><br>
+		<button onclick=FIL.requestFileXform("https://rawgit.com/rndmStff/radModels/master/house01/model.rad",FIL.callbackRequestFileXform) >house01/model.rad</button><br>
+		<button onclick=FIL.requestFileXform("https://rawgit.com/rndmStff/radModels/master/houseWithPool/model.rad",FIL.callbackRequestFileXform) >houseWithPool/model.rad</button><br>
+		<button onclick=FIL.requestFileXform("https://rawgit.com/rndmStff/radModels/master/islandHouse/model.rad",FIL.callbackRequestFileXform) >islandHouse/model.rad</button><br>
+		<button onclick=FIL.requestFileXform("https://rawgit.com/rndmStff/radModels/master/manhattan/model.rad",FIL.callbackRequestFileXform) >manhattan/model.rad</button><br>
+		<button onclick=FIL.requestFileXform("https://rawgit.com/rndmStff/radModels/master/manhattanTex/model.rad",FIL.callbackRequestFileXform) >manhattanTex/model.rad</button><br>
+		<button onclick=FIL.requestFileXform("https://rawgit.com/rndmStff/radModels/master/roomJugs/model.rad",FIL.callbackRequestFileXform) >roomJugs/model.rad</button>
+	</p>
+		<details>
+
+			<summary>File data</summary>
+
+			<div id = "divFileData" >vv</div>
+
+		</details>
+
+
+		<details open >
+
+			<summary>section cut</summary>
+
+			<div id=divSectionCut ></div>
+
+		</details>
+
+		<details open >
+
+			<summary>Settings</summary>
+
+			<div id = "divSettings" ></div>
+
+		</details>
+
+	</nav>
+
+
+<script>
+
+const urlSourceCode = "https://github.com/ladybug-tools/spider-rad-viewer/tree/master/cookbook/rad-viewer-basic/";
+
+const urlDefaultFile = 'https://rawgit.com/ladybug-tools/spider/master/radiance-sample-files/sample-file.rad';
+
+init();
+
+
+function init() {
+
+	navHeader.innerHTML = COR.getNavHeader();
+
+	divFileOpen.innerHTML = FIL.getFileOpen();
+
+	divSettings.innerHTML = THRU.getSettings();
+
+	divSectionCut.innerHTML = CUT.getDetSectionViews();
+
+	THR.getThreejs();
+
+	THRU.toggleAxesHelper();
+
+	if ( !location.hash ) { location.hash = urlDefaultFile; } else { FIL.onHashChange(); }
+
+	//location.hash = urlDefaultFile;
+
+	THR.animate();
+
+}
+
+
+
+
+</script>
+</body>
+</html>
