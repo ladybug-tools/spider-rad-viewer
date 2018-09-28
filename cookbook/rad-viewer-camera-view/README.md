@@ -9,7 +9,7 @@ value="You are now in a GitHub web page view - Click this button to view this re
 # [Spider RAD Viewer R6 - Camera View Read Me]( #cookbook/rad-viewer-camera-view/README.md )
 
 
-<iframe src=https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-camera-view/cookr6book/rad-viewer-camera-view.html width=100% height=500px >Iframes are not viewable in GitHub source code views</iframe>
+<iframe src=https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-camera-view/r6/rad-viewer-camera-view.html width=100% height=500px >Iframes are not viewable in GitHub source code views</iframe>
 _<small>Spider RAD Viewer R6 - Camera View</small>_
 
 ## Full Screen: [Spider RAD Viewer R6 - Camera View]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-camera-view/r6/rad-viewer-camera-view.html )

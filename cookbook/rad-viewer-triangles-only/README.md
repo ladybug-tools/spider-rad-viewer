@@ -6,6 +6,10 @@ value="You are now in a GitHub web page view - Click this button to view this re
 
 <br>
 
+## _DEPRECATED - now in main rad-to-three.js._
+
+<br>
+
 # [Spider Rad Viewer Triangles Only Read Me]( #cookbook/rad-viewer-triangles-only/README.md )
 
 
