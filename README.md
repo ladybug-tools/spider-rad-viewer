@@ -18,23 +18,50 @@ Welcome visitors from the [17th International Radiance Workshop]( http://climate
 
 ### Full Screen: [Spider RAD Viewer]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/ ) &mdash; [Read Me]( https://www.ladybug.tools/spider-rad-viewer/index.html#rad-viewer/README.md ) &mdash; [Download scripts]( https://github.com/ladybug-tools/spider-rad-viewer/releases )
 
-* A [Radiance]( https://www.radiance-online.org/ ) RAD file viewer with a minimal feature set
-	* Open fileas via an API. fil dialog or drag and drop
-	* View surfaces data in a pop-up
+* A [Radiance]( https://www.radiance-online.org/ ) RAD file viewer with a limited feature set
+	* Open files via an API, a file dialog box, via drag and drop or from a selection of sample files
+	* View selected individual surface data in a pop-up
+	* Adjust a variety of display settings
 * Open, display and manipulate RAD files in real-time 3D in your browser
 * Built with plain-vanilla JavaScript using the [Three.js]( https://threejs.org ) library
 * All free and open source softare hosted on [GitHub]( https://github.com ) with an MIT license
 
 ### Read Me: [Spider RAD Viewer Cookbook]( https://www.ladybug.tools/spider-rad-viewer/#cookbook/README.md )
 
-* A collection of scripts that enhance the basic file viewer to carry out specific tasks
-	* Point cursor at a surface and view its geometry and materials in a pop-up: [Spider Rad Viewer with Pop-Up Info]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-pop-up-info )
-	* Display a slide-show carousel of RAD files: [RAD Viewer Iframe Carousel]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-iframe-carousel/ )
-	* View all the RAD files in a GitHub repository: [RAD Sample File Gallery]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-sample-file-gallery/ )
-	* A very basic script with a minimal feature set: [RAD Viewer Basic]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-basic/ )
-		* Use this script to start building your own modules
-	* An exprimental cript for loading mult-megabyte files: [RAD Viewer Triangles Only]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-triangles-only/ )
-	* More scripts are available in the Cookbook
+The Spider RAD Viewer is designed to be a tool that you can edit and update according to your needs. In order to help you, the cookbook Spider RAD Cookbook supplies a number of simple code samples. The cookbook is a collection of scripts that:
+* Enhance the basic file RAD file viewer to carry out specific tasks.
+* Isolate features in the main viewer so you can see how the work in a more simple way
+* Add special features not in the main viewer
+* Experiment with new ideas
+
+Scripts of interest include:
+* Point cursor at a surface and view its geometry and materials in a pop-up: [Spider Rad Viewer with Pop-Up Info]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-pop-up-info )
+* Display a slide-show carousel of RAD files: [RAD Viewer Iframe Carousel]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-iframe-carousel/ )
+* View all the RAD files in a GitHub repository: [RAD Sample File Gallery]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-sample-file-gallery/ )
+* A very basic script with a minimal feature set: [RAD Viewer Basic]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-basic/ )
+	* Use this script to start building your own modules
+* An excremental script for loading mult-megabyte files: [RAD Viewer Triangles Only]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-triangles-only/ )
+* More scripts are available in the Cookbook
+
+### Forum / https://discourse.ladybug.tools/c/spider
+
+* General discussion on Spider projects
+* Updates on latest features added
+* Obtain help and support
+
+<br>
+
+### Issues / GitHub issues: [Spider RAD Viewer Issues]( https://github.com/ladybug-tools/spider-rad-viewer/issues )
+
+* Report bugs
+* Discuss wish list items
+
+<br>
+
+### To do / wish list / GitHub Project: [Spider RAD Viewer Projects]( https://github.com/ladybug-tools/spider-rad-viewer/projects )
+
+* What's in the pipeline
+
 
 ***
 
@@ -55,7 +82,7 @@ And provide new-user support for [Radiance Online]( https://www.radiance-online.
 Translate Radiance RAD file types into Three.js views - all building on [Mostapha's efforts]( https://github.com/mostaphaRoudsari/radJSON)
 
 * Select and display RAD files very quickly
-* Access anywhere: computer/tablet/phone
+* Access RAD files from anywhere: computer/tablet/phone
 * Reduce labor needs and increase engineering insights
 * Easy code you learn from and can easily adapt to your specific needs
 
@@ -89,6 +116,7 @@ Viewing files as data
 * Highlight individual elements visually and view their numeric parameters in a pop-up
 	* Shows use of Three.js Raycaster and Object3D.traverse
 
+
 Parsing file data
 * Uses converter from [github.com/mostaphaRoudsari/radJSON]( https://github.com/mostaphaRoudsari/radJSON )
 	* Outlines a possible JSON schema
@@ -96,12 +124,14 @@ Parsing file data
 * Handles openings in surfaces moderately well
 * Files under a megabyte in size handled in a speedy fashion / Larger files are a work-in-progress
 
+
 Written in plan-vanilla JavaScript
 * All free and open source on [GitHub]( https://github.com ) with an MIT license
 * [Plain-vanilla JavaScript]( http://vanilla-js.com/ ) with [Three.js]( https://threejs.org ) as the only dependency
 * Written in a very beginner-friendly style
 * Run offline and locally / No server or localhost required
 * Follows the code style guidelines of the [Three.js Examples]( https://threejs.org/examples/ )
+
 
 Cookbook sample files add scripts with these extra features
 * Select files to view from lists of links to available online sample RAD files
@@ -124,14 +154,6 @@ Possible future uses
 
 
 
-## To do / wish list
-
-See this GitHub Project: [Spider RAD Viewer Dev]( https://github.com/ladybug-tools/spider-rad-viewer/projects/1 )
-
-
-## Issues
-
-See GitHub issues: [Spider RAD Viewer Issues]( https://github.com/ladybug-tools/spider-rad-viewer/issues )
 
 
 ## Links of Interest

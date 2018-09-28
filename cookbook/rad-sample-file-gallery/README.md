@@ -20,6 +20,10 @@ Demonstrate that the Spider RAD Viewer open files via a URL set as the text afte
 
 Provide links to many files for testing
 
+## 2018-09-01: [RAD Sample File Gallery R7]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-sample-file-gallery/r7/rad-sample-file-gallery.html )
+
+* Update to use R7 lib files
+
 ***
 
 ## 2018-09-01: [RAD Sample File Gallery R3]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-sample-file-gallery/r3/rad-sample-file-gallery.html )
