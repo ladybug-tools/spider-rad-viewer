@@ -16,7 +16,9 @@ Welcome visitors from the [17th International Radiance Workshop]( http://climate
 
 ***
 
-### Full Screen: [Spider RAD Viewer]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/ ) &mdash; [Read Me]( https://www.ladybug.tools/spider-rad-viewer/index.html#rad-viewer/README.md ) &mdash; [Download scripts]( https://github.com/ladybug-tools/spider-rad-viewer/releases )
+### Full Screen: [Spider RAD Viewer]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/ )
+### Learn more: [Read Me]( https://www.ladybug.tools/spider-rad-viewer/index.html#rad-viewer/README.md )
+### Edit the source code: [Download scripts]( https://github.com/ladybug-tools/spider-rad-viewer/releases )
 
 * A [Radiance]( https://www.radiance-online.org/ ) RAD file viewer with a limited feature set
 	* Open files via an API, a file dialog box, via drag and drop or from a selection of sample files

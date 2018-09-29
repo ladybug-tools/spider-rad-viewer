@@ -18,11 +18,20 @@ _<small>Spider RAD Viewer R7 Open Xform</small>_
 
 ## Concept
 
+A fork of fil-open-file.js to handle RAD files that have !xform elements that provide links to other files that need loading.
+
+There can be many files to load. Handling the callbacks is a work-in-progress
+
 
 ## To Do / Wish List
 
+* File data card: make it work
 
 ## Issues
+
+* Elements with multi-parameter type causes errors, but other files still seem to keep on loading
+* Need to establish whether loading files via !xform is a popular current day workflow
+
 
 
 ## Things you can do using this script

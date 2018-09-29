@@ -1,15 +1,15 @@
 
-<span style=display:none; >[You are now in a GitHub source code view - click this link to view Read Me file as a web page]( https://www.ladybug.tools/spider-rad-viewer/#cookbook/rad-sample-file-gallery/README.md "View file as a web page." ) </span>
+<span style=display:none; >[You are now in a GitHub source code view - click this link to view Read Me file as a web page]( https://www.ladybug.tools/spider-rad-viewer/#cookbook/rad-viewer-sample-file-gallery/README.md "View file as a web page." ) </span>
 
-<div><input type=button class = "btn btn-secondary btn-sm" onclick=window.location.href="https://github.com/ladybug-tools/spider-rad-viewer/tree/master/cookbook/rad-sample-file-gallery"
+<div><input type=button class = "btn btn-secondary btn-sm" onclick=window.location.href="https://github.com/ladybug-tools/spider-rad-viewer/tree/master/cookbook/radviewer--sample-file-gallery"
 value="You are now in a GitHub web page view - Click this button to view this read me file as source code" ></div>
 
 <br>
 
-# [RAD Sample File Gallery Read Me]( #cookbook/rad-sample-file-gallery/README.md )
+# [RAD Sample File Gallery Read Me]( #cookbook/rad-viewer-sample-file-gallery/README.md )
 
 
-<iframe src=https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-sample-file-gallery/index.html width=100% height=500px >Iframes are not viewable in GitHub source code views</iframe>
+<iframe src=https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-sample-file-gallery/index.html width=100% height=500px >Iframes are not viewable in GitHub source code views</iframe>
 _<small>RAD Sample File Gallery</small>_
 
 
@@ -20,19 +20,19 @@ Demonstrate that the Spider RAD Viewer open files via a URL set as the text afte
 
 Provide links to many files for testing
 
-## 2018-09-01: [RAD Sample File Gallery R7]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-sample-file-gallery/r7/rad-sample-file-gallery.html )
+## 2018-09-01: [RAD Sample File Gallery R7]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-sample-file-gallery/r7/rad-viewer-sample-file-gallery.html )
 
 * Update to use R7 lib files
 
 ***
 
-## 2018-09-01: [RAD Sample File Gallery R3]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-sample-file-gallery/r3/rad-sample-file-gallery.html )
+## 2018-09-01: [RAD Sample File Gallery R3]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-sample-file-gallery/r3/rad-viewer-sample-file-gallery.html )
 
 * Update to use r3 lib files
 * Update to Three.js R96
 
 
-## 2018-08-29: [RAD Sample File Gallery R1]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-sample-file-gallery/r1/rad-sample-file-gallery.html )
+## 2018-08-29: [RAD Sample File Gallery R1]( https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-sample-file-gallery/r1/rad-viewer-sample-file-gallery.html )
 
 * Add fetch-github-api-tree.js to lib and make more generic
 * Adds links to two galleries
