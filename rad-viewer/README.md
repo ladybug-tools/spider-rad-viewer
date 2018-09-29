@@ -8,9 +8,9 @@ value='You are now in a GitHub web page view - Click this button to view this re
 
 ## Concept
 
-* A basic Radiance RAD file viewer
+* A basic [Radiance]( https://www.radiance-online.org/ ) RAD file viewer
 * Open, display and manipulate RAD files in real-time 3D in your browser
-* Built with plain-vanilla JavaScript using the Three.js library
+* Built with plain-vanilla JavaScript using the [Three.js]( https://threejs.org ) library
 * All free and open source on GitHub with an MIT license
 * See also the scripts in the cookbook for features such as menus of sample files and pop-up surface materials info
 
@@ -18,17 +18,18 @@ The following sections - newest on top - are a show and tell of the changes
 
 ***
 
-<iframe src=https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r6/rad-viewer.html  width=100% height=500px >Iframes are not viewable in GitHub source code view<</iframe>
+<iframe src=https://www.ladybug.tools/spider-rad-viewer/rad-viewer/index.html  width=100% height=500px >Iframes are not viewable in GitHub source code view<</iframe>
 
 
-## 2018-09-18 ~ Development version: [Spider RAD Viewer R7]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r7/rad-viewer.html )
+## 2018-09-18/28 ~ Stable version: [Spider RAD Viewer R7]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r7/rad-viewer.html )
 
-* Uses BufferGeometry which makes things much faster ( and more complicated )
-* Still at an early stage / pop-up area broken / ditto normals and more
-* Best to reload the page in between lading big files
+* Uses BufferGeometry which makes drawing things much faster ( and the code more complicated )
+* Still at an early stage / pop-up area broken /
+* Best to reload the page in between loading large files
+* Additions to cookbook include camera view parameters and visible frustum, section cutting, standard style sheet and improved large file support
 
 
-## 2018-09-11 ~ Stable version: [Spider RAD Viewer R6]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r6/rad-viewer.html )
+## 2018-09-11 ~ [Spider RAD Viewer R6]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r6/rad-viewer.html )
 
 * Handles multiple drag and drop files
 * Handles URLs that contain links to multiple files
