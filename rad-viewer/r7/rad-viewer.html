@@ -5,14 +5,21 @@
 <meta name="viewport" content = "width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" >
 <meta name=description content="View Radiance RAD files in interactive 3D in your browser using the Three.js JavaScript library" >
 <meta name=keywords content="Radiance,Three.js,WebGL,JavaScript,GitHub,FOSS,3D,STEM" >
-<meta name = "date" content = "2018-09-17" >
-<title>Spider Rad Viewer R7</title>
+<meta name = "date" content = "2018-10-03" >
+<title>Spider Rad Viewer R7.1</title>
 <link rel="stylesheet" href="../../lib/r7/style.css">
+<style>
+
+/* Copyright 2018 Ladybug Tools authors. MIT License */
+
+#divJson, #txtJson, #divRadiance { border: 1px solid #aaa; height: 200px; overflow: auto; resize: both; width: 100%; }
+
+</style>
 </head>
 <body>
 <script src = "https://rawgit.com/mrdoob/three.js/r96/build/three.min.js" ></script>
 <script src = "https://rawgit.com/mrdoob/three.js/r96/examples/js/controls/OrbitControls.js" ></script>
-<script src = "../../lib/r7/cor-core.js" ></script>
+<script src = "../../lib/r7/mnu-menu.js" ></script>
 <script src = "../../lib/r7/fil-open-files.js" ></script>
 <script src = "../../lib/r7/thr-threejs.js" ></script>
 <script src = "../../lib/r7/thru-threejs-utilities.js" ></script>
@@ -71,10 +78,29 @@
 
 		</details>
 
-		<footer id="navFooter"></footer>
+		<details>
+
+			<summary>Renderer Info</summary>
+
+			<div id = "divInfo" ></div>
+
+		</details>
+
+		<div id = "divLog" ></div>
+
+		<footer>
+
+			<hr>
+
+			<div id = "divFooter" ></div>
+
+		</footer>
 
 	</nav>
 
+	<nav>
+		<button id="butHamburger" onclick=MNU.toggleNavLeft(); title="click to hide this menu"> slide &#9776; </button>
+	</nav>
 
 	<div id="divPopUp" >
 
@@ -95,7 +121,7 @@ init();
 
 function init() {
 
-	navHeader.innerHTML = COR.getNavHeader();
+	navHeader.innerHTML = MNU.getNavHeader();
 
 	divFileOpen.innerHTML = FIL.getFileOpen( divFileData );
 	//divFileOpen.innerHTML = FIL.getFileOpen();
@@ -103,7 +129,7 @@ function init() {
 	divSettings.innerHTML = THRU.getSettings( divSettings );
 	//divSettings.innerHTML = THRU.getSettings();
 
-	navFooter.innerHTML = COR.getNavFooter();
+	divFooter.innerHTML = MNU.getNavFooter();
 
 	THR.getThreejs();
 
@@ -118,6 +144,8 @@ function init() {
 	FGAT.fetchGitHubApiTree(); // get links to sample files
 
 	//setTimeout(() => { divPopUpData.innerHTML = POP.getPopUpHtml(); }, 600);
+
+	divInfo.innerHTML = THRU.getRendererInfo();
 
 }
 
