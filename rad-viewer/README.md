@@ -21,12 +21,12 @@ The following sections - newest on top - are a show and tell of the changes
 <iframe src=https://www.ladybug.tools/spider-rad-viewer/rad-viewer/index.html  width=100% height=500px >Iframes are not viewable in GitHub source code view<</iframe>
 
 
-## 2018-09-18/28 ~ Stable version: [Spider RAD Viewer R7]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r7/rad-viewer.html )
+## 2018-09-18/2018-10-06 ~ Stable version: [Spider RAD Viewer R7]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r7/rad-viewer.html )
 
 * Uses BufferGeometry which makes drawing things much faster ( and the code more complicated )
-* Still at an early stage / pop-up area broken /
-* Best to reload the page in between loading large files
+* Handles polygons with ten or more vertices fairly well
 * Additions to cookbook include camera view parameters and visible frustum, section cutting, standard style sheet and improved large file support
+* Many small fixes
 
 
 ## 2018-09-11 ~ [Spider RAD Viewer R6]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r6/rad-viewer.html )
