@@ -25,6 +25,7 @@ The following sections - newest on top - are a show and tell of the changes
 
 * Uses BufferGeometry which makes drawing things much faster ( and the code more complicated )
 * Handles polygons with ten or more vertices fairly well
+* Should work on tablets and mobile devices - menu can be hiden
 * Additions to cookbook include camera view parameters and visible frustum, section cutting, standard style sheet and improved large file support
 * Many small fixes
 
@@ -51,7 +52,7 @@ Coming next: opening RAD files that contain links to other files
 
 ***
 
-## 2018-09-05 ~ Development version: [Spider RAD Viewer R5]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r5/rad-viewer.html )
+## 2018-09-05 ~ [Spider RAD Viewer R5]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r5/rad-viewer.html )
 
 This release is based on a change of direction. The previous releases are based on the premise of creating the minimum viewer to open and display a single RAD file. All extra features are made available via cookbook sample files.
 
@@ -68,7 +69,7 @@ Other enhancements include:
 
 ***
 
-## 2018-09-05 ~ Development version: [Spider RAD Viewer R4]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r4/rad-viewer.html )
+## 2018-09-05 ~ [Spider RAD Viewer R4]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r4/rad-viewer.html )
 
 [download source code]( https://github.com/ladybug-tools/spider-rad-viewer/releases/tag/v4.0 )
 
@@ -79,7 +80,7 @@ Other enhancements include:
 
 ***
 
-## 2018-09-01 ~ Full screen stable: [Spider RAD Viewer R3]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r3/rad-viewer.html )
+## 2018-09-01 ~ [Spider RAD Viewer R3]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r3/rad-viewer.html )
 
 <!--
 <iframe src=https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r3/rad-viewer.html  width=100% height=500px >Iframes are not viewable in GitHub source code view<</iframe>
@@ -96,7 +97,7 @@ Other enhancements include:
 
 ***
 
-## 2018-08-28/29 ~ Full Screen: [Spider RAD Viewer R1.1]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r1-1/rad-viewer.html )
+## 2018-08-28/29 ~ [Spider RAD Viewer R1.1]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r1-1/rad-viewer.html )
 
 <!--
 <iframe src=https://www.ladybug.tools/spider-rad-viewer/rad-viewer/index.html width=100% height=500px >Iframes are not viewable in GitHub source code view<</iframe>
