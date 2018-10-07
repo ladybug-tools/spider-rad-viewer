@@ -25,7 +25,7 @@ The following sections - newest on top - are a show and tell of the changes
 
 * Uses BufferGeometry which makes drawing things much faster ( and the code more complicated )
 * Handles polygons with ten or more vertices fairly well
-* Should work on tablets and mobile devices - menu can be hiden
+* Should work on tablets and mobile devices - menu can be hidden
 * Additions to cookbook include camera view parameters and visible frustum, section cutting, standard style sheet and improved large file support
 * Many small fixes
 
