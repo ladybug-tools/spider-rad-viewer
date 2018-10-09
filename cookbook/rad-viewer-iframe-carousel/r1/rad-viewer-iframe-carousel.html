@@ -74,6 +74,7 @@
 
 		timer = setInterval( displayNext, 10000 );
 
+
 	}
 
 
@@ -91,7 +92,8 @@
 
 		divIframe.innerHTML =
 		`
-			<iframe id=ifr src = "${ urlCarousel }#https://www.ladybug.tools/spider/radiance-sample-files/${sites[ index ].fileName}" width=100% height=480px ></iframe>
+			<iframe id=ifr src = "${ urlCarousel }#https://www.ladybug.tools/spider/radiance-sample-files/${sites[ index ].fileName}"
+				width=100% height=480px onload=ifr.contentWindow.THR.controls.autoRotate=true; ></iframe>
 			<p>${sites[ index ].fileName.split('/').pop()}<p>
 
 		`;
