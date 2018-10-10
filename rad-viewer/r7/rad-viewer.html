@@ -14,6 +14,8 @@
 
 #divJson, #txtJson, #divRadiance { border: 1px solid #aaa; height: 200px; overflow: auto; resize: both; width: 100%; }
 
+#divPopUp { max-height: 95%; overflow: auto; resize: both; }
+
 </style>
 </head>
 <body>
@@ -100,9 +102,9 @@
 		<button id="butHamburger" onclick=MNU.toggleNavLeft(); title="click to hide this menu"> slide &#9776; </button>
 	</nav>
 
-	<div id="divPopUp" >
+	<div id="divPopUp" style=resize:both; >
 
-		<div id="divPopUpData" ></div>
+		<div id="divPopUpData" style=resize:both; ></div>
 
 		<div id="divMessage" ></div>
 
