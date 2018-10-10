@@ -28,7 +28,9 @@ Welcome visitors from the [17th International Radiance Workshop]( http://climate
 * Built with plain-vanilla JavaScript using the [Three.js]( https://threejs.org ) library
 * All free and open source softare hosted on [GitHub]( https://github.com ) with an MIT license
 
-### Read Me: [Spider RAD Viewer Cookbook]( https://www.ladybug.tools/spider-rad-viewer/#cookbook/README.md )
+
+### [Spider RAD Viewer Cookbook Gallery]( https://www.ladybug.tools/spider-rad-viewer/#cookbook/cookbook-viewer-one-pager.html )
+#### Learn more: [Cookbook Read Me]( https://www.ladybug.tools/spider-rad-viewer/#cookbook/README.md )
 
 The Spider RAD Viewer is designed to be a tool that you can edit and update according to your needs. In order to help you, the cookbook Spider RAD Cookbook supplies a number of simple code samples. The cookbook is a collection of scripts that:
 * Enhance the basic file RAD file viewer to carry out specific tasks.
