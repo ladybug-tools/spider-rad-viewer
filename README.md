@@ -12,7 +12,11 @@
 <iframe src=https://www.ladybug.tools/spider-rad-viewer/cookbook/rad-viewer-iframe-carousel/r1/rad-viewer-iframe-carousel.html width=100% height=520px >Iframes are not viewable in GitHub source code view</iframe>
 _<small>RAD Viewer Iframe Carousel: still at an early stage of development</small>_
 
+## Welcome <a href="https://www.rtcevents.com/bilt/eur18/" title="Ahoj Michal! Ahoj Ljubljana! Pivo, prosím." style=color:red; target="_blank">BILT EUR 2018</a> attendees!
+
+<!--
 Welcome visitors from the [17th International Radiance Workshop]( http://climate-based-daylighting.com/doku.php?id=radiance2018:programme#workshop_programme )
+-->
 
 ***
 
@@ -26,7 +30,7 @@ Welcome visitors from the [17th International Radiance Workshop]( http://climate
 	* Adjust a variety of display settings
 * Open, display and manipulate RAD files in real-time 3D in your browser
 * Built with plain-vanilla JavaScript using the [Three.js]( https://threejs.org ) library
-* All free and open source softare hosted on [GitHub]( https://github.com ) with an MIT license
+* All free and open source software hosted on [GitHub]( https://github.com ) with an MIT license
 
 
 ### [Spider RAD Viewer Cookbook Gallery]( https://www.ladybug.tools/spider-rad-viewer/#cookbook/cookbook-viewer-one-pager.html )
