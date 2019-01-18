@@ -1,22 +1,31 @@
 
-<span style=display:none; >[You are now in a GitHub source code view - click this link to view Read Me file as a web page]( https://www.ladybug.tools/spider-rad-viewer/#xxxxx/README.md "View file as a web page." ) </span>
+<span style=display:none; >[You are now in a GitHub source code view - click this link to view Read Me file as a web page]( https://www.ladybug.tools/spider-rad-viewer/#perkins-will-sunlight-simulation/README.md "View file as a web page." ) </span>
 
-<div><input type=button class = "btn btn-secondary btn-sm" onclick=window.location.href="https://www.ladybug.tools/spider-rad-viewer/blob/master/xxxxx/README.md"
+<div><input type=button class = "btn btn-secondary btn-sm" onclick=window.location.href="https://www.ladybug.tools/spider-rad-viewer/blob/master/perkins-will-sunlight-simulation/README.md"
 value="You are now in a GitHub web page view - Click this button to view this read me file as source code" ></div>
 
 <br>
 
-# [ZZZZZ Read Me]( #xxxxx/README.md )
+# [Perkins-Will Sunlight Simulation Read Me]( #perkins-will-sunlight-simulation/README.md )
 
-<!--
-<iframe src=https://www.ladybug.tools/spider-rad-viewer/xxxxx/xxxxx.html width=100% height=500px >Iframes are not viewable in GitHub source code views</iframe>
-_<small>ZZZZZ</small>_
 
-## Full Screen: [ZZZZZ]( https://www.ladybug.tools/spider-rad-viewer/xxxxx/xxxxx.html )
--->
+<iframe src=https://www.ladybug.tools/spider-rad-viewer/cookbook/perkins-will-sunlight-simulation/index.html width=100% height=500px >Iframes are not viewable in GitHub source code views</iframe>
+_<small>Perkins-Will Sunlight Simulation</small>_
+
+## Full Screen: [Perkins-Will Sunlight Simulation]( https://www.ladybug.tools/spider-rad-viewer/cookbook/perkins-will-sunlight-simulation/index.html )
+
 
 
 ## Concept
+
+List and display Radiance HDR files as textures on a 3D surface for all files in a test case folder
+
+* Bitmap files created by Zack Rogers/daylightinginnovations.com for Ben Welle/Perkins-Will
+* L-shape building in Denver
+* Sunlight files for all floors
+* 10 hours - 7 to 5 - at Spring Equinox
+* 12 months at 3pm
+* See [perkins-will-test-case]( https://github.com/ladybug-tools/spider-rad-resources/tree/master/sunlight-sample-files/2019-01-18-perkins-will-test-case )
 
 
 ## To Do / Wish List
@@ -39,7 +48,7 @@ _<small>ZZZZZ</small>_
 
 ## Change Log
 
-###
+### 2019-01-18 ~ Theo
 
 * First commit
 
