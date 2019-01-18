@@ -141,7 +141,9 @@ function init() {
 
 	//POP.getPopUpHtml();
 
-	if ( !location.hash ) { location.hash = urlDefaultFile; } else { FIL.onHashChange(); }	THR.animate();
+	if ( !location.hash ) { location.hash = urlDefaultFile; } else { FIL.onHashChange(); }
+
+	THR.animate();
 
 	FGAT.fetchGitHubApiTree(); // get links to sample files
 

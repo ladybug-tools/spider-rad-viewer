@@ -78,60 +78,51 @@ RAD.addDataFile = function( text ) {
 }
 
 
-RAD.addDataFilexxx = function( text ) {
-
-	json = RAD.radToJson( text );
-	//console.log( 'json', json );
-
-	if ( json.other.length > 0 ) {
-
-		count = 0;
-
-		for ( other of json.other ) {
-
-			//console.log( 'other', other.type.slice( 2 ) );
-
-			FIL.requestFile( RAD.path + other.type, FIL.callbackRequestFileXform );
-			count++;
-
-			if ( count  >= json.other.length ) { RAD.setThreeJsWindowUpdate( json ); }
-
-		}
-
-	} else {
-
-		RAD.setThreeJsWindowUpdate( json );
-
-	}
-
-
-	return json;
-
-}
-
 
 //////////
 
 RAD.radToJson = function( radText ) {
 
-	//radText = radTxt.replace( / \./gm, ' 0.');
-	//console.log( 'radText', radText );
+	items = [];
 
-	const parseRadRe = /^\s*([^0-9].*(\s*[\d.-]+.*)*)/gm; // how does this work? ;-)
+	const lines = radText.split( /\r\n|\n/ );
 
-	rawObjects1 = radText.match( parseRadRe )
-	//console.log( 'rawObjects1', rawObjects1 );
+	count = -1;
 
-	rawObjects = rawObjects1.filter( word => word.trim().length > 0 && !word.trim().startsWith( '#' ) );
-	//console.log( 'rawObjects', rawObjects ); // 'void' trimmed o
+	for ( let line of lines ) {
 
-	const rawObjectsRe = rawObjects.map( item => item.trim().replace(/\r\n|\n/g, " " ).replace(/\t/g, " " ).replace(/ {2,}/g, " " )  );
-	//console.log( 'rawObjectsRe', rawObjectsRe );
+		line = line.trim();
+		if ( line[0] === '#' || line === '' ) { continue; }
 
-	let jsonData = rawObjectsRe.map( line => RAD.converterObjectToJson(line))
+		if ( line.search( /[a-z]/ ) >= 0 ) { // there is a word
+		//if ( line.test( /[a-z]/ ) ) { // there is a word
+
+			if ( line.match( '!xform' ) && !line.match( '-rx' ) && !line.match( '-f' ) ) {
+
+				let url = line.trim().replace( /  /g, ' ' ).split( /\s/)[ 1 ];
+				url = url.slice( 1 );
+				//console.log( 'path + url', path + url );
+
+				rad.requestFile( path + url );
+
+			}
+
+			items[ ++count ] = line + ' ';
+
+		} else {
+
+
+			items[ count ] += line + ' ';
+
+		}
+
+
+	}
+
+	//console.log( 'items', items );
+
+	let jsonData = items.map( line => RAD.converterObjectToJson( line ) )
 		.filter( result => result ); // drop empties // needed?
-
-	//jsonData.forEach( result => json[ result[ 0 ] ].push( result[ 1 ] ) ); // not easy to understand
 	//console.log( 'jsonData', jsonData );
 
 	return jsonData;
@@ -206,12 +197,12 @@ RAD.setThreeJsWindowUpdate = function( json, target = undefined ) {
 
 	//target.innerHTML = POP.getPopUpHtml();
 
-	if ( RAD.divPopUpData ) {
+/* 	if ( RAD.divPopUpData ) {
 
 		setTimeout(() => { RAD.divPopUpData.innerHTML = POP.getPopUpHtml(); }, 600 );
 
 	}
-
+ */
 };
 
 

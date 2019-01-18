@@ -8,16 +8,25 @@
 <meta name = "date" content = "2019-01-17" >
 <meta name = "release" content = "8.0" >
 <title>Spider Rad Viewer R8</title>
-
+<link rel="stylesheet" href="js/style.css">
 </head>
 <body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js" ></script>
+<script src = "https://rawgit.com/mrdoob/three.js/r100/build/three.min.js" ></script>
+<script src = "https://rawgit.com/mrdoob/three.js/r100/examples/js/controls/OrbitControls.js" ></script>
+
+<script src = "js/thr-threejs.js" ></script>
+<script src = "js/thru-threejs-utilities.js" ></script>
 
 <script src="https://pushme-pullyou.github.io/tootoo13/js-tootoo13/mnu-menu.js" ></script>
 <script src="https://pushme-pullyou.github.io/tootoo13/js-tootoo13/fob-file-open-basic.js" ></script>
 <script src="https://pushme-pullyou.github.io/tootoo13/js-tootoo13/thm-theme-select.js" ></script>
 <script src="https://pushme-pullyou.github.io/tootoo13/js-tootoo13/ohc-on-hash-change.js" ></script>
 <script src="https://pushme-pullyou.github.io/tootoo13/js-tootoo13/tmp-template.js" ></script>
+
+<script src = "js/rad-to-three.js" ></script>
+<script src = "js/rad-converter.js" ></script>
+<script src = "js/fgat-fetch-github-api-tree.js" ></script>
 <script>
 
 //Copyright Ladybug Tools authors. MIT License
@@ -51,9 +60,11 @@ MNU.description =
 	`;
 
 
-const uriDefaultFile = '#README.md';
+//const uriDefaultFile = '#README.md';
+const urlDefaultFile = 'radiance-animation-test-case.rad';
+//const urlDefaultFile = 'https://rawgit.com/ladybug-tools/spider/master/radiance-sample-files/sample-file.rad';
 
-THM.cssBasic = "https://pushme-pullyou.github.io/tootoo13/js-tootoo13/style.css";
+THM.cssBasic = "js/style.css";
 
 // For main menu header
 MNU.urlSourceCode = "https://github.com/pushme-pullyou/pushme-pullyou.github.io/tree/master/tootoo-templates/hamburger-css";
@@ -78,7 +89,7 @@ MNU.footerTarget = ""; //"target=_blank";
 MNU.footerIssues = "https://www.ladybug.tools/spider-rad-viewer/issues";
 
 // for parsing
-OHC.user = 'ladybug-tools;
+OHC.user = 'ladybug-tools';
 OHC.repo = 'spider-rad-viewer';
 OHC.pathRepo = '';
 OHC.branch = '/master/';
@@ -111,6 +122,19 @@ OHC.urlGitHubPage = `https://${ OHC.repo }/`;
 				<section id=FILdivFileSave ></section>
 
 			</details>
+
+
+			<!--
+			<details>
+
+				<summary>Spider RAD Sample files</summary>
+
+				<div id=divSampleFiles ></div>
+
+			</details>
+
+			-->
+
 
 
 			<details id=detMenuHelp open >
@@ -158,10 +182,53 @@ OHC.urlGitHubPage = `https://${ OHC.repo }/`;
 
 <script>
 
+let FIL = {};
+
+
+
+FIL.requestFile = function( url, callback ) {
+
+	const xhr = new XMLHttpRequest();  // unlike fetch handles local files
+	xhr.crossOrigin = 'anonymous';
+	xhr.open( 'GET', url, true );
+	xhr.onerror = function( xhr ) { console.log( 'error:', xhr  ); };
+	//xhr.onprogress = function( xhr ) { console.log( 'bytes loaded:', xhr.loaded ); }; // or something
+	xhr.onload = callback;
+	xhr.send( null );
+
+};
+
+
+
+FIL.callbackRequestFile = function( xhr ) {
+	//console.log( 'xhr.target.response', xhr.target.response );
+
+	const json = RAD.addDataFile( xhr.target.response );
+
+	json.forEach( result => RAD.json[ result[ 0 ] ].push( result[ 1 ] ) ); // not easy to understand
+
+	RAD.size = xhr.target.response.length;
+
+	FIL.htmLog +=
+	`
+		<p>
+			name: ${ RAD.name }<br>
+			size: ${ RAD.size.toLocaleString() } bytes<br>
+		</p>
+	`;
+
+	FIL.txtRadiance = xhr.target.response;
+	FIL.txtJson = JSON.stringify( json, undefined, 1 );
+
+	//FIL.setLog( FIL.divFileData );
+	FIL.timeLoad = ( performance.now() - FIL.timeStart ).toLocaleString();
+
+};
+
 
 
 init();
-
+THR.animate();
 
 function init() {
 
@@ -169,7 +236,24 @@ function init() {
 
 	//OHCsecMenuRepoFilesFolders.innerHTML = OHC.getMenuRepoFilesFolders();
 
-	FOBsecFileOpenBasic.innerHTML = FOB.getMenuFileOpenBasic( divContents, divPopUpData );
+	THR.getThreejs();
+
+	THRU.setHelpers();
+
+	THRU.addSomeLights();
+
+	//mesh = THRU.getGeometry();
+	//THR.scene.add( mesh );
+
+	RAD.url = location.hash.slice( 1 );
+
+	FIL.timeStart = performance.now();
+
+	RAD.json = { 'surfaces': [], 'materials': [], 'other': [] };
+
+	FIL.requestFile( urlDefaultFile, FIL.callbackRequestFile )
+
+	//FOBsecFileOpenBasic.innerHTML = FOB.getMenuFileOpenBasic( divContents, divPopUpData );
 
 	THMsecMenuThemeSelect.innerHTML = THM.getMenuThemeSelect();
 
@@ -179,9 +263,8 @@ function init() {
 
 	THM.init();
 
-	//OHC.onHashChange();
-
 }
+
 
 
 </script>
