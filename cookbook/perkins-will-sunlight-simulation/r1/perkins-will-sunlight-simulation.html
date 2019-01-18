@@ -28,7 +28,9 @@
 	a { color: var( --mnu-color ); text-decoration: none; }
 	a:hover, a:focus, #hamburger:hover { background-color: yellow; color: #888; }
 
-	button, input[ type=button ] { background-color: var(--but-bg-color ); border: none; color: var( --mnu-color ); cursor: pointer; padding: 3px 20px; }
+	button, input[ type=button ] { background-color: var(--but-bg-color ); border: none;
+		/* color: var( --mnu-color ); */cursor: pointer; margin: 1px; padding: 3px 20px; min-width: 6rem;  }
+
 	button:hover { background-color: var( --a-back-color-hover ); color: var( --but-bg-color ) }
 
 	iframe { width: 100%; }
@@ -36,6 +38,7 @@
 	input[ type = range ] { -webkit-appearance: none; -moz-appearance: none; background-color: #ddd; width: 100%; }
 	input[ type = range ]::-moz-range-thumb { background-color: #888; border-radius: 0; width: 10px; }
 	input[ type = range ]::-webkit-slider-thumb { -webkit-appearance: none; background-color: #888; height: 20px; width: 10px; }
+
 
 	#hamburger { background-color: pink; box-sizing: border-box; cursor: pointer; font-size: 30px; left: calc( var( --mnu-width ) - 100px );
 		line-height: 30px; margin: 0; padding: 5px 15px 8px 10px; position: fixed; top: 0; transition: left 0.5s; z-index: 10; }
@@ -72,49 +75,116 @@
 
 		<div id=divTitle ></div>
 
-		<p>
-			<button onclick=fetchGitHubFolderContents(1); >7 am</button>
-		</p>
-
-		<p>
-			<button onclick=fetchGitHubFolderContents(2); >8 am</button>
-		</p>
-
-		<p>
-			<button onclick=fetchGitHubFolderContents(3); >9 am</button>
-		</p>
-
-		<p>
-			<button onclick=fetchGitHubFolderContents(4); >10 am</button>
-		</p>
-
-		<p>
-			<button onclick=fetchGitHubFolderContents(5); >11 am</button>
-		</p>
-
-		<p>
-			<button onclick=fetchGitHubFolderContents(6); >12 pm</button>
-		</p>
-
-		<p>
-			<button onclick=fetchGitHubFolderContents(7); >1 pm</button>
-		</p>
-
-		<p>
-			<button onclick=fetchGitHubFolderContents(8); >2 pm</button>
-		</p>
-
-		<p>
-			<button onclick=fetchGitHubFolderContents(9); >3 pm</button>
-		</p>
-
-		<div id = "divMenuItems" >
-
-
-			<button title = "Toggle the scene spinning" onclick="controls.autoRotate=!controls.autoRotate;" style=width:100%; >rotation</button>
-			<div id = "divLog" ></div>
+		<div>
+			<button onclick="fetchTestCase('e7am')"; >7 am</button>
 		</div>
 
+		<div>
+			<button onclick="fetchTestCase('e8am');" >8 am</button>
+		</div>
+
+		<div>
+			<button onclick="fetchTestCase('e9am');" >9 am</button>
+		</div>
+
+		<div>
+			<button onclick="fetchTestCase('e10am');"" >10 am</button>
+		</div>
+
+		<div>
+			<button onclick=fetchTestCase('e11am'); >11 am</button>
+		</div>
+
+		<div>
+			<button onclick=fetchTestCase('e12pm'); >12 pm</button>
+		</div>
+
+		<div>
+			<button onclick=fetchTestCase('e1pm'); >1 pm</button>
+		</div>
+
+		<div>
+			<button onclick=fetchTestCase('e2pm'); >2 pm</button>
+		</div>
+
+		<div>
+			<button onclick=fetchTestCase('e3pm'); >3 pm</button>
+		</div>
+
+		<div>
+			<button onclick=fetchTestCase('e4pm'); >4 pm</button>
+		</div>
+
+		<div>
+			<button onclick=fetchTestCase('e5pm'); >5 pm</button>
+		</div>
+
+		<br>
+
+		<div>
+			<button onclick=fetchTestCase('jan3pm'); >jan 3 pm</button>
+		</div>
+
+		<div>
+			<button onclick=fetchTestCase('feb3pm'); >feb 3 pm</button>
+		</div>
+
+		<div>
+			<button onclick=fetchTestCase('mar3pm'); disabled >mar 3 pm</button>
+		</div>
+
+		<div>
+			<button onclick=fetchTestCase('apr3pm'); >apr 3 pm</button>
+		</div>
+
+		<div>
+			<button onclick=fetchTestCase('may3pm'); >may 3 pm</button>
+		</div>
+
+		<div>
+			<button onclick=fetchTestCase('jun3pm'); disabled >jun 3 pm</button>
+		</div>
+
+		<div>
+			<button onclick=fetchTestCase('jul3pm'); >jul 3 pm</button>
+		</div>
+
+		<div>
+			<button onclick=fetchTestCase('aug3pm'); >aug 3 pm</button>
+		</div>
+
+		<div>
+			<button onclick=fetchTestCase('sep3pm'); >sep 3 pm</button>
+		</div>
+
+		<div>
+			<button onclick=fetchTestCase('oct3pm'); >oct 3 pm</button>
+		</div>
+
+		<div>
+			<button onclick=fetchTestCase('nov3pm'); >nov 3 pm</button>
+		</div>
+
+		<div>
+			<button onclick=fetchTestCase('dec3pm'); disabled >dec 3 pm</button>
+		</div>
+
+		<div>
+			<button onclick=fetchTestCase('test'); >test</button>
+		</div>
+
+		<div>
+			<button onclick=fetchTestCase('w3pm'); >w 3 pm</button>
+		</div>
+
+		<br>
+		
+		<div id = "divMenuItems" ></div>
+
+		<br>
+
+		<button title = "Toggle the scene spinning" onclick="controls.autoRotate=!controls.autoRotate;" style=width:100%; >rotation</button>
+		<div id = "divLog" ></div>
 
 		<hr>
 
@@ -129,12 +199,16 @@
 /* globals THREE, divTitle, divMenu, hamburger  */
 // jshint esversion: 6
 
-const urlGitHubSourcePng = "https://github.com/ladybug-tools/spider-rad-resources/tree/master/sunlight-sample-files/2019-01-18-perkins-will-test-case/";
-const urlGitHubPage = "https://ladybug-tools.github.io/spider-rad-resources/sunlight-sample-files/2019-01-18-perkins-will-test-case/';
-const iconGitHubMark = "<img src='https://status.github.com/images/invertocat.png' height=14 style=vertical-align:middle>"";
+//const urlGitHubSourcePng = "https://www.ladybug.tools/spider-rad-resources/sunlight-sample-files/2019-01-18-perkins-will-test-case/";
+
+const urlGitHubSourcePng = "https://rawgit.com/ladybug-tools/spider-rad-resources/master/sunlight-sample-files/2019-01-18-perkins-will-test-case/";
+
+const urlGitHubPage = "https://ladybug-tools.github.io/spider-rad-resources/sunlight-sample-files/2019-01-18-perkins-will-test-case/";
+const iconGitHubMark = "<img src='https://status.github.com/images/invertocat.png' height=14 style=vertical-align:middle>";
 
 let meshes;
-let testCase = 9;
+let testCase = "e7am";
+let files;
 let pngs;
 
 let renderer, camera, controls, scene;
@@ -197,28 +271,20 @@ function init() {
 
 	fetchGitHubFolderContents( testCase );
 
-	window.addEventListener ( 'hashchange', onHashChange, false );
+	//window.addEventListener ( 'hashchange', onHashChange, false );
 
 }
 
 
 
-function fetchGitHubFolderContents( index ) {
+function fetchGitHubFolderContents( txt ) {
 
-	testCase = index;
+	testCase = txt;
 
-	const url = 'https://api.github.com/repos/ladybug-tools/spider/contents/sandbox/speed-rad2solar-viewer/test-cases/test-case-2018-07-04-' + index + '/';
+	const url = "https://api.github.com/repos/ladybug-tools/spider-rad-resources/contents/sunlight-sample-files/2019-01-18-perkins-will-test-case/";
 	//console.log(url );
 
-	divMenuItems.innerHTML =
 
-	`<details id = detGallery >
-
-		<summary>Test Case ${ index } - List of Files</summary>
-
-		<div id=divGallery ></div>
-
-	</details>`;
 
 	const request = new Request( url );
 
@@ -230,18 +296,41 @@ function fetchGitHubFolderContents( index ) {
 
 
 
-function callbackGitHubMenu ( files ) {
+function callbackGitHubMenu ( json ) {
+
+	files = json;
 
 	//console.log( 'files', files );
 
+	fetchTestCase( testCase );
+
+}
+
+
+
+function fetchTestCase( testCase ) {
+
 	let txt = '';
-	pngs = [];
+	pngs = []; // global
+
+	divMenuItems.innerHTML =
+		`
+			<details id = detGallery >
+
+				<summary>Test Case ${ testCase } - List of Files</summary>
+
+				<div id=divGallery ></div>
+
+			</details>
+		`;
 
 	for ( let file of files) {
 
 		if ( !file.name.endsWith( '.png' ) ) { continue; }
 
-		if( file.name.includes( 'sw' ) || file.name.includes( 'legend' ) ) { continue; }
+		if ( !file.name.startsWith( testCase ) ) { continue; }
+
+		//if( file.name.includes( 'sw' ) || file.name.includes( 'legend' ) ) { continue; }
 
 		const fileName = encodeURI( file.name );
 
@@ -249,7 +338,7 @@ function callbackGitHubMenu ( files ) {
 
 		`<div style=margin:10px; >
 
-			<a href=${ urlGitHubSource + testCase + '/' + fileName } title="Edit me" >${ iconGitHubMark }</a>
+			<a href=${ urlGitHubSourcePng + fileName } title="Edit me" >${ iconGitHubMark }</a>
 
 			<a href=#${ fileName } title="${ file.size.toLocaleString() } bytes" >${ file.name }</a>
 
@@ -262,47 +351,12 @@ function callbackGitHubMenu ( files ) {
 	}
 
 	divGallery.innerHTML =
-	`<div style=margin:10px; >${ pngs.length} PNG files found</div>` + txt;
+	`<div style=margin:10px; >${ pngs.length } PNG files found</div>` + txt;
 
 	loadTestCase( testCase );
 
-}
-
-
-
-function onHashChange() {
-
-	uriDefaultFile = pngs[ 0 ];
-	if ( !uriDefaultFile ) { alert("no-files-found" ); return; }
-
-	const url = !location.hash ? uriDefaultFile : location.hash.slice( 1 );
-	const ulc = url.toLowerCase();
-
-	if ( ulc.endsWith( '.png' ) ) {
-
-		loadSinglePGFile( url, testCase );
-
-	}
 
 }
-
-
-
-function loadSinglePGFile( fileName, index ) {
-
-	//console.log( 'fileName', fileName.slice( 0, -8 ) );
-
-	scene.remove( meshes );
-
-	meshes = new THREE.Group();
-
-	loadPNG( fileName, index );
-
-	scene.add( meshes );
-
-}
-
-
 
 function loadTestCase( index ) {
 
@@ -318,14 +372,6 @@ function loadTestCase( index ) {
 
 	}
 
-	/*
-	loadPNG( pngs[ 0 ], index );
-	loadPNG( pngs[ 1 ], index );
-	loadPNG( pngs[ 2 ], index );
-	loadPNG( pngs[ 3 ], index );
-	loadPNG( pngs[ 4 ], index );
-	*/
-
 	scene.add( meshes );
 
 }
@@ -334,85 +380,71 @@ function loadTestCase( index ) {
 
 function loadPNG( fileName, index ) {
 
-		const items = fileName.slice( 0, -4).split( '_' ).map( item => parseFloat( item ) );
+	const items = fileName.slice( 0, -4).split( '_' ).map( item => parseFloat( item ) );
+	//console.log( 'items', items );
+
+	const center = new THREE.Vector3().fromArray( items.slice( 1, 4 ) );
+	//console.log( 'center', center );
+
+	const normal = new THREE.Vector3().fromArray( [ items[ 4 ], items[ 5 ], items[ 6 ] ] ).normalize();
+
+	//console.log( 'normal', normal );
+	meshes.add( new THREE.ArrowHelper( normal, center, 3, 0xff00ff, 1, 1 ) );
+
+	const point = new THREE.Vector3().fromArray( [ items[ 7 ], items[ 8 ], items[ 9 ] ] ).normalize();
+
+	//console.log( 'point', point );
+	meshes.add( new THREE.ArrowHelper( point, center, 3, 0x000000 , 1, 1 ) );
+
+	const width = items[ 10 ];
+	const height = items[ 11 ];
+	//console.log( 'w',width, 'h', height );
+
+	const loader = new THREE.TextureLoader();
+
+	//const texture = loader.load ( urlGitHubPage + index + '/' + fileName );
+
+	//name = urlGitHubPage + fileName;
+
+	const name = urlGitHubSourcePng + fileName;
+	//console.log( 'name', name );
+
+	const texture = loader.load ( name );
+	//console.log( 'tex', texture );
+
+	texture.minFilter = THREE.LinearFilter;
+
+	const material = new THREE.MeshBasicMaterial( { alphaTest : 0.01, map: texture, opacity: 1, side: 0, transparent: true } );
+	const geometry = new THREE.PlaneBufferGeometry( width, height );
+
+	mesh = new THREE.Mesh( geometry, material );
+
+	mesh.position.copy( center );
+
+	normal.add( center )
+	mesh.up = point;
+	mesh.lookAt( normal );
+
+	if ( items[ 0 ] === 0 && items[ 1 ] === 0 ) {
+
 		//console.log( 'items', items );
 
-		const center = new THREE.Vector3().fromArray( items.slice( 0, 3 ) );
-		//console.log( 'center', center );
+	} else {
 
-		const normal = new THREE.Vector3().fromArray( [ items[ 3 ], items[ 4 ], items[ 5 ] ] ).normalize();
+		edgesGeometry = new THREE.EdgesGeometry( mesh.geometry ); // or WireframeGeometry
+		edgesMaterial = new THREE.LineBasicMaterial( { color: 0x000000 } );
+		edges = new THREE.LineSegments( edgesGeometry, edgesMaterial );
+		mesh.add( edges );
 
-		//console.log( 'normal', normal );
-		meshes.add( new THREE.ArrowHelper( normal, center, 3, 0xff00ff , 1, 1 ) );
+	}
 
-		const point = new THREE.Vector3().fromArray( [ items[ 6 ], items[ 7 ], items[ 8 ] ] ).normalize();
-
-		//console.log( 'point', point );
-		meshes.add( new THREE.ArrowHelper( point, center, 3, 0x000000 , 1, 1 ) );
-
-		const width = items[ 9 ];
-		const height = items[ 10 ];
-		//console.log( 'w',width, 'h', height );
-
-		const loader = new THREE.TextureLoader();
-
-		const texture = loader.load ( urlGitHubPage + index + '/' + fileName );
-		texture.minFilter = THREE.LinearFilter;
-
-		const material = new THREE.MeshBasicMaterial( { alphaTest : 0.01, map: texture, opacity: 1, side: 0, transparent: true } );
-		const geometry = new THREE.PlaneBufferGeometry( width, height );
-
-		/*
-		if ( Math.abs( items[ 6 ] ) === 1 ) {
-
-			const angle = Math.atan2( point.x, point.y )
-			geometry.applyMatrix( new THREE.Matrix4().makeRotationZ( angle ) );
-
-		}
-
-		if ( Math.abs( items[ 5 ] ) !== 1 ) {
-		//if ( items[ 5 ] !== -1 ) {
-
-			geometry.applyMatrix( new THREE.Matrix4().makeRotationX( Math.PI ) );
-
-		} else {
-
-			//console.log( 'items[ 5 ]', index, items );
-			geometry.applyMatrix( new THREE.Matrix4().makeRotationZ( Math.PI ) );
-
-		}
-		*/
-
-		//geometry.lookAt( normal );
-
-		mesh = new THREE.Mesh( geometry, material );
-
-		mesh.position.copy( center );
-
-		normal.add( center )
-		mesh.up = point;
-		mesh.lookAt( normal );
-
-		if ( items[ 0 ] === 0 && items[ 1 ] === 0 ) {
-
-			//console.log( 'items', items );
-
-		} else {
-
-			edgesGeometry = new THREE.EdgesGeometry( mesh.geometry ); // or WireframeGeometry
-			edgesMaterial = new THREE.LineBasicMaterial( { color: 0x000000 } );
-			edges = new THREE.LineSegments( edgesGeometry, edgesMaterial );
-			mesh.add( edges );
-
-		}
-
-		meshes.add( mesh );
-
-
+	meshes.add( mesh );
 
 }
 
 
+
+//////////
 
 function toggleNav() {
 
