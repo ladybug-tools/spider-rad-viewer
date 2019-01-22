@@ -9,8 +9,10 @@ RAD.converterObjectToJson = function( rad_text ) {
 	// probably should arrive as an array??
 	//console.log( 'rad_text', rad_text );
 
+	dd = rad_text.replace ( /\t/g, " " );
+	
 	const rep_new_line_re = /\s\s+/g;
-	const data = rad_text.replace( rep_new_line_re, " " ).trim().split( " " );
+	const data = dd.replace( rep_new_line_re, " " ).trim().split( " " );
 	//console.log( 'data', data  );
 
 	const type = data[ 1 ];
@@ -21,40 +23,39 @@ RAD.converterObjectToJson = function( rad_text ) {
 	switch (type) {
 
 		case 'polygon':
-			return parse_polygon(data );
+			return parse_polygon(data);
 
 		case 'sphere':
-			return parse_sphere(data );
+			return parse_sphere(data);
 
 		case 'cone':
-			return parse_cone(data );
+			return parse_cone(data);
 
 		case 'cylinder':
-			return parse_cylinder(data );
+			return parse_cylinder(data);
 
 		case 'plastic':
-			return parse_plastic(data );
+			return parse_plastic(data);
 
 		case 'glass':
-			return parse_glass(data );
+			return parse_glass(data);
 
 		case 'metal':
-			return parse_metal(data );
+			return parse_metal(data);
 
 		case 'trans':
-			return parse_trans(data );
+			return parse_trans(data);
 
 		case 'glow':
-			return parse_glow(data );
+			return parse_glow(data);
 
 		case 'mirror':
-			return parse_mirror(data );
+			return parse_mirror(data);
 
 		case 'void':
 
 		default:
-			console.log( 'data', data );
-
+			//console.log( 'data', data );
 			// this is a generic method that returns the data as values for each line
 			return parse_base( data );
 
@@ -92,7 +93,7 @@ function parse_polygon( data ) {
 
 
 
-function parse_sphere(data)  {
+function parse_sphere(data) {
 
 	const sphere = {
 		'modifier': data[0],
@@ -103,11 +104,12 @@ function parse_sphere(data)  {
 	};
 
 	return ['surfaces', sphere];
+
 }
 
 
 
-function parse_cone(data)  {
+function parse_cone(data) {
 
 	const cone = {
 		'modifier': data[0],
@@ -125,7 +127,7 @@ function parse_cone(data)  {
 
 
 
-function parse_cylinder(data)  {
+function parse_cylinder(data) {
 
 	const cylinder = {
 		'modifier': data[0],
@@ -141,7 +143,7 @@ function parse_cylinder(data)  {
 
 
 
-function parse_plastic(data)  {
+function parse_plastic(data) {
 
 	const plastic = {
 		'modifier': data[0],
@@ -159,7 +161,7 @@ function parse_plastic(data)  {
 
 
 
-function parse_glass(data)  {
+function parse_glass(data) {
 
 	const glass = {
 		'modifier': data[0],
@@ -177,7 +179,7 @@ function parse_glass(data)  {
 
 
 function parse_metal(data) {
-/* convert a meta l line to a JSON object */
+/* convert a metal line to a JSON object */
 
 	const metal = {
 		'modifier': data[0],
@@ -195,7 +197,7 @@ function parse_metal(data) {
 
 
 
-function parse_trans(data)  {
+function parse_trans(data) {
 
 	const trans = {
 		'modifier': data[0],
@@ -216,7 +218,7 @@ function parse_trans(data)  {
 
 
 
-function parse_glow(data)  {
+function parse_glow(data) {
 
 	const glow = {
 		'modifier': data[0],
@@ -233,7 +235,7 @@ function parse_glow(data)  {
 
 
 
-function parse_mirror(data)  {
+function parse_mirror(data) {
 
 	const mirror = {
 		'modifier': data[0],
@@ -250,7 +252,7 @@ function parse_mirror(data)  {
 
 
 
-function parse_base(data)  {
+function parse_base( data ) {
 
 	// convert a radiance primitive line to a JSON object
 	// find number of items in each line

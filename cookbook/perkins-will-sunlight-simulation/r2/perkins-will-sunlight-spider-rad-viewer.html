@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang = "en" >
+<head>
+<meta charset = "utf-8" >
+<meta name = "viewport" content= "width=device-width, initial-scale=1" >
+<meta name = "description" content = "List and display Radiance HDR files as textures on a 3D surface for all files in a test case folder" >
+<meta name = "keywords" content = "JavaScript,GitHub,FOSS" >
+<meta name = "date" content = "2019-01-21" >
+<meta name = "release" content = "2.0" >
+<title>Perkins-Will Sunlight Simulation</title>
+<link rel="stylesheet" href="js-rad/style.css">
+</head>
+<body>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js" ></script>
+<script src = "https://cdn.jsdelivr.net/gh/mrdoob/three.js@r100/build/three.min.js" ></script>
+<script src = "https://cdn.jsdelivr.net/gh/mrdoob/three.js@r100/examples/js/controls/OrbitControls.js" ></script>
+
+<!--
+<script src="https://pushme-pullyou.github.io/tootoo13/js-tootoo13/fob-file-open-basic.js" ></script>
+<script src="https://pushme-pullyou.github.io/tootoo13/js-tootoo13/ohc-on-hash-change.js" ></script>
+<script src="https://pushme-pullyou.github.io/tootoo13/js-tootoo13/tmp-template.js" ></script>
+-->
+<script src="https://pushme-pullyou.github.io/tootoo13/js-tootoo13/mnu-menu.js" ></script>
+<script src="https://pushme-pullyou.github.io/tootoo13/js-tootoo13/thm-theme-select.js" ></script>
+
+
+<script src = "js-rad/thr-threejs.js" ></script>
+<script src = "js-rad/thru-threejs-utilities.js" ></script>
+
+<script src = "js-rad/fil-open-files.js" ></script>
+<script src = "js-rad/fgat-fetch-github-api-tree.js" ></script>
+<script src = "js-rad/rad-to-three.js" ></script>
+<script src = "js-rad/rad-converter.js" ></script>
+<script src = "js-rad/pop-up.js" ></script>
+
+<script src = "pws-perkins-will-sunlight.js" ></script>
+
+<script>
+
+//Copyright Ladybug Tools authors. MIT License
+
+MNU.currentStatusCore =
+	`
+		<h3>
+			Spider Rad Viewer R8
+			<!--R${ document.head.querySelector( '[ name=release ]' ).content } -->
+			~
+			${ document.head.querySelector( '[ name=date ]' ).content }
+		</h3>
+
+
+		<p>
+			Change log
+			<ul>
+				<li>2019-01-20 ~ update MNU var content and links</li>
+				<li>2019-01-17 ~ First commit</li>
+				<li>2019-01-09 ~ Index/html now based on TooToo R13 - beginning to look OK</li>
+				<!--   <li></li>    -->
+			</ul>
+		</p>
+
+		This web page is built with:
+		${ MNU.descriptionTooToo }
+	`;
+
+
+MNU.description =
+	`
+		List and display Radiance HDR files as textures on a 3D surface for all files in a test case folder.
+		View Radiance RAD files in interactive 3D in your browser using the Three.js JavaScript library
+	`;
+
+
+//const uriDefaultFile = '#README.md';
+const urlDefaultFile = "radiance-animation-test-case.rad";
+//const urlDefaultFile = "https://cdn.jsdelivr.net/gh/ladybug-tools/spider-rad-resources@master/rad-sample-files/various-sources/sample-file.rad";
+
+const urlGitHubSourcePng = "https://rawgit.com/ladybug-tools/spider-rad-resources/master/sunlight-sample-files/2019-01-18-perkins-will-test-case/";
+
+THM.cssBasic = "js-rad/style.css";
+
+// For main menu header
+MNU.urlSourceCode = "https://github.com/ladybug-tools/spider-rad-viewer/tree/master/cookbook/perkins-will-sunlight-simulation";
+
+MNU.homeText="<img src='https://ladybug.tools/artwork/icons_bugs/ico/ladybug.ico' height=24 >";
+MNU.homeTitle="Ladybug Tools: free computer applications that support environmental design and education";
+MNU.homeUrl="https://www.ladybug.tools";
+
+MNU.repoText="<img src='https://ladybug.tools/artwork/icons_bugs/ico/spider.ico' height=24 >";
+MNU.repoTitle="Spider: 3D interactive analysis in your browser mostly written around the Three.js JavaScript library";
+MNU.repoUrl="https://www.ladybug.tools/spider/";
+
+MNU.appText= "RAD Tools";
+MNU.appTitle = "Tools to help you find, load, examine and edit Radiance files - in large numbers and sizes";
+MNU.appUrl = "https://www.ladybug.tools/spider-rad-viewer/";
+
+MNU.urlSourceCodeImage="https://status.github.com/images/invertocat.png";
+MNU.urlSourceCodeIcon=`<img src="${ MNU.urlSourceCodeImage }" height=18 >`;
+
+MNU.footerUrl = "#https://www.ladybug.tools/spider/";
+MNU.footerTarget = ""; //"target=_blank";
+MNU.footerIssues = "https://www.ladybug.tools/spider-rad-viewer/issues";
+
+/*
+// for parsing
+OHC.user = 'ladybug-tools';
+OHC.repo = 'spider-rad-viewer';
+OHC.pathRepo = '';
+OHC.branch = '/master/';
+
+// When running in dev folder
+// = location.href.includes( OHC.repo ) ? '../' : 'https://' + OHC.repo + "/";
+OHC.urlGitHubPage = `https://${ OHC.repo }/`;
+// When running in build repo
+//OHC.urlGitHubPage = "";
+*/
+
+
+</script>
+
+
+	<nav id="navMenu" >
+
+		<header>
+
+			<div id="MNUdivHeader" ></div>
+
+		</header>
+
+		<div id=divTitle >
+
+			Spring Equinox<br>
+			<button class=pwsButtDay onclick="fetchTestCase('e7am');" style=min-width:5rem; >7 am</button>
+
+			<button class=pwsButtDay onclick="fetchTestCase('e8am');" style=min-width:5rem; >8 am</button>
+
+			<button class=pwsButtDay onclick="fetchTestCase('e9am');" style=min-width:5rem; >9 am</button>
+
+			<button class=pwsButtDay onclick="fetchTestCase('e10am');" style=min-width:5rem; >10 am</button>
+
+			<button class=pwsButtDay onclick=fetchTestCase('e11am'); style=min-width:5rem; >11 am</button>
+
+			<button class=pwsButtDay onclick=fetchTestCase('e12pm'); style=min-width:5rem; >12 pm</button>
+
+			<button class=pwsButtDay onclick=fetchTestCase('e1pm'); style=min-width:5rem; >1 pm</button>
+
+			<button class=pwsButtDay onclick=fetchTestCase('e2pm'); style=min-width:5rem; >2 pm</button>
+
+			<button class=pwsButtDay onclick=fetchTestCase('e3pm'); style=min-width:5rem; >3 pm</button>
+
+			<button class=pwsButtDay onclick=fetchTestCase('e4pm'); style=min-width:5rem; >4 pm</button>
+
+			<button class=pwsButtDay onclick=fetchTestCase('e5pm'); style=min-width:5rem; >5 pm</button>
+
+			<br>
+
+			<button onclick=playTheDay(); >play the day</button>
+			<button onclick=clearTimeout(playDay); >stop</button>
+
+		</div>
+
+		<br>
+
+		<br>
+
+		<div>
+
+			Annual<br>
+			<button class=pwsButtYear onclick=fetchTestCase('jan3pm'); style=min-width:5rem; >jan 3 pm</button>
+
+			<button class=pwsButtYear onclick=fetchTestCase('feb3pm'); style=min-width:5rem; >feb 3 pm</button>
+
+			<button class=pwsButtYear onclick=fetchTestCase('e3pm'); style=min-width:5rem;  >mar 3 pm</button>
+
+			<button class=pwsButtYear onclick=fetchTestCase('apr3pm'); style=min-width:5rem; >apr 3 pm</button>
+
+			<button class=pwsButtYear onclick=fetchTestCase('may3pm'); style=min-width:5rem; >may 3 pm</button>
+
+			<button class=pwsButtYear onclick=fetchTestCase('jun3pm'); disabled style=min-width:5rem; >jun 3 pm</button>
+
+			<button class=pwsButtYear onclick=fetchTestCase('jul3pm'); style=min-width:5rem; >jul 3 pm</button>
+
+			<button class=pwsButtYear onclick=fetchTestCase('aug3pm'); style=min-width:5rem; >aug 3 pm</button>
+
+			<button class=pwsButtYear onclick=fetchTestCase('sep3pm'); style=min-width:5rem; >sep 3 pm</button>
+
+			<button class=pwsButtYear onclick=fetchTestCase('oct3pm'); style=min-width:5rem; >oct 3 pm</button>
+
+			<button class=pwsButtYear onclick=fetchTestCase('nov3pm'); style=min-width:5rem; >nov 3 pm</button>
+
+			<button class=pwsButtYear onclick=fetchTestCase('dec3pm'); disabled style=min-width:5rem; >dec 3 pm</button>
+
+			<button class=pwsButtYear onclick=fetchTestCase('test'); style=min-width:5rem; >test</button>
+
+			<button class=pwsButtYear onclick=fetchTestCase('w3pm'); style=min-width:5rem; >w 3 pm</button>
+
+			<br>
+
+			<button onclick=playTheYear(); >play the year</button>
+			<button onclick=clearTimeout(playYear); >stop</button>
+
+		</div>
+
+		<br>
+
+		<div id = "divMenuItems" ></div>
+
+		<details>
+
+				<summary class=divMenuTitle >File Menu</summary>
+
+				<div id="divFileOpen" class="dragDropArea" ></div>
+
+				<section id=divSampleFiles ></section>
+
+				<details ontoggle=divInfo.innerHTML=THRU.getRendererInfo(); >
+
+					<summary>Renderer Info</summary>
+
+					<div id = "divInfo" ></div>
+
+				</details>
+
+				<details ontoggle=FIL.setLog(); >
+
+					<summary>File Data</summary>
+
+					<div id="divFileData" ></div>
+
+				</details>
+
+				<div id = "divLog" ></div>
+
+
+			</details>
+
+
+			<details>
+
+				<summary class=divMenuTitle >View Menu</summary>
+
+				<div id="divSettings" ></div>
+
+			</details>
+
+
+
+			<details id=detMenuHelp open >
+
+				<summary class=divMenuTitle >Help Menu </summary>
+
+				<section id=THMsecMenuThemeSelect ></section>
+
+				<section id=TMPsecMenuTemplate ></section>
+
+				<footer>
+
+					<section id = "MNUdivFooter" ></section>
+
+				</footer>
+
+		</details>
+
+		<h1 onclick=navMenu.scrollTop=0; style=cursor:pointer;text-align:center; title="go to top of menu" > ❦ </h1>
+
+	</nav>
+
+
+	<div>
+
+		<button id="butHamburger" onclick=MNU.toggleNavLeft(); title="click here to hide this menu"> slide &#9776; </button>
+
+	</div>
+
+
+	<nav id="navPopUp" >
+
+		<div id="divPopUpData" ></div>
+
+		<div id="divMessage" ></div>
+
+	</nav>
+
+
+	<div id="divContainer" >
+
+		<div id="divContents" ></div>
+
+	</div>
+
+<script>
+
+
+
+init();
+THR.animate();
+
+
+function init() {
+
+	MNUdivHeader.innerHTML = MNU.getNavHeader();
+
+	divSettings.innerHTML = THRU.getSettings( divSettings );
+
+	THR.getThreejs();
+
+	THRU.setHelpers();
+
+	THRU.addSomeLights();
+
+	//mesh = THRU.getGeometry();
+	//THR.scene.add( mesh );
+
+
+	FGAT.fetchGitHubApiTree();
+
+	divFileOpen.innerHTML = FIL.getFileOpen( divFileData );
+
+	//RAD.url = location.hash.slice( 1 );
+
+	//FIL.timeStart = performance.now();
+	//RAD.json = { 'surfaces': [], 'materials': [], 'other': [] };
+
+	//FIL.requestFile( urlDefaultFile, FIL.callbackRequestFile );
+
+	if ( !location.hash ) { location.hash = urlDefaultFile; } else { FIL.onHashChange(); }
+
+	THR.animate();
+
+
+
+
+	THMsecMenuThemeSelect.innerHTML = THM.getMenuThemeSelect();
+
+	//TMPsecMenuTemplate.innerHTML = TMP.getMenuTemplate();
+
+	MNUdivFooter.innerHTML = MNU.getNavFooter(); // not essential
+
+	THM.init();
+
+	fetchGitHubFolderContents( testCase );
+
+}
+
+
+
+</script>
+</body>
+</html>

@@ -99,18 +99,17 @@ RAD.radToJson = function( radText ) {
 
 			if ( line.match( '!xform' ) && !line.match( '-rx' ) && !line.match( '-f' ) ) {
 
-				let url = line.trim().replace( /  /g, ' ' ).split( /\s/)[ 1 ];
+				let url = line.trim().replace( /  /g, ' ' ).split( /\s/ )[ 1 ];
 				url = url.slice( 1 );
 				//console.log( 'path + url', path + url );
 
-				rad.requestFile( path + url );
+				FIL.requestFile( url );
 
 			}
 
 			items[ ++count ] = line + ' ';
 
 		} else {
-
 
 			items[ count ] += line + ' ';
 
@@ -197,12 +196,12 @@ RAD.setThreeJsWindowUpdate = function( json, target = undefined ) {
 
 	//target.innerHTML = POP.getPopUpHtml();
 
-/* 	if ( RAD.divPopUpData ) {
+ 	if ( RAD.divPopUpData ) {
 
 		setTimeout(() => { RAD.divPopUpData.innerHTML = POP.getPopUpHtml(); }, 600 );
 
 	}
- */
+
 };
 
 

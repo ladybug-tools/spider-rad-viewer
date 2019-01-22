@@ -21,6 +21,18 @@ The following sections - newest on top - are a show and tell of the changes
 <iframe src=https://www.ladybug.tools/spider-rad-viewer/rad-viewer/index.html  width=100% height=500px >Iframes are not viewable in GitHub source code view<</iframe>
 
 
+## Dev version: [Spider RAD Viewer R8]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r8/ )
+
+### 2019-01-20 ~ Theo
+
+* Update folder names
+* Update MNU text and vars
+
+
+### 2019-01-20 ~ Theo
+* UI based on TooToo
+* First commit
+
 ## 2018-09-18/2018-10-06 ~ Stable version: [Spider RAD Viewer R7]( https://www.ladybug.tools/spider-rad-viewer/rad-viewer/r7/rad-viewer.html )
 
 * Uses BufferGeometry which makes drawing things much faster ( and the code more complicated )

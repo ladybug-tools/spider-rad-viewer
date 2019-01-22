@@ -5,28 +5,34 @@
 <meta name = "viewport" content= "width=device-width, initial-scale=1" >
 <meta name = "description" content = "This menu is a component of a basic html content management script with sliding menu, css theme selection, Markdown to HTML, drag and drop file reading capability, access to frequently used pages and more" >
 <meta name = "keywords" content = "JavaScript,GitHub,FOSS" >
-<meta name = "date" content = "2019-01-17" >
-<meta name = "release" content = "8.0" >
+<meta name = "date" content = "2019-01-20" >
+<meta name = "release" content = "8.1" >
 <title>Spider Rad Viewer </title>
-<link rel="stylesheet" href="js/style.css">
+<link rel="stylesheet" href="js-rad/style.css">
 </head>
 <body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js" ></script>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js" ></script>
 <script src = "https://rawgit.com/mrdoob/three.js/r100/build/three.min.js" ></script>
 <script src = "https://rawgit.com/mrdoob/three.js/r100/examples/js/controls/OrbitControls.js" ></script>
 
-<script src = "js/thr-threejs.js" ></script>
-<script src = "js/thru-threejs-utilities.js" ></script>
-
-<script src="https://pushme-pullyou.github.io/tootoo13/js-tootoo13/mnu-menu.js" ></script>
+<!--
 <script src="https://pushme-pullyou.github.io/tootoo13/js-tootoo13/fob-file-open-basic.js" ></script>
-<script src="https://pushme-pullyou.github.io/tootoo13/js-tootoo13/thm-theme-select.js" ></script>
 <script src="https://pushme-pullyou.github.io/tootoo13/js-tootoo13/ohc-on-hash-change.js" ></script>
 <script src="https://pushme-pullyou.github.io/tootoo13/js-tootoo13/tmp-template.js" ></script>
+-->
+<script src="https://pushme-pullyou.github.io/tootoo13/js-tootoo13/mnu-menu.js" ></script>
+<script src="https://pushme-pullyou.github.io/tootoo13/js-tootoo13/thm-theme-select.js" ></script>
 
-<script src = "js/rad-to-three.js" ></script>
-<script src = "js/rad-converter.js" ></script>
-<script src = "js/fgat-fetch-github-api-tree.js" ></script>
+
+<script src = "js-rad/thr-threejs.js" ></script>
+<script src = "js-rad/thru-threejs-utilities.js" ></script>
+
+<script src = "js-rad/fil-open-files.js" ></script>
+<script src = "js-rad/fgat-fetch-github-api-tree.js" ></script>
+<script src = "js-rad/rad-to-three.js" ></script>
+<script src = "js-rad/rad-converter.js" ></script>
+<script src = "js-rad/pop-up.js" ></script>
+
 <script>
 
 //Copyright Ladybug Tools authors. MIT License
@@ -44,8 +50,10 @@ MNU.currentStatusCore =
 		<p>
 			Change log
 			<ul>
+				<li>2019-01-20 ~ update MNU var content and links</li>
 				<li>2019-01-17 ~ First commit</li>
 				<li>2019-01-09 ~ Index/html now based on TooToo R13 - beginning to look OK</li>
+				<!--   <li></li>    -->
 			</ul>
 		</p>
 
@@ -61,25 +69,26 @@ MNU.description =
 
 
 //const uriDefaultFile = '#README.md';
-const urlDefaultFile = 'radiance-animation-test-case.rad';
-//const urlDefaultFile = 'https://rawgit.com/ladybug-tools/spider/master/radiance-sample-files/sample-file.rad';
+const urlDefaultFile = "radiance-animation-test-case.rad";
+//const urlDefaultFile = "https://cdn.jsdelivr.net/gh/ladybug-tools/spider-rad-resources@master/rad-sample-files/various-sources/sample-file.rad";
 
-THM.cssBasic = "js/style.css";
+THM.cssBasic = "js-rad/style.css";
 
 // For main menu header
-MNU.urlSourceCodeUrl = "https://github.com/ladybug-tools/spider-rad-viewer/tree/master/rad-viewer";
+MNU.urlSourceCode = "https://github.com/ladybug-tools/spider-rad-viewer/tree/master/rad-viewer";
 
-MNU.homeText = ""; // "pushMe-pullYou";
-MNU.homeTitle = ""; "Very simple JavaScript files to help you explore and build new tools on GitHub.";
-MNU.homeUrl = ""; "https://pushme-pullyou.github.io";
+MNU.homeText="<img src='https://ladybug.tools/artwork/icons_bugs/ico/ladybug.ico' height=24 >";
+MNU.homeTitle="Ladybug Tools: free computer applications that support environmental design and education";
+MNU.homeUrl="https://www.ladybug.tools";
 
-MNU.repoText = ""; "TooToo13";
-MNU.repoTitle = ""; //"Basic html templates with sliding menu, css selection, markdown capability and frequently used pages";
-MNU.repoUrl = ""; // "https://pushme-pullyou.github.io/tootoo13";
+MNU.repoText="<img src='https://ladybug.tools/artwork/icons_bugs/ico/spider.ico' height=24 >";
+MNU.repoTitle="Spider: 3D interactive analysis in your browser mostly written around the Three.js JavaScript library";
+MNU.repoUrl="https://www.ladybug.tools/spider/";
 
-MNU.appText = "";// "CMS";
-MNU.appTitle = ""; //"Basic html content management script with sliding menu, css theme selection, Markdown to HTML, drag and drop file reading capability, access to frequently used pages and more";
-MNU.appUrl = ""; //"https://pushme-pullyou.github.io/#tootoo-templates/hamburger-theme-cms/README.md";
+
+MNU.appText= "RAD Tools";
+MNU.appTitle = "Tools to help you find, load, examine and edit Radiance files - in large numbers and sizes";
+MNU.appUrl = "https://www.ladybug.tools/spider-rad-viewer/";
 
 MNU.urlSourceCodeImage="https://status.github.com/images/invertocat.png";
 MNU.urlSourceCodeIcon=`<img src="${ MNU.urlSourceCodeImage }" height=18 >`;
@@ -88,6 +97,7 @@ MNU.footerUrl = "#https://www.ladybug.tools/spider/";
 MNU.footerTarget = ""; //"target=_blank";
 MNU.footerIssues = "https://www.ladybug.tools/spider-rad-viewer/issues";
 
+/*
 // for parsing
 OHC.user = 'ladybug-tools';
 OHC.repo = 'spider-rad-viewer';
@@ -99,6 +109,8 @@ OHC.branch = '/master/';
 OHC.urlGitHubPage = `https://${ OHC.repo }/`;
 // When running in build repo
 //OHC.urlGitHubPage = "";
+*/
+
 
 </script>
 
@@ -115,25 +127,44 @@ OHC.urlGitHubPage = `https://${ OHC.repo }/`;
 
 				<summary class=divMenuTitle >File Menu</summary>
 
-				<section id="OHCsecMenuRepoFilesFolders" ></section>
+				<div id="divFileOpen" class="dragDropArea" ></div>
 
-				<section id=FOBsecFileOpenBasic ></section>
+				<section id=divSampleFiles ></section>
 
-				<section id=FILdivFileSave ></section>
+
+				<div>
+
+
+				</div>
+				<details ontoggle=divInfo.innerHTML=THRU.getRendererInfo(); >
+
+					<summary>Renderer Info</summary>
+
+					<div id = "divInfo" ></div>
+
+				</details>
+
+				<details ontoggle=FIL.setLog(); >
+
+					<summary>File Data</summary>
+
+					<div id="divFileData" ></div>
+
+				</details>
+
+				<div id = "divLog" ></div>
+
 
 			</details>
 
 
-			<!--
 			<details>
 
-				<summary>Spider RAD Sample files</summary>
+				<summary class=divMenuTitle >View Menu</summary>
 
-				<div id=divSampleFiles ></div>
+				<div id="divSettings" ></div>
 
 			</details>
-
-			-->
 
 
 
@@ -182,59 +213,17 @@ OHC.urlGitHubPage = `https://${ OHC.repo }/`;
 
 <script>
 
-let FIL = {};
-
-
-
-FIL.requestFile = function( url, callback ) {
-
-	const xhr = new XMLHttpRequest();  // unlike fetch handles local files
-	xhr.crossOrigin = 'anonymous';
-	xhr.open( 'GET', url, true );
-	xhr.onerror = function( xhr ) { console.log( 'error:', xhr  ); };
-	//xhr.onprogress = function( xhr ) { console.log( 'bytes loaded:', xhr.loaded ); }; // or something
-	xhr.onload = callback;
-	xhr.send( null );
-
-};
-
-
-
-FIL.callbackRequestFile = function( xhr ) {
-	//console.log( 'xhr.target.response', xhr.target.response );
-
-	const json = RAD.addDataFile( xhr.target.response );
-
-	json.forEach( result => RAD.json[ result[ 0 ] ].push( result[ 1 ] ) ); // not easy to understand
-
-	RAD.size = xhr.target.response.length;
-
-	FIL.htmLog +=
-	`
-		<p>
-			name: ${ RAD.name }<br>
-			size: ${ RAD.size.toLocaleString() } bytes<br>
-		</p>
-	`;
-
-	FIL.txtRadiance = xhr.target.response;
-	FIL.txtJson = JSON.stringify( json, undefined, 1 );
-
-	//FIL.setLog( FIL.divFileData );
-	FIL.timeLoad = ( performance.now() - FIL.timeStart ).toLocaleString();
-
-};
-
 
 
 init();
 THR.animate();
 
+
 function init() {
 
 	MNUdivHeader.innerHTML = MNU.getNavHeader();
 
-	//OHCsecMenuRepoFilesFolders.innerHTML = OHC.getMenuRepoFilesFolders();
+	divSettings.innerHTML = THRU.getSettings( divSettings );
 
 	THR.getThreejs();
 
@@ -245,15 +234,24 @@ function init() {
 	//mesh = THRU.getGeometry();
 	//THR.scene.add( mesh );
 
-	RAD.url = location.hash.slice( 1 );
 
-	FIL.timeStart = performance.now();
+	FGAT.fetchGitHubApiTree();
 
-	RAD.json = { 'surfaces': [], 'materials': [], 'other': [] };
+	divFileOpen.innerHTML = FIL.getFileOpen( divFileData );
 
-	FIL.requestFile( urlDefaultFile, FIL.callbackRequestFile )
+	//RAD.url = location.hash.slice( 1 );
 
-	//FOBsecFileOpenBasic.innerHTML = FOB.getMenuFileOpenBasic( divContents, divPopUpData );
+	//FIL.timeStart = performance.now();
+	//RAD.json = { 'surfaces': [], 'materials': [], 'other': [] };
+
+	//FIL.requestFile( urlDefaultFile, FIL.callbackRequestFile );
+
+	if ( !location.hash ) { location.hash = urlDefaultFile; } else { FIL.onHashChange(); }
+
+	THR.animate();
+
+
+
 
 	THMsecMenuThemeSelect.innerHTML = THM.getMenuThemeSelect();
 
@@ -263,6 +261,7 @@ function init() {
 
 	THM.init();
 
+	//setTimeout(() => { divPopUpData.innerHTML = POP.getPopUpHtml(); }, 600);
 }
 
 

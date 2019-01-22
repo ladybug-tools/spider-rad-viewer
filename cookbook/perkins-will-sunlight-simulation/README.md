@@ -48,6 +48,14 @@ List and display Radiance HDR files as textures on a 3D surface for all files in
 
 ## Change Log
 
+### 2019-01-21 ~ Theo
+
+Perkins-Will Sunlight Simulation R2.0
+
+* Built over TooToo13 and Rad Viewer 8.1
+* Opens and loads RAD file / turns off surfaces
+* Adds play the day and play the year buttons
+
 ### 2019-01-18 ~ Theo
 
 * First commit

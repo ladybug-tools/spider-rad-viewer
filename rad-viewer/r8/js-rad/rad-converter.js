@@ -9,8 +9,10 @@ RAD.converterObjectToJson = function( rad_text ) {
 	// probably should arrive as an array??
 	//console.log( 'rad_text', rad_text );
 
+	dd = rad_text.replace ( /\t/g, " " );
+	
 	const rep_new_line_re = /\s\s+/g;
-	const data = rad_text.replace( rep_new_line_re, " " ).trim().split( " " );
+	const data = dd.replace( rep_new_line_re, " " ).trim().split( " " );
 	//console.log( 'data', data  );
 
 	const type = data[ 1 ];
@@ -53,7 +55,7 @@ RAD.converterObjectToJson = function( rad_text ) {
 		case 'void':
 
 		default:
-			console.log( 'data', data );
+			//console.log( 'data', data );
 			// this is a generic method that returns the data as values for each line
 			return parse_base( data );
 
@@ -102,6 +104,7 @@ function parse_sphere(data) {
 	};
 
 	return ['surfaces', sphere];
+
 }
 
 
@@ -249,7 +252,7 @@ function parse_mirror(data) {
 
 
 
-function parse_base(data) {
+function parse_base( data ) {
 
 	// convert a radiance primitive line to a JSON object
 	// find number of items in each line

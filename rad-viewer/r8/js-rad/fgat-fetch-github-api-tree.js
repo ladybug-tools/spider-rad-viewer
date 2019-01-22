@@ -70,7 +70,18 @@ FGAT.callbackGitHubApiTree = function( results, user, repo, target ) {
 
 	}
 
-	target.innerHTML = `<p>files: ${ files.length } </p> ${ sections } <hr>`;
+	target.innerHTML =
+		`
+		<details>
+
+			<summary>Spider RAD Sample files</summary>
+
+			<p>files: ${ files.length } </p> ${ sections }
+
+			<hr>
+
+		</details
+		`;
 
 	for ( let file of files ) {
 
