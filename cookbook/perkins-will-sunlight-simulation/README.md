@@ -68,6 +68,11 @@ Enhancing the Script
 
 ### 2019-01-22 ~ Theo
 
+Perkins-Will Sunlight Simulation R2.2
+
+* Test case test in pop-up
+
+
 Perkins-Will Sunlight Simulation R2.1
 
 * Add legend.png

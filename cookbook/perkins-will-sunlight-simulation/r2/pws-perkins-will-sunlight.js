@@ -79,6 +79,8 @@ function fetchTestCase( testCase ) {
 			</details>
 		`;
 
+		h3TestCase.innerHTML = `Test case: ${ testCase }`;
+		
 	for ( let file of files) {
 
 		if ( !file.name.endsWith( '.png' ) ) { continue; }

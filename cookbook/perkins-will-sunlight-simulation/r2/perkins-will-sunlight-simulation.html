@@ -6,7 +6,7 @@
 <meta name = "description" content = "List and display Radiance HDR files as textures on a 3D surface for all files in a test case folder" >
 <meta name = "keywords" content = "JavaScript,GitHub,FOSS" >
 <meta name = "date" content = "2019-01-22" >
-<meta name = "release" content = "2.1" >
+<meta name = "release" content = "2.2" >
 <title>Perkins-Will Sunlight Simulation</title>
 <link rel="stylesheet" href="js-rad/style.css">
 </head>
@@ -188,11 +188,7 @@ OHC.urlGitHubPage = `https://${ OHC.repo }/`;
 
 			<button class=pwsButtYear onclick=fetchTestCase('nov3pm'); style=min-width:5rem; >nov 3 pm</button>
 
-			<button class=pwsButtYear onclick=fetchTestCase('dec3pm'); disabled style=min-width:5rem; >dec 3 pm</button>
-
-			<button class=pwsButtYear onclick=fetchTestCase('test'); style=min-width:5rem; >test</button>
-
-			<button class=pwsButtYear onclick=fetchTestCase('w3pm'); style=min-width:5rem; >w 3 pm</button>
+			<button class=pwsButtYear onclick=fetchTestCase('w3pm'); style=min-width:5rem; >dec 3 pm</button>
 
 			<br>
 
@@ -278,6 +274,8 @@ OHC.urlGitHubPage = `https://${ OHC.repo }/`;
 		<div id="divPopUpData" ></div>
 
 		<div id="divMessage" ><img src=legend.png ></div>
+
+		<h3 id=h3TestCase ></h3>
 
 	</nav>
 
