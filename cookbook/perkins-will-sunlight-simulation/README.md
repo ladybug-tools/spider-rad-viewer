@@ -30,7 +30,8 @@ List and display Radiance HDR files as textures on a 3D surface for all files in
 
 ## To Do / Wish List
 
-* 2019-01-22 ~ Theo ~ Add legend
+* 2019-01-22 ~ Theo ~ Better interaction between play animation buttons
+* 2019-01-22 ~ Theo ~ Make opacity with surfaces visible work OK
 * 2019-01-22 ~ Theo ~ add new GitHub access token code
 * 2019-01-22 ~ Theo ~ smoother animation
 * 2019-01-22 ~ Theo ~ Add ground plane
@@ -54,7 +55,7 @@ Using the Script
 
 Enhancing the Script
 
-* Try adding a new menu module
+* Try adding a new images
 * Translate into another language
 
 
@@ -68,6 +69,8 @@ Enhancing the Script
 Perkins-Will Sunlight Simulation R2.1
 
 * Add legend.png
+* Add read me content
+
 
 ### 2019-01-21 ~ Theo
 
