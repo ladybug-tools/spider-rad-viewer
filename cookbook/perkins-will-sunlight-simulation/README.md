@@ -30,11 +30,21 @@ List and display Radiance HDR files as textures on a 3D surface for all files in
 
 ## To Do / Wish List
 
+* 2019-01-22 ~ Theo ~ Add legend
+* 2019-01-22 ~ Theo ~ add new GitHub access token code
+* 2019-01-22 ~ Theo ~ smoother animation
+* 2019-01-22 ~ Theo ~ Add ground plane
+* 2019-01-22 ~ Theo ~ Need Sun altitude azimuth and altitude
+* 2019-01-22 ~ Theo ~ Need text for credits and explanations - and marketing?
+
+
 
 ## Issues
 
 
 ## Things you can do using this script
+
+Using the Script
 
 * Click the three bars( 'hamburger menu icon' ) to slide the menu in and out
 * Click the Octocat icon to view or edit the source code on GitHub
@@ -42,11 +52,22 @@ List and display Radiance HDR files as textures on a 3D surface for all files in
 * Press Control-U/Command-Option-U to view the source code
 * Press Control-Shift-J/Command-Option-J to see if the JavaScript console reports any errors
 
+Enhancing the Script
+
+* Try adding a new menu module
+* Translate into another language
+
 
 ## Links of Interest
 
 
 ## Change Log
+
+### 2019-01-22 ~ Theo
+
+Perkins-Will Sunlight Simulation R2.1
+
+* Add legend.png
 
 ### 2019-01-21 ~ Theo
 
