@@ -68,6 +68,13 @@ Enhancing the Script
 
 ### 2019-01-22 ~ Theo
 
+Perkins-Will Sunlight Simulation R2.5
+
+* Illumination surfaces cast shadows
+
+Once we have the different Sun positions, the shadows will update with each test case update
+
+
 Perkins-Will Sunlight Simulation R2.4
 
 * ground plane gray and thinner

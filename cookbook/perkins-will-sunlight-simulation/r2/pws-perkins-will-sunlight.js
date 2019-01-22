@@ -59,7 +59,7 @@ function toggleSurfacesOff() {
 	} );
 
 	ground.visible = true;
-	
+
 };
 
 
@@ -202,6 +202,7 @@ function loadPNG( fileName, index ) {
 	normal.add( center )
 	mesh.up = point;
 	mesh.lookAt( normal );
+	mesh.castShadow = true;
 
 	if ( items[ 0 ] === 0 && items[ 1 ] === 0 ) {
 
