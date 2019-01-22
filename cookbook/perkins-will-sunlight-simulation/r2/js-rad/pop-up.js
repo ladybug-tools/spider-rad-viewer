@@ -92,6 +92,7 @@ POP.onDocumentMouseDown = function( event ) {
 	if ( intersects.length > 0 ) {
 
 		POP.intersected = intersects[ 0 ].object;
+		console.log( 'POP.intersected', POP.intersected);
 
 		POP.faceIndex = intersects[ 0 ].faceIndex;
 		//intersected.material.color.setHex( Math.random() * 0xffffff );

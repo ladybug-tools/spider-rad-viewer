@@ -6,7 +6,7 @@
 <meta name = "description" content = "List and display Radiance HDR files as textures on a 3D surface for all files in a test case folder" >
 <meta name = "keywords" content = "JavaScript,GitHub,FOSS" >
 <meta name = "date" content = "2019-01-22" >
-<meta name = "release" content = "2.2" >
+<meta name = "release" content = "2.3" >
 <title>Perkins-Will Sunlight Simulation</title>
 <link rel="stylesheet" href="js-rad/style.css">
 </head>
@@ -304,11 +304,15 @@ function init() {
 
 	THRU.setHelpers();
 
-	THRU.addSomeLights();
+	THRU.addSomeLights2();
 
-	//mesh = THRU.getGeometry();
-	//THR.scene.add( mesh );
+	const geometry = new THREE.BoxGeometry( 100, 100, 5 );
+	const material = new THREE.MeshPhongMaterial( { color: "green" });
+	ground = new THREE.Mesh( geometry, material );
+	ground.receiveShadow = true;
+	ground.position.set( 0, 0, -2.5 );
 
+	THR.scene.add( ground );
 
 	FGAT.fetchGitHubApiTree();
 

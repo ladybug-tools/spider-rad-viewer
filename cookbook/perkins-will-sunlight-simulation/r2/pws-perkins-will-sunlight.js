@@ -30,7 +30,7 @@ function callbackGitHubMenu ( json ) {
 	files = json;
 
 	//console.log( 'files', files );
-	THRU.toggleSurfaces();
+	toggleSurfacesOff();
 
 	buttsDay = document.querySelectorAll( '.pwsButtDay');
 
@@ -41,6 +41,26 @@ function callbackGitHubMenu ( json ) {
 	//fetchTestCase( testCase );
 
 }
+
+
+
+function toggleSurfacesOff() {
+
+	THR.scene.traverse( function ( child ) {
+
+		if ( child instanceof THREE.Mesh ) {
+
+			child.visible = false;
+			//child.material.transparent = true;
+			//child.material.opacity = 0.3;
+
+		}
+
+	} );
+
+	ground.visible = true;
+};
+
 
 
 function playTheDay() {
@@ -80,7 +100,7 @@ function fetchTestCase( testCase ) {
 		`;
 
 		h3TestCase.innerHTML = `Test case: ${ testCase }`;
-		
+
 	for ( let file of files) {
 
 		if ( !file.name.endsWith( '.png' ) ) { continue; }
@@ -171,7 +191,7 @@ function loadPNG( fileName, index ) {
 
 	texture.minFilter = THREE.LinearFilter;
 
-	const material = new THREE.MeshBasicMaterial( { alphaTest : 0.01, map: texture, opacity: 1, side: 0, transparent: true } );
+	const material = new THREE.MeshBasicMaterial( { alphaTest : 0.01, map: texture, opacity: 1, side: 2, transparent: true } );
 	const geometry = new THREE.PlaneBufferGeometry( width, height );
 
 	mesh = new THREE.Mesh( geometry, material );
@@ -196,6 +216,8 @@ function loadPNG( fileName, index ) {
 	}
 
 	meshes.add( mesh );
+
+
 
 }
 

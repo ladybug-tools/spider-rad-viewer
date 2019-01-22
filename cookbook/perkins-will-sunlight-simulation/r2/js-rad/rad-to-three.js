@@ -298,6 +298,7 @@ RAD.getTrianglesMesh = function( vertices, colors ) {
 
 	const materialTriangles = new RAD.materialType( { color: 0xaaaaaa, side: 2, vertexColors: THREE.VertexColors } );
 	const mesh = new THREE.Mesh( geometryTriangles, materialTriangles );
+	mesh.castShadow = true;
 	mesh.name = RAD.name;
 
 	//RAD.setEdges( mesh );
@@ -348,6 +349,7 @@ RAD.setShapeMesh = function( polygon ) {
 	const material = new RAD.materialType( { color: color, opacity: RAD.opacity, side: 2, transparent: true } );
 
 	const mesh = RAD.getShape( points, material );
+	mesh.castShadow = true;
 	mesh.userData = polygon;
 
 	RAD.meshes.add( mesh );
