@@ -30,6 +30,7 @@ List and display Radiance HDR files as textures on a 3D surface for all files in
 
 ## To Do / Wish List
 
+
 * 2019-01-22 ~ Theo ~ Better interaction between play animation buttons
 * 2019-01-22 ~ Theo ~ Make opacity with surfaces visible work OK
 * 2019-01-22 ~ Theo ~ add new GitHub access token code
@@ -42,6 +43,7 @@ List and display Radiance HDR files as textures on a 3D surface for all files in
 
 ## Issues
 
+* 2019-01-22 ~ Theo ~ Need clarification on PNG titles
 
 ## Things you can do using this script
 
