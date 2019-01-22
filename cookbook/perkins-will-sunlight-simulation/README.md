@@ -68,6 +68,11 @@ Enhancing the Script
 
 ### 2019-01-22 ~ Theo
 
+Perkins-Will Sunlight Simulation R2.6
+
+* Lines cast shadows
+
+
 Perkins-Will Sunlight Simulation R2.5
 
 * Illumination surfaces cast shadows

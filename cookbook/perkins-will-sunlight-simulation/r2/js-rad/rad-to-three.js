@@ -565,6 +565,7 @@ RAD.getLine = function( vertices ) {
 	geometry.vertices = points;
 	material = new THREE.LineBasicMaterial( { color: 0x000000 } );
 	line = new THREE.Line( geometry, material );
+	line.castShadow = true;
 
 	return line;
 
