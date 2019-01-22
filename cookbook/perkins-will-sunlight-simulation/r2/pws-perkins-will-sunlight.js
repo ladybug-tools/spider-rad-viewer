@@ -59,6 +59,7 @@ function toggleSurfacesOff() {
 	} );
 
 	ground.visible = true;
+	
 };
 
 

@@ -158,6 +158,7 @@ THRU.toggleSurfaces = function() {
 
 	} );
 
+	ground.visible = true;
 };
 
 

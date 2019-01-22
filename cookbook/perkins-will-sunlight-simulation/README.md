@@ -68,6 +68,12 @@ Enhancing the Script
 
 ### 2019-01-22 ~ Theo
 
+Perkins-Will Sunlight Simulation R2.4
+
+* ground plane gray and thinner
+* Better handling of shadow, opacity slider and surface visibility toggle
+
+
 Perkins-Will Sunlight Simulation R2.3
 
 * Add green ground plane
