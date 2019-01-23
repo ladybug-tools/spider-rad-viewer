@@ -79,7 +79,7 @@ function callbackGitHubMenu ( json ) {
 
 	buttsYear = document.querySelectorAll( '.pwsButtYear');
 
-	buttsDay[ 0].click();
+	buttsDay[ 8 ].click();
 
 	//fetchTestCase( testCase );
 
@@ -140,12 +140,12 @@ function fetchTestCase( testCase ) {
 
 	const pos = convertPosition( position.altitude, position.azimuth, 30 );
 	//console.log( 'pos', pos );
+	ground.position.set( THRU.center.x, THRU.center.y, -0.5 );
 
 	sprite.position.copy( THRU.center.clone().add( pos ) );
 
 	THRU.lightDirectional.position.copy( sprite.position );
 
-	ground.position.set( THRU.center.x, THRU.center.y, -0.5 );
 
 	divMenuItems.innerHTML =
 		`
@@ -263,12 +263,12 @@ function loadPNG( fileName, index ) {
 	const normal = new THREE.Vector3().fromArray( [ items[ 4 ], items[ 5 ], items[ 6 ] ] ).normalize();
 
 	//console.log( 'normal', normal );
-	meshes.add( new THREE.ArrowHelper( normal, center, 3, 0xff00ff, 1, 1 ) );
+	//meshes.add( new THREE.ArrowHelper( normal, center, 3, 0xff00ff, 1, 1 ) );
 
 	const point = new THREE.Vector3().fromArray( [ items[ 7 ], items[ 8 ], items[ 9 ] ] ).normalize();
 
 	//console.log( 'point', point );
-	meshes.add( new THREE.ArrowHelper( point, center, 3, 0x000000 , 1, 1 ) );
+	//meshes.add( new THREE.ArrowHelper( point, center, 3, 0x000000 , 1, 1 ) );
 
 	const width = items[ 10 ];
 	const height = items[ 11 ];

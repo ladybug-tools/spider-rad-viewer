@@ -68,6 +68,11 @@ Enhancing the Script
 
 ### 2019-01-22 ~ Theo
 
+Perkins-Will Sunlight Simulation R2.9
+
+* Draw no arrows
+* Start-up test case set to e3pm
+
 Perkins-Will Sunlight Simulation R2.8
 
 * Sun god revision
