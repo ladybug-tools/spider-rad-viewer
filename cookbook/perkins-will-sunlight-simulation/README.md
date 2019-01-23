@@ -68,6 +68,16 @@ Enhancing the Script
 
 ### 2019-01-22 ~ Theo
 
+Perkins-Will Sunlight Simulation R2.7
+
+* Add test case altitude and azimuth object with Zack's numbers
+* Add lat/lon to XYZ function
+* Add Sun as a Three.js Sprite positioned at current test case altitude and azimuth
+* Add direction light tracking Sun position and casting shadows
+* Add current test case altitude and azimuth report to pop-up menu
+* Add updated legend
+* Add June bitmaps
+
 Perkins-Will Sunlight Simulation R2.6
 
 * Lines cast shadows

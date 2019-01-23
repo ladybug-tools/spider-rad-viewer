@@ -8,6 +8,49 @@ let index = 0;
 let playDay = null;
 let playYear = null;
 
+
+const sunPositions = {
+
+	//e7am: { altitude: 0, azimuth: 90 },
+	e7am: { altitude: 9.8, azimuth: -81.2 },
+	e8am: { altitude: 20.9, azimuth: -70.7 },
+	e9am: { altitude: 31.3, azimuth: -58.6 },
+	e10am: { altitude: 40.3, azimuth: -43.7 },
+	e11am: { altitude: 46.8, azimuth: -25 },
+	e12pm: { altitude: 49.6, azimuth: 2.9 },
+	e1pm: { altitude: 47.9, azimuth: 19.8 },
+	e2pm: { altitude: 42.1, azimuth: 39.5 },
+	e3pm: { altitude: 33.7, azimuth: 55.3 },
+	e4pm: { altitude: 23.6, azimuth: 67.9 },
+	e5pm: { altitude: 12.6, azimuth: 78.7 },
+
+	jan3pm: { altitude: 18.2, azimuth: 41.7 },
+	feb3pm: { altitude: 26, azimuth: 46.4 },
+	e3pm: { altitude: 33.7, azimuth: 55.3 },
+	apr3pm: { altitude: 41, azimuth: 67.4},
+	may3pm: { altitude: 46.2, azimuth: 76.8 },
+	s3pm: { altitude: 49.1, azimuth: 79.9 },
+	jul3pm: { altitude: 48.3, azimuth: 75.5 },
+	aug3pm: { altitude: 42.3, azimuth: 67 },
+	sep3pm: { altitude: 32, azimuth: 59.1 },
+	oct3pm: { altitude: 21.7, azimuth: 52.7 },
+	nov3pm: { altitude: 14.8, azimuth: 48.6 },
+	w3pm: { altitude: 13.6, azimuth: 42.5 }
+
+};
+
+
+function getSprite() {
+
+	const spriteMap = new THREE.TextureLoader().load( "ben-welle-yellow-round.png" );
+	const spriteMaterial = new THREE.SpriteMaterial( { color: 0xffffff, map: spriteMap } );
+	sprite = new THREE.Sprite( spriteMaterial );
+
+	return sprite;
+
+}
+
+
 function fetchGitHubFolderContents( txt ) {
 
 	testCase = txt;
@@ -36,9 +79,11 @@ function callbackGitHubMenu ( json ) {
 
 	buttsYear = document.querySelectorAll( '.pwsButtYear');
 
-	buttsDay[ 8 ].click();
+	buttsDay[ 0].click();
 
 	//fetchTestCase( testCase );
+
+	THR.scene.add( sprite );
 
 }
 
@@ -70,6 +115,7 @@ function playTheDay() {
 	index = index >= buttsDay.length ? 0 : index;
 	playDay = setTimeout( playTheDay, 1000 );
 
+
 };
 
 
@@ -89,6 +135,16 @@ function fetchTestCase( testCase ) {
 	let txt = '';
 	pngs = []; // global
 
+	position = sunPositions[ testCase ];
+	//console.log( 'position', position );
+
+	const pos = convertPosition( position.altitude, position.azimuth, 30 );
+	//console.log( 'pos', pos );
+
+	sprite.position.copy( THRU.center.clone().add( pos ) );
+
+	THRU.lightDirectional.position.copy( sprite.position );
+
 	divMenuItems.innerHTML =
 		`
 			<details id = detGallery >
@@ -100,7 +156,12 @@ function fetchTestCase( testCase ) {
 			</details>
 		`;
 
-		h3TestCase.innerHTML = `Test case: ${ testCase }`;
+	h3TestCase.innerHTML =
+		`
+			Test case: ${ testCase }<br>
+			Altitude: ${ position.altitude }<br>
+			Azimuth: ${ position.azimuth}
+			`;
 
 	for ( let file of files) {
 
@@ -135,6 +196,39 @@ function fetchTestCase( testCase ) {
 
 
 }
+
+
+
+function convertPosition( lat, lon, radius ) {
+
+	lon = lon - 90;
+	const d2r = Math.PI / 180
+	var rc = radius * Math.cos( lat * d2r );
+	return new THREE.Vector3( - rc * Math.cos( lon * d2r ), rc * Math.sin( lon * d2r), radius * Math.sin( lat * d2r ) );
+}
+
+
+
+function calcPosFromLatLonRad( radius, lat, lon ) {
+
+	// https://stackoverflow.com/questions/28365948/javascript-latitude-longitude-to-xyz-position-on-earth-threejs
+
+	//l2 = -20
+	const spherical = new THREE.Spherical(
+		radius,
+		THREE.Math.degToRad( 90 - lon ),
+		THREE.Math.degToRad( 90 - lat )
+	);
+
+	var vector = new THREE.Vector3();
+	vector.setFromSpherical( spherical );
+	console.log( vector.x, vector.y, vector.z );
+
+	return vector;
+
+}
+
+
 
 function loadTestCase( index ) {
 
