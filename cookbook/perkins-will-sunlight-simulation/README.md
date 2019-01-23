@@ -68,6 +68,12 @@ Enhancing the Script
 
 ### 2019-01-22 ~ Theo
 
+Perkins-Will Sunlight Simulation R2.8
+
+* Sun god revision
+* Ground re-centers itself
+
+
 Perkins-Will Sunlight Simulation R2.7
 
 * Add test case altitude and azimuth object with Zack's numbers

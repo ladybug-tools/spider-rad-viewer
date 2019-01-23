@@ -42,8 +42,8 @@ const sunPositions = {
 
 function getSprite() {
 
-	const spriteMap = new THREE.TextureLoader().load( "ben-welle-yellow-round.png" );
-	const spriteMaterial = new THREE.SpriteMaterial( { color: 0xffffff, map: spriteMap } );
+	const spriteMap = new THREE.TextureLoader().load( "phil-512-yellow.png" );
+	const spriteMaterial = new THREE.SpriteMaterial( { color: 0xffff00, map: spriteMap, opacity: 1 } );
 	sprite = new THREE.Sprite( spriteMaterial );
 
 	return sprite;
@@ -144,6 +144,8 @@ function fetchTestCase( testCase ) {
 	sprite.position.copy( THRU.center.clone().add( pos ) );
 
 	THRU.lightDirectional.position.copy( sprite.position );
+
+	ground.position.set( THRU.center.x, THRU.center.y, -0.5 );
 
 	divMenuItems.innerHTML =
 		`
